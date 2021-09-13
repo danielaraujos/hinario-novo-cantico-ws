@@ -61,6 +61,11 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.PUT, "/indices/**").hasAnyRole(Provedor.retornaPermissao(Modulo.INDICE, TipoPermissao.UPDATE))
                 .antMatchers(HttpMethod.DELETE,"/indices/**").hasAnyRole(Provedor.retornaPermissao(Modulo.INDICE, TipoPermissao.DELETE))
 
+                // Indices
+                .antMatchers(HttpMethod.GET, "/hinos/**").permitAll()
+                .antMatchers(HttpMethod.POST,"/hinos").hasAnyRole(Provedor.retornaPermissao(Modulo.HINO, TipoPermissao.INSERT))
+                .antMatchers(HttpMethod.PUT, "/hinos/**").hasAnyRole(Provedor.retornaPermissao(Modulo.HINO, TipoPermissao.UPDATE))
+                .antMatchers(HttpMethod.DELETE,"/hinos/**").hasAnyRole(Provedor.retornaPermissao(Modulo.HINO, TipoPermissao.DELETE))
 
                 // Autenticacao
                 .antMatchers(HttpMethod.POST, "/auth").permitAll()
