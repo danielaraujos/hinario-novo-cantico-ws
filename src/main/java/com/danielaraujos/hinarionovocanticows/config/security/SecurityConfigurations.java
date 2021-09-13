@@ -1,5 +1,8 @@
 package com.danielaraujos.hinarionovocanticows.config.security;
 
+import com.danielaraujos.hinarionovocanticows.config.provedor.Provedor;
+import com.danielaraujos.hinarionovocanticows.model.Enum.Modulo;
+import com.danielaraujos.hinarionovocanticows.model.Enum.TipoPermissao;
 import com.danielaraujos.hinarionovocanticows.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -54,6 +57,10 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 
                 // Indices
                 .antMatchers(HttpMethod.GET, "/indices/**").permitAll()
+                .antMatchers(HttpMethod.POST,"/indices").hasAnyRole(Provedor.retornaPermissao(Modulo.INDICE, TipoPermissao.INSERT))
+                .antMatchers(HttpMethod.PUT, "/indices/**").hasAnyRole(Provedor.retornaPermissao(Modulo.INDICE, TipoPermissao.UPDATE))
+                .antMatchers(HttpMethod.DELETE,"/indices/**").hasAnyRole(Provedor.retornaPermissao(Modulo.INDICE, TipoPermissao.DELETE))
+
 
                 // Autenticacao
                 .antMatchers(HttpMethod.POST, "/auth").permitAll()
