@@ -11,12 +11,15 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/indices")
@@ -48,5 +51,22 @@ public class IndiceController {
         } catch (SecurityException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
+    }
+
+    @PutMapping("/{id}")
+    @Transactional
+    public ResponseEntity<IndiceDto> atualizar(@RequestBody @Valid IndiceForm form, @PathVariable("id") Integer id) {
+
+        try {
+            Optional<Indice> indiceOptional = indiceRepository.findById(id);
+            if (indiceOptional.isPresent()) {
+                Indice indice = form.atualizar(id, indiceRepository);
+                return ResponseEntity.ok(new IndiceDto(indice));
+            }
+        } catch (SecurityException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
+        return ResponseEntity.notFound().build();
     }
 }
