@@ -19,7 +19,6 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/indices")
@@ -67,6 +66,21 @@ public class IndiceController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
 
+        return ResponseEntity.notFound().build();
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity<?> remover(@PathVariable("id") Integer id) {
+        try {
+            Optional<Indice> optional = indiceRepository.findById(id);
+            if (optional.isPresent()) {
+                indiceRepository.deleteById(id);
+                return ResponseEntity.ok().build();
+            }
+        } catch (SecurityException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
         return ResponseEntity.notFound().build();
     }
 }
