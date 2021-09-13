@@ -1,6 +1,7 @@
 package com.danielaraujos.hinarionovocanticows.controller;
 
 import com.danielaraujos.hinarionovocanticows.controller.dto.IndiceDto;
+import com.danielaraujos.hinarionovocanticows.controller.form.IndiceForm;
 import com.danielaraujos.hinarionovocanticows.model.Indice;
 import com.danielaraujos.hinarionovocanticows.repository.IndiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,10 +9,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -32,5 +36,17 @@ public class IndiceController {
     public List<IndiceDto> listarSemPaginacao() {
         List<Indice> indices = indiceRepository.findAll();
         return IndiceDto.converterLista(indices);
+    }
+
+    @PostMapping
+    public ResponseEntity<IndiceDto> cadastrar(@RequestBody @Valid IndiceForm form, UriComponentsBuilder uriBuilder) {
+        try {
+            Indice indice = form.converter();
+            indiceRepository.save(indice);
+            URI uri = uriBuilder.path("/indices/{id}").buildAndExpand(indice.getId()).toUri();
+            return ResponseEntity.created(uri).body(new IndiceDto(indice));
+        } catch (SecurityException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
     }
 }
