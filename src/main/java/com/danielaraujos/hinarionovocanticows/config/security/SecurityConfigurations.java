@@ -1,5 +1,8 @@
 package com.danielaraujos.hinarionovocanticows.config.security;
 
+import com.danielaraujos.hinarionovocanticows.config.provedor.Provedor;
+import com.danielaraujos.hinarionovocanticows.model.Enum.Modulo;
+import com.danielaraujos.hinarionovocanticows.model.Enum.TipoPermissao;
 import com.danielaraujos.hinarionovocanticows.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -48,18 +51,26 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/auth").permitAll()
-                .anyRequest().permitAll()
 
-                //.anyRequest().authenticated()
+                // Banco de Dados
+                .antMatchers("/h2-console/**").permitAll()
+
+                // Indices
+                .antMatchers(HttpMethod.GET, "/indices/**").permitAll()
+                .antMatchers(HttpMethod.POST,"/indices").hasAnyRole(Provedor.retornaPermissao(Modulo.INDICE, TipoPermissao.INSERT))
+                .antMatchers(HttpMethod.PUT, "/indices/**").hasAnyRole(Provedor.retornaPermissao(Modulo.INDICE, TipoPermissao.UPDATE))
+                .antMatchers(HttpMethod.DELETE,"/indices/**").hasAnyRole(Provedor.retornaPermissao(Modulo.INDICE, TipoPermissao.DELETE))
+
+
+                // Autenticacao
+                .antMatchers(HttpMethod.POST, "/auth").permitAll()
+                .anyRequest().authenticated()
                 .and().cors()
                 .and().csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().headers().frameOptions().sameOrigin()
                 .and().addFilterBefore(new AutenticacaoViaTokenFilter(tokenService, usuarioRepository), UsernamePasswordAuthenticationFilter.class)
                 .exceptionHandling().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED));
-                //.exceptionHandling().accessDeniedPage("/401");
-
     }
 
     // Html css js ... Recursos estaticos
