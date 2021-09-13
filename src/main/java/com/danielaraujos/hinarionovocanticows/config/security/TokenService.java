@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.Date;
-import java.util.UUID;
 
 @Service
 public class TokenService {
@@ -45,8 +45,8 @@ public class TokenService {
         }
     }
 
-    public UUID getIdUsuario(String token) {
+    public BigInteger getIdUsuario(String token) {
         Claims claims = Jwts.parser().setSigningKey(this.secret).parseClaimsJws(token).getBody();
-        return UUID.fromString(claims.getSubject());
+        return BigInteger.valueOf(Long.parseLong(claims.getSubject()));
     }
 }
