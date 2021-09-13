@@ -1,13 +1,12 @@
 package com.danielaraujos.hinarionovocanticows.model;
 
 import javax.persistence.*;
-import java.math.BigInteger;
 
 @Entity(name = "TSAIND")
 public class Indice {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codind", updatable = false, unique = true, nullable = false)
     private Integer id;
 
