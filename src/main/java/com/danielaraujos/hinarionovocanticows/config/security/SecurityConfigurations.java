@@ -48,18 +48,22 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/auth").permitAll()
-                .anyRequest().permitAll()
 
-                //.anyRequest().authenticated()
+                // Banco de Dados
+                .antMatchers("/h2-console/**").permitAll()
+
+                // Indices
+                .antMatchers(HttpMethod.GET, "/indices/**").permitAll()
+
+                // Autenticacao
+                .antMatchers(HttpMethod.POST, "/auth").permitAll()
+                .anyRequest().authenticated()
                 .and().cors()
                 .and().csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().headers().frameOptions().sameOrigin()
                 .and().addFilterBefore(new AutenticacaoViaTokenFilter(tokenService, usuarioRepository), UsernamePasswordAuthenticationFilter.class)
                 .exceptionHandling().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED));
-                //.exceptionHandling().accessDeniedPage("/401");
-
     }
 
     // Html css js ... Recursos estaticos
