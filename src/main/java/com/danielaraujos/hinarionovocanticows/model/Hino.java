@@ -10,9 +10,10 @@ public class Hino {
     @Column(name = "codhino", updatable = false, unique = true, nullable = false)
     private Integer id;
 
-    @Column(name = "nome", columnDefinition = "TEXT")
+    @Column(name = "nome")
     private String nomeHino;
 
+    @Column(name = "conteudo", columnDefinition = "VARCHAR2(4000)")
     private String conteudo;
 
     private String audio;
@@ -24,8 +25,7 @@ public class Hino {
     public Hino() {
     }
 
-    public Hino(Integer id, String nomeHino, String conteudo, String audio, Indice indice) {
-        this.id = id;
+    public Hino(String nomeHino, String conteudo, String audio, Indice indice) {
         this.nomeHino = nomeHino;
         this.conteudo = conteudo;
         this.audio = audio;
