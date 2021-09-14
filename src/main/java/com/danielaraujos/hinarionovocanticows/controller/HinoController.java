@@ -59,7 +59,6 @@ public class HinoController {
     @PutMapping("/{id}")
     @Transactional
     public ResponseEntity<HinoDto> atualizar(@RequestBody @Valid HinoForm form, @PathVariable("id") Integer id) {
-
         try {
             Optional<Hino> hinoOptional = hinoRepository.findById(id);
             if (hinoOptional.isPresent()) {
@@ -73,5 +72,18 @@ public class HinoController {
         return ResponseEntity.notFound().build();
     }
 
-
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity<?> remover(@PathVariable("id") Integer id) {
+        try {
+            Optional<Hino> optional = hinoRepository.findById(id);
+            if (optional.isPresent()) {
+                hinoRepository.deleteById(id);
+                return ResponseEntity.ok().build();
+            }
+        } catch (SecurityException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+        return ResponseEntity.notFound().build();
+    }
 }
