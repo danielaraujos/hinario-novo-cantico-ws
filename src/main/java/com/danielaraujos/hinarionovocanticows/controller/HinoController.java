@@ -12,12 +12,14 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/hinos")
@@ -52,6 +54,23 @@ public class HinoController {
         } catch (SecurityException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
+    }
+
+    @PutMapping("/{id}")
+    @Transactional
+    public ResponseEntity<HinoDto> atualizar(@RequestBody @Valid HinoForm form, @PathVariable("id") Integer id) {
+
+        try {
+            Optional<Hino> hinoOptional = hinoRepository.findById(id);
+            if (hinoOptional.isPresent()) {
+                Hino hino = form.atualizar(id, hinoRepository, indiceRepository);
+                return ResponseEntity.ok(new HinoDto(hino));
+            }
+        } catch (SecurityException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
+        return ResponseEntity.notFound().build();
     }
 
 
