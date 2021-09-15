@@ -50,6 +50,34 @@ INSERT INTO TSAUSUG (CODUSU, CODGRU)
 VALUES (1, 1);
 
 
+-- NOTAS MUSICAIS
+INSERT INTO TSANOTA (NOTA) VALUES ('A');
+INSERT INTO TSANOTA (NOTA) VALUES ('Am');
+INSERT INTO TSANOTA (NOTA) VALUES ('Bb');
+INSERT INTO TSANOTA (NOTA) VALUES ('B');
+INSERT INTO TSANOTA (NOTA) VALUES ('Bm');
+INSERT INTO TSANOTA (NOTA) VALUES ('C');
+INSERT INTO TSANOTA (NOTA) VALUES ('C#');
+INSERT INTO TSANOTA (NOTA) VALUES ('Cm');
+INSERT INTO TSANOTA (NOTA) VALUES ('C#m');
+INSERT INTO TSANOTA (NOTA) VALUES ('D');
+INSERT INTO TSANOTA (NOTA) VALUES ('D#');
+INSERT INTO TSANOTA (NOTA) VALUES ('Dm');
+INSERT INTO TSANOTA (NOTA) VALUES ('D#m');
+INSERT INTO TSANOTA (NOTA) VALUES ('Eb');
+INSERT INTO TSANOTA (NOTA) VALUES ('E');
+INSERT INTO TSANOTA (NOTA) VALUES ('Em');
+INSERT INTO TSANOTA (NOTA) VALUES ('F');
+INSERT INTO TSANOTA (NOTA) VALUES ('F#m');
+INSERT INTO TSANOTA (NOTA) VALUES ('Fm');
+INSERT INTO TSANOTA (NOTA) VALUES ('F#');
+INSERT INTO TSANOTA (NOTA) VALUES ('G');
+INSERT INTO TSANOTA (NOTA) VALUES ('G#');
+INSERT INTO TSANOTA (NOTA) VALUES ('G#m');
+INSERT INTO TSANOTA (NOTA) VALUES ('Gm');
+INSERT INTO TSANOTA (NOTA) VALUES ('Ab');
+
+
 -- INDICES
 INSERT INTO TSAIND(CODIND,NOME) VALUES (1,'Intróitos');
 INSERT INTO TSAIND(CODIND,NOME) VALUES (2,'Deus Trino');
@@ -124,7 +152,7 @@ INSERT INTO TSAIND(CODIND,NOME) VALUES (69,'Ofertório e Améns');
 
 
 
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND, CIFRA) VALUES (1,'01 - Doxologia',
+INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND, CIFRA, TOM) VALUES (1,'01 - Doxologia',
  'Justo é o Senhor em Seus Santos caminhos,
  Benigno em todas as Suas obras. (Bis)
  Perto está o Senhor, perto está dos que O invocam,
@@ -140,15 +168,16 @@ Perto está  o Senhor, (perto está dos que o invocam,)
      F   C  Dm    G  C               F        G         C F
 De todos que o invocam  (De todos que o invocam)
 C/G G   C                        F C
-Em   verdade. Aleluia! Aleluia!');
-
+Em   verdade. Aleluia! Aleluia!', 'C');
+/*
 INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (2,'02 - Reverência',
  'O Senhor está no seu santo templo,
  O Senhor está no seu santo templo!
  Cale-se diante dele toda terra,
  Cale-se diante dele toda terra!','02.mp3',1);
 
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (3,'03 - A Igreja em Adoração','1
+INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND)
+VALUES (3,'03 - A Igreja em Adoração','1
 Eterno Pai, teu povo congregado,
 Humilde entoa o teu louvor aqui!
 No dia para o culto reservado,
@@ -9780,3 +9809,4 @@ INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (418,'D · Amém
 [Outros] Amém, amém, amém, amém, amém, amém.','418.mp3',69);
 
 
+*/
