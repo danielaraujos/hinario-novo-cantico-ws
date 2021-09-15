@@ -12,13 +12,24 @@ O objetivo desde projeto seria a criação de um back-end comunitário, para que
 
 ## Requisições
 <ul>
-    <li>Hinos </li>
+    <li>Letras </li>
 
-    <li>GET /hinos - Obtém a lista de todos os hinos páginados.</li>
-    <li>GET /hinos/sp - Obtém a lista de todos os hinos sem paginação.</li>
-    <li>POST /hinos - Adiciona um novo hino.</li>
-    <li>PUT /hinos - Atualiza um hino.</li>
-    <li>DELETE /hinos - Deleta um hino.</li>
+    <li>GET /hinos/letras/ - Obtém a lista de todos os hinos páginados.</li>
+    <li>GET /hinos/letras/sp - Obtém a lista de todos os hinos sem paginação.</li>
+    <li>POST /hinos/letras - Adiciona um novo hino.</li>
+    <li>PUT /hinos/letras - Atualiza um hino.</li>
+    <li>DELETE /hinos/letras - Deleta um hino.</li>
+
+</ul>
+
+<ul>
+    <li>Cifras </li>
+
+    <li>GET /hinos/cifras/ - Obtém a lista de todas cifras páginados.</li>
+    <li>GET /hinos/cifras/sp - Obtém a lista de todos as cifras sem paginação.</li>
+    <li>POST /hinos/cifras - Adiciona uma nova cifra.</li>
+    <li>PUT /hinos/cifras - Atualiza uma cifra.</li>
+    <li>DELETE /hinos/cifras - Deleta uma cifra.</li>
 
 </ul>
 
