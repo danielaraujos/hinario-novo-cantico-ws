@@ -9,10 +9,10 @@ import com.danielaraujos.hinarionovocanticows.repository.IndiceRepository;
 import java.util.Optional;
 
 
-public class HinoForm {
+public class CifraHinoForm {
 
     private String nomeHino;
-    private String conteudo;
+    private String cifra;
     private String audio;
     private Integer indice;
 
@@ -20,8 +20,8 @@ public class HinoForm {
         return nomeHino;
     }
 
-    public String getConteudo() {
-        return conteudo;
+    public String getCifra() {
+        return cifra;
     }
 
     public String getAudio() {
@@ -40,7 +40,7 @@ public class HinoForm {
             indice = optional.get();
         }
 
-        return new Hino(getNomeHino(), getConteudo(), getAudio(), indice);
+        return new Hino(getNomeHino(), getCifra(), getAudio(), indice);
     }
 
     public Hino atualizar(Integer id, HinoRepository hinoRepository, IndiceRepository indiceRepository) throws SecurityException {
@@ -49,8 +49,8 @@ public class HinoForm {
         if (!Provedor.isVazioOuNulo(getNomeHino()))
             hino.setNomeHino(this.nomeHino);
 
-        if (!Provedor.isVazioOuNulo(getConteudo()))
-            hino.setConteudo(this.conteudo);
+        if (!Provedor.isVazioOuNulo(getCifra()))
+            hino.setCifra(this.cifra);
 
         if (!Provedor.isVazioOuNulo(getAudio()))
             hino.setAudio(this.audio);
