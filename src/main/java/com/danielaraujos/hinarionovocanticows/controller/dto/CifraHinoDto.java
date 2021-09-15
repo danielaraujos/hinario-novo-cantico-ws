@@ -11,12 +11,14 @@ public class CifraHinoDto {
     private Integer id;
     private String nomeHino;
     private String cifra;
+    private String tom;
     private String audio;
     private Integer indice;
 
     public CifraHinoDto(Hino hino) {
         this.id = hino.getId();
         this.nomeHino = hino.getNomeHino();
+        this.tom = hino.getTom().getNota();
         this.cifra = hino.getCifra();
         this.audio = hino.getAudio();
         this.indice = hino.getIndice().getId();
@@ -40,6 +42,10 @@ public class CifraHinoDto {
 
     public Integer getIndice() {
         return indice;
+    }
+
+    public String getTom() {
+        return tom;
     }
 
     public static Page<CifraHinoDto> convert(Page<Hino> hinos) {
