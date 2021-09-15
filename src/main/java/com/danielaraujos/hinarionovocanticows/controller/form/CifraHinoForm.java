@@ -3,8 +3,10 @@ package com.danielaraujos.hinarionovocanticows.controller.form;
 import com.danielaraujos.hinarionovocanticows.config.provedor.Provedor;
 import com.danielaraujos.hinarionovocanticows.model.Hino;
 import com.danielaraujos.hinarionovocanticows.model.Indice;
+import com.danielaraujos.hinarionovocanticows.model.Nota;
 import com.danielaraujos.hinarionovocanticows.repository.HinoRepository;
 import com.danielaraujos.hinarionovocanticows.repository.IndiceRepository;
+import com.danielaraujos.hinarionovocanticows.repository.NotaRepository;
 
 import java.util.Optional;
 
@@ -15,6 +17,7 @@ public class CifraHinoForm {
     private String cifra;
     private String audio;
     private Integer indice;
+    private String tom;
 
     public String getNomeHino() {
         return nomeHino;
@@ -22,6 +25,10 @@ public class CifraHinoForm {
 
     public String getCifra() {
         return cifra;
+    }
+
+    public String getTom() {
+        return tom;
     }
 
     public String getAudio() {
@@ -32,7 +39,7 @@ public class CifraHinoForm {
         return indice;
     }
 
-    public Hino converter(IndiceRepository indiceRepository) throws SecurityException {
+    public Hino converter(IndiceRepository indiceRepository, NotaRepository notaRepository) throws SecurityException {
 
         Indice indice = new Indice();
         Optional<Indice> optional = indiceRepository.findById(getIndice());
@@ -40,10 +47,16 @@ public class CifraHinoForm {
             indice = optional.get();
         }
 
-        return new Hino(getNomeHino(), getCifra(), getAudio(), indice);
+        Nota nota = new Nota();
+        Optional<Nota> optionalNota = notaRepository.findById(getTom());
+        if (optionalNota.isPresent()){
+            nota = optionalNota.get();
+        }
+
+        return new Hino(getNomeHino(), nota, getCifra(), getAudio(), indice);
     }
 
-    public Hino atualizar(Integer id, HinoRepository hinoRepository, IndiceRepository indiceRepository) throws SecurityException {
+    public Hino atualizar(Integer id, HinoRepository hinoRepository, IndiceRepository indiceRepository, NotaRepository notaRepository) throws SecurityException {
         Hino hino = hinoRepository.findById(id).get();
 
         if (!Provedor.isVazioOuNulo(getNomeHino()))
@@ -58,6 +71,11 @@ public class CifraHinoForm {
         if (!Provedor.isVazioOuNulo(String.valueOf(getIndice()))) {
             Optional<Indice> optional = indiceRepository.findById(getIndice());
             optional.ifPresent(hino::setIndice);
+        }
+
+        if (!Provedor.isVazioOuNulo(String.valueOf(getTom()))) {
+            Optional<Nota> optionalNota = notaRepository.findById(getTom());
+            optionalNota.ifPresent(hino::setTom);
         }
 
         return hino;
