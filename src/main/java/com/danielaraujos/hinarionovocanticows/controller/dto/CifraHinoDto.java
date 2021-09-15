@@ -6,18 +6,18 @@ import org.springframework.data.domain.Page;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class HinoDto {
+public class CifraHinoDto {
 
     private Integer id;
     private String nomeHino;
-    private String conteudo;
+    private String cifra;
     private String audio;
     private Integer indice;
 
-    public HinoDto(Hino hino) {
+    public CifraHinoDto(Hino hino) {
         this.id = hino.getId();
         this.nomeHino = hino.getNomeHino();
-        this.conteudo = hino.getConteudo();
+        this.cifra = hino.getCifra();
         this.audio = hino.getAudio();
         this.indice = hino.getIndice().getId();
     }
@@ -30,8 +30,8 @@ public class HinoDto {
         return nomeHino;
     }
 
-    public String getConteudo() {
-        return conteudo;
+    public String getCifra() {
+        return cifra;
     }
 
     public String getAudio() {
@@ -42,11 +42,11 @@ public class HinoDto {
         return indice;
     }
 
-    public static Page<HinoDto> convert(Page<Hino> hinos) {
-        return hinos.map(HinoDto::new);
+    public static Page<CifraHinoDto> convert(Page<Hino> hinos) {
+        return hinos.map(CifraHinoDto::new);
     }
 
-    public static List<HinoDto> converterLista(List<Hino> hinos) {
-        return hinos.stream().map(HinoDto::new).collect(Collectors.toList());
+    public static List<CifraHinoDto> converterLista(List<Hino> hinos) {
+        return hinos.stream().map(CifraHinoDto::new).collect(Collectors.toList());
     }
 }
