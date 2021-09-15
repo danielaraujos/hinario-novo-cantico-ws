@@ -5,6 +5,7 @@ import com.danielaraujos.hinarionovocanticows.controller.form.CifraHinoForm;
 import com.danielaraujos.hinarionovocanticows.model.Hino;
 import com.danielaraujos.hinarionovocanticows.repository.HinoRepository;
 import com.danielaraujos.hinarionovocanticows.repository.IndiceRepository;
+import com.danielaraujos.hinarionovocanticows.repository.NotaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -31,6 +32,9 @@ public class CifraHinoController {
     @Autowired
     private IndiceRepository indiceRepository;
 
+    @Autowired
+    private NotaRepository notaRepository;
+
     @GetMapping
     public Page<CifraHinoDto> listarComPaginacao(@PageableDefault(sort = "id", direction = Sort.Direction.ASC, page = 0, size = 30)
                                                Pageable paginacao) {
@@ -47,7 +51,7 @@ public class CifraHinoController {
     @PostMapping
     public ResponseEntity<CifraHinoDto> cadastrar(@RequestBody @Valid CifraHinoForm form, UriComponentsBuilder uriBuilder) {
         try {
-            Hino hino = form.converter(indiceRepository);
+            Hino hino = form.converter(indiceRepository,notaRepository);
             hinoRepository.save(hino);
             URI uri = uriBuilder.path("/hinos/{id}").buildAndExpand(hino.getId()).toUri();
             return ResponseEntity.created(uri).body(new CifraHinoDto(hino));
@@ -62,7 +66,7 @@ public class CifraHinoController {
         try {
             Optional<Hino> hinoOptional = hinoRepository.findById(id);
             if (hinoOptional.isPresent()) {
-                Hino hino = form.atualizar(id, hinoRepository, indiceRepository);
+                Hino hino = form.atualizar(id, hinoRepository, indiceRepository,notaRepository);
                 return ResponseEntity.ok(new CifraHinoDto(hino));
             }
         } catch (SecurityException e) {

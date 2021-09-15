@@ -25,6 +25,10 @@ public class Hino {
     @JoinColumn(name = "codind", foreignKey = @ForeignKey(name = "FK_TSAHINO_TSAIND"))
     private Indice indice;
 
+    @ManyToOne
+    @JoinColumn(name = "tom", foreignKey = @ForeignKey(name = "FK_TSAHINO_TSANOTA"))
+    private Nota tom;
+
     public Hino() {
     }
 
@@ -35,20 +39,14 @@ public class Hino {
         this.indice = indice;
     }
 
-    /*public Hino(String nomeHino, String cifra,  String audio, Indice indice) {
+    public Hino(String nomeHino, Nota tom,  String cifra,  String audio, Indice indice) {
         this.nomeHino = nomeHino;
         this.cifra = cifra;
         this.audio = audio;
         this.indice = indice;
-    }*/
-
-    public Hino(String nomeHino, String letra, String cifra, String audio, Indice indice) {
-        this.nomeHino = nomeHino;
-        this.letra = letra;
-        this.cifra = cifra;
-        this.audio = audio;
-        this.indice = indice;
+        this.tom = tom;
     }
+
 
     public Integer getId() {
         return id;
@@ -96,6 +94,14 @@ public class Hino {
 
     public void setIndice(Indice indice) {
         this.indice = indice;
+    }
+
+    public Nota getTom() {
+        return tom;
+    }
+
+    public void setTom(Nota tom) {
+        this.tom = tom;
     }
 
     @Override
