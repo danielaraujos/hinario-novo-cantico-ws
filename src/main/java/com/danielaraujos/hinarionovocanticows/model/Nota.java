@@ -13,6 +13,10 @@ public class Nota {
     public Nota() {
     }
 
+    public Nota(String nota) {
+        this.nota = nota;
+    }
+
     public String getNota() {
         return nota;
     }
