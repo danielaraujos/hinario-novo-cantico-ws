@@ -22,8 +22,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/hinos")
-public class HinoController {
+@RequestMapping("/hinos/letras")
+public class LetraHinoController {
 
     @Autowired
     private HinoRepository hinoRepository;
@@ -31,14 +31,14 @@ public class HinoController {
     @Autowired
     private IndiceRepository indiceRepository;
 
-    @GetMapping("letras")
+    @GetMapping
     public Page<LetraHinoDto> listarComPaginacao(@PageableDefault(sort = "id", direction = Sort.Direction.ASC, page = 0, size = 30)
                                                Pageable paginacao) {
         Page<Hino> hinos = hinoRepository.findAll(paginacao);
         return LetraHinoDto.convert(hinos);
     }
 
-    @GetMapping("letras/sp")
+    @GetMapping("sp")
     public List<LetraHinoDto> listarSemPaginacao() {
         List<Hino> hinos = hinoRepository.findAll();
         return LetraHinoDto.converterLista(hinos);
