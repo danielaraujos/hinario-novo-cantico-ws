@@ -1,7 +1,8 @@
 package com.danielaraujos.hinarionovocanticows.model.Enum;
 
 public enum Modulo {
-    HINO,
+    LETRA,
+    CIFRA,
     INDICE,
     FAVORITOS,
     SUGESTAO,
