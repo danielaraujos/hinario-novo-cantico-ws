@@ -13,8 +13,11 @@ public class Hino {
     @Column(name = "nome")
     private String nomeHino;
 
-    @Column(name = "conteudo", columnDefinition = "VARCHAR2(4000)")
-    private String conteudo;
+    @Column(name = "letra", columnDefinition = "VARCHAR2(4000)")
+    private String letra;
+
+    @Column(name = "cifra", columnDefinition = "VARCHAR2(4000)")
+    private String cifra;
 
     private String audio;
 
@@ -25,9 +28,24 @@ public class Hino {
     public Hino() {
     }
 
-    public Hino(String nomeHino, String conteudo, String audio, Indice indice) {
+    public Hino(String nomeHino, String letra,  String audio, Indice indice) {
         this.nomeHino = nomeHino;
-        this.conteudo = conteudo;
+        this.letra = letra;
+        this.audio = audio;
+        this.indice = indice;
+    }
+
+    /*public Hino(String nomeHino, String cifra,  String audio, Indice indice) {
+        this.nomeHino = nomeHino;
+        this.cifra = cifra;
+        this.audio = audio;
+        this.indice = indice;
+    }*/
+
+    public Hino(String nomeHino, String letra, String cifra, String audio, Indice indice) {
+        this.nomeHino = nomeHino;
+        this.letra = letra;
+        this.cifra = cifra;
         this.audio = audio;
         this.indice = indice;
     }
@@ -48,12 +66,20 @@ public class Hino {
         this.nomeHino = nomeHino;
     }
 
-    public String getConteudo() {
-        return conteudo;
+    public String getLetra() {
+        return letra;
     }
 
-    public void setConteudo(String conteudo) {
-        this.conteudo = conteudo;
+    public void setLetra(String letra) {
+        this.letra = letra;
+    }
+
+    public String getCifra() {
+        return cifra;
+    }
+
+    public void setCifra(String cifra) {
+        this.cifra = cifra;
     }
 
     public String getAudio() {
@@ -77,7 +103,8 @@ public class Hino {
         return "Hino{" +
                 "id=" + id +
                 ", nomeHino='" + nomeHino + '\'' +
-                ", conteudo='" + conteudo + '\'' +
+                ", letra='" + letra + '\'' +
+                ", cifra='" + cifra + '\'' +
                 ", audio='" + audio + '\'' +
                 ", indice=" + indice +
                 '}';

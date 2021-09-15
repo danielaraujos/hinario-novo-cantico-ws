@@ -1,7 +1,7 @@
 package com.danielaraujos.hinarionovocanticows.controller;
 
-import com.danielaraujos.hinarionovocanticows.controller.dto.HinoDto;
-import com.danielaraujos.hinarionovocanticows.controller.form.HinoForm;
+import com.danielaraujos.hinarionovocanticows.controller.dto.LetraHinoDto;
+import com.danielaraujos.hinarionovocanticows.controller.form.LetraHinoForm;
 import com.danielaraujos.hinarionovocanticows.model.Hino;
 import com.danielaraujos.hinarionovocanticows.repository.HinoRepository;
 import com.danielaraujos.hinarionovocanticows.repository.IndiceRepository;
@@ -22,8 +22,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/hinos")
-public class HinoController {
+@RequestMapping("/hinos/letras")
+public class LetraHinoController {
 
     @Autowired
     private HinoRepository hinoRepository;
@@ -32,25 +32,25 @@ public class HinoController {
     private IndiceRepository indiceRepository;
 
     @GetMapping
-    public Page<HinoDto> listarComPaginacao(@PageableDefault(sort = "id", direction = Sort.Direction.ASC, page = 0, size = 30)
+    public Page<LetraHinoDto> listarComPaginacao(@PageableDefault(sort = "id", direction = Sort.Direction.ASC, page = 0, size = 30)
                                                Pageable paginacao) {
         Page<Hino> hinos = hinoRepository.findAll(paginacao);
-        return HinoDto.convert(hinos);
+        return LetraHinoDto.convert(hinos);
     }
 
     @GetMapping("sp")
-    public List<HinoDto> listarSemPaginacao() {
+    public List<LetraHinoDto> listarSemPaginacao() {
         List<Hino> hinos = hinoRepository.findAll();
-        return HinoDto.converterLista(hinos);
+        return LetraHinoDto.converterLista(hinos);
     }
 
     @PostMapping
-    public ResponseEntity<HinoDto> cadastrar(@RequestBody @Valid HinoForm form, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<LetraHinoDto> cadastrar(@RequestBody @Valid LetraHinoForm form, UriComponentsBuilder uriBuilder) {
         try {
             Hino hino = form.converter(indiceRepository);
             hinoRepository.save(hino);
             URI uri = uriBuilder.path("/hinos/{id}").buildAndExpand(hino.getId()).toUri();
-            return ResponseEntity.created(uri).body(new HinoDto(hino));
+            return ResponseEntity.created(uri).body(new LetraHinoDto(hino));
         } catch (SecurityException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
@@ -58,12 +58,12 @@ public class HinoController {
 
     @PutMapping("/{id}")
     @Transactional
-    public ResponseEntity<HinoDto> atualizar(@RequestBody @Valid HinoForm form, @PathVariable("id") Integer id) {
+    public ResponseEntity<LetraHinoDto> atualizar(@RequestBody @Valid LetraHinoForm form, @PathVariable("id") Integer id) {
         try {
             Optional<Hino> hinoOptional = hinoRepository.findById(id);
             if (hinoOptional.isPresent()) {
                 Hino hino = form.atualizar(id, hinoRepository, indiceRepository);
-                return ResponseEntity.ok(new HinoDto(hino));
+                return ResponseEntity.ok(new LetraHinoDto(hino));
             }
         } catch (SecurityException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
