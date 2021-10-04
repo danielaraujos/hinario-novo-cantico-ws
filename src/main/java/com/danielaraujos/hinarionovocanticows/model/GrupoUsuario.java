@@ -14,7 +14,7 @@ import java.util.List;
 public class GrupoUsuario implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "codgru", updatable = false, unique = true, nullable = false)
     private BigInteger id;
 
@@ -35,7 +35,7 @@ public class GrupoUsuario implements Serializable {
     )
     private List<Permissao> permissoes = new ArrayList<>();
 
-    @Column(name = "ativo", columnDefinition = "VARCHAR2(1)")
+    @Column(name = "ativo", columnDefinition = "VARCHAR(1)")
     @Convert(converter = ConverterBooleanParaString.class)
     private Boolean isAtivo;
 

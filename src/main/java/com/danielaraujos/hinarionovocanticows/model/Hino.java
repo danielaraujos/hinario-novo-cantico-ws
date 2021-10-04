@@ -6,17 +6,17 @@ import javax.persistence.*;
 public class Hino {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "codhino", updatable = false, unique = true, nullable = false)
     private Integer id;
 
     @Column(name = "nome")
     private String nomeHino;
 
-    @Column(name = "letra", columnDefinition = "VARCHAR2(4000)")
+    @Column(name = "letra", columnDefinition = "VARCHAR(4000)")
     private String letra;
 
-    @Column(name = "cifra", columnDefinition = "VARCHAR2(4000)")
+    @Column(name = "cifra", columnDefinition = "VARCHAR(4000)")
     private String cifra;
 
     private String audio;

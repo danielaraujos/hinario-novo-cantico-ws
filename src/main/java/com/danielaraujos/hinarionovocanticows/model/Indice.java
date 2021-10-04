@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Indice {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "codind", updatable = false, unique = true, nullable = false)
     private Integer id;
 
