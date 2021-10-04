@@ -1,158 +1,158 @@
 -- USUARIO
 
-INSERT INTO TSAUSU (CODUSU, USUARIO, NOMECOMPLETO, EMAIL , SENHA , ATIVO)
+INSERT INTO tsausu (codusu, usuario, nomecompleto, email , senha , ativo)
 VALUES (1, 'admin', 'Daniel Araujo', 'danielaraujos@live.com', '$2a$10$0tfcCTMXpriivRrC00MHbO2ndzLwlpxd7LWuz3hNb8JaihjuO4HMS', 'S');
 
 -- GRUPO
-INSERT INTO TSAGRU (CODGRU, NOMEGRUPO, ATIVO)
+INSERT INTO tsagru (codgru, nomegrupo, ativo)
 VALUES (1, 'Administrador', 'S');
 
 
 -- PERMISSOES
-insert into TSAPER (CODPER, MODULO, TIPO) values (1, 'INDICE', 'INSERT');
-insert into TSAPER (CODPER, MODULO, TIPO) values (2, 'INDICE', 'UPDATE');
-insert into TSAPER (CODPER, MODULO, TIPO) values (3, 'INDICE', 'DELETE');
-insert into TSAPER (CODPER, MODULO, TIPO) values (4, 'INDICE', 'VIEW');
+insert into tsaper (codper, modulo, tipo) values (1, 'INDICE', 'INSERT');
+insert into tsaper (codper, modulo, tipo) values (2, 'INDICE', 'UPDATE');
+insert into tsaper (codper, modulo, tipo) values (3, 'INDICE', 'DELETE');
+insert into tsaper (codper, modulo, tipo) values (4, 'INDICE', 'VIEW');
 
-insert into TSAPER (CODPER, MODULO, TIPO) values (5, 'LETRA', 'INSERT');
-insert into TSAPER (CODPER, MODULO, TIPO) values (6, 'LETRA', 'UPDATE');
-insert into TSAPER (CODPER, MODULO, TIPO) values (7, 'LETRA', 'DELETE');
-insert into TSAPER (CODPER, MODULO, TIPO) values (8, 'LETRA', 'VIEW');
+insert into tsaper (codper, modulo, tipo) values (5, 'LETRA', 'INSERT');
+insert into tsaper (codper, modulo, tipo) values (6, 'LETRA', 'UPDATE');
+insert into tsaper (codper, modulo, tipo) values (7, 'LETRA', 'DELETE');
+insert into tsaper (codper, modulo, tipo) values (8, 'LETRA', 'VIEW');
 
-insert into TSAPER (CODPER, MODULO, TIPO) values (9, 'CIFRA', 'INSERT');
-insert into TSAPER (CODPER, MODULO, TIPO) values (10, 'CIFRA', 'UPDATE');
-insert into TSAPER (CODPER, MODULO, TIPO) values (11, 'CIFRA', 'DELETE');
-insert into TSAPER (CODPER, MODULO, TIPO) values (12, 'CIFRA', 'VIEW');
+insert into tsaper (codper, modulo, tipo) values (9, 'CIFRA', 'INSERT');
+insert into tsaper (codper, modulo, tipo) values (10, 'CIFRA', 'UPDATE');
+insert into tsaper (codper, modulo, tipo) values (11, 'CIFRA', 'DELETE');
+insert into tsaper (codper, modulo, tipo) values (12, 'CIFRA', 'VIEW');
 
 
 -- VINCULA PERMISSAO COM O GRUPO
-INSERT INTO TSAGRUP (CODGRU, CODPER)
+insert into tsagrup (codgru, codper)
 VALUES (1, 1);
-INSERT INTO TSAGRUP (CODGRU, CODPER)
+insert into tsagrup (codgru, codper)
 VALUES (1, 2);
-INSERT INTO TSAGRUP (CODGRU, CODPER)
+insert into tsagrup (codgru, codper)
 VALUES (1, 3);
-INSERT INTO TSAGRUP (CODGRU, CODPER)
+insert into tsagrup (codgru, codper)
 VALUES (1, 4);
 
-INSERT INTO TSAGRUP (CODGRU, CODPER)
+insert into tsagrup (codgru, codper)
 VALUES (1, 5);
-INSERT INTO TSAGRUP (CODGRU, CODPER)
+insert into tsagrup (codgru, codper)
 VALUES (1, 6);
-INSERT INTO TSAGRUP (CODGRU, CODPER)
+insert into tsagrup (codgru, codper)
 VALUES (1, 7);
-INSERT INTO TSAGRUP (CODGRU, CODPER)
+insert into tsagrup (codgru, codper)
 VALUES (1, 8);
 
 -- VINCULA GRUPO AO USUARIO
 
-INSERT INTO TSAUSUG (CODUSU, CODGRU)
+INSERT INTO tsausug (codusu, codgru)
 VALUES (1, 1);
 
 
 -- NOTAS MUSICAIS
-INSERT INTO TSANOTA (NOTA) VALUES ('A');
-INSERT INTO TSANOTA (NOTA) VALUES ('Am');
-INSERT INTO TSANOTA (NOTA) VALUES ('Bb');
-INSERT INTO TSANOTA (NOTA) VALUES ('B');
-INSERT INTO TSANOTA (NOTA) VALUES ('Bm');
-INSERT INTO TSANOTA (NOTA) VALUES ('C');
-INSERT INTO TSANOTA (NOTA) VALUES ('C#');
-INSERT INTO TSANOTA (NOTA) VALUES ('Cm');
-INSERT INTO TSANOTA (NOTA) VALUES ('C#m');
-INSERT INTO TSANOTA (NOTA) VALUES ('D');
-INSERT INTO TSANOTA (NOTA) VALUES ('D#');
-INSERT INTO TSANOTA (NOTA) VALUES ('Dm');
-INSERT INTO TSANOTA (NOTA) VALUES ('D#m');
-INSERT INTO TSANOTA (NOTA) VALUES ('Eb');
-INSERT INTO TSANOTA (NOTA) VALUES ('E');
-INSERT INTO TSANOTA (NOTA) VALUES ('Em');
-INSERT INTO TSANOTA (NOTA) VALUES ('F');
-INSERT INTO TSANOTA (NOTA) VALUES ('F#m');
-INSERT INTO TSANOTA (NOTA) VALUES ('Fm');
-INSERT INTO TSANOTA (NOTA) VALUES ('F#');
-INSERT INTO TSANOTA (NOTA) VALUES ('G');
-INSERT INTO TSANOTA (NOTA) VALUES ('G#');
-INSERT INTO TSANOTA (NOTA) VALUES ('G#m');
-INSERT INTO TSANOTA (NOTA) VALUES ('Gm');
-INSERT INTO TSANOTA (NOTA) VALUES ('Ab');
+insert into tsanota (nota) VALUES ('A');
+insert into tsanota (nota) VALUES ('Am');
+insert into tsanota (nota) VALUES ('Bb');
+insert into tsanota (nota) VALUES ('B');
+insert into tsanota (nota) VALUES ('Bm');
+insert into tsanota (nota) VALUES ('C');
+insert into tsanota (nota) VALUES ('C#');
+insert into tsanota (nota) VALUES ('Cm');
+insert into tsanota (nota) VALUES ('C#m');
+insert into tsanota (nota) VALUES ('D');
+insert into tsanota (nota) VALUES ('D#');
+insert into tsanota (nota) VALUES ('Dm');
+insert into tsanota (nota) VALUES ('D#m');
+insert into tsanota (nota) VALUES ('Eb');
+insert into tsanota (nota) VALUES ('E');
+insert into tsanota (nota) VALUES ('Em');
+insert into tsanota (nota) VALUES ('F');
+insert into tsanota (nota) VALUES ('F#m');
+insert into tsanota (nota) VALUES ('Fm');
+insert into tsanota (nota) VALUES ('F#');
+insert into tsanota (nota) VALUES ('G');
+insert into tsanota (nota) VALUES ('G#');
+insert into tsanota (nota) VALUES ('G#m');
+insert into tsanota (nota) VALUES ('Gm');
+insert into tsanota (nota) VALUES ('Ab');
 
 
 -- INDICES
-INSERT INTO TSAIND(CODIND,NOME) VALUES (1,'Intróitos');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (2,'Deus Trino');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (3,'Deus Santo');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (4,'Deus Soberano');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (5,'Deus Criador');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (6,'Deus Providente');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (7,'Deus Fiel');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (8,'Deus Senhor');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (9,'Deus Salvador');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (10,'Deus Vencedor');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (11,'Gratidão');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (12,'Contrição e Arrependimento');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (13,'Perdão');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (14,'Espírito Instruidor');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (15,'Espírito Consolador');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (16,'Espírito Vivificador');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (17,'Amor de Deus');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (18,'Fé');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (19,'Salvação');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (20,'Testemunho');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (21,'Companhia do Senhor');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (22,'Aspiração');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (23,'Oração');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (24,'Santificação');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (25,'Proteção');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (26,'Confiança');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (27,'Fidelidade');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (28,'Fraternidade');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (29,'Esperança');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (30,'Lar Celestial');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (31,'Convite');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (32,'Decisão');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (33,'Submissão');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (34,'Dedicação');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (35,'Advento');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (36,'Natal');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (37,'Ministério');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (38,'Entrada Triunfal');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (39,'Paixão e Morte');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (40,'Ressurreição');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (41,'Ascensão');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (42,'A Grande Comissão');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (43,'Segunda Vinda');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (44,'Igreja Militante');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (45,'Evangelização');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (46,'Trabalho Cristão');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (47,'Sociedade Auxiliadora Feminina');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (48,'União Presbiteriana de Homens');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (49,'Discipulado e Serviço');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (50,'Posse de Pastor');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (51,'Bastismo');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (52,'Convertidos');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (53,'Profissão de Fé');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (54,'Ceia do Senhor');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (55,'Dia do Senhor');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (56,'Escola Dominical');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (57,'Crianças');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (58,'Despedida');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (59,'Bíblia');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (60,'Ano Novo');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (61,'Pátria');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (62,'Cidade');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (63,'Mocidade');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (64,'Casamento');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (65,'Lar Cristão');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (66,'Aniversário');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (67,'Mãe');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (68,'Final de Culto');
-INSERT INTO TSAIND(CODIND,NOME) VALUES (69,'Ofertório e Améns');
+INSERT INTO tsaind(codind,nome) VALUES (1,'Intróitos');
+INSERT INTO tsaind(codind,nome) VALUES (2,'Deus Trino');
+INSERT INTO tsaind(codind,nome) VALUES (3,'Deus Santo');
+INSERT INTO tsaind(codind,nome) VALUES (4,'Deus Soberano');
+INSERT INTO tsaind(codind,nome) VALUES (5,'Deus Criador');
+INSERT INTO tsaind(codind,nome) VALUES (6,'Deus Providente');
+INSERT INTO tsaind(codind,nome) VALUES (7,'Deus Fiel');
+INSERT INTO tsaind(codind,nome) VALUES (8,'Deus Senhor');
+INSERT INTO tsaind(codind,nome) VALUES (9,'Deus Salvador');
+INSERT INTO tsaind(codind,nome) VALUES (10,'Deus Vencedor');
+INSERT INTO tsaind(codind,nome) VALUES (11,'Gratidão');
+INSERT INTO tsaind(codind,nome) VALUES (12,'Contrição e Arrependimento');
+INSERT INTO tsaind(codind,nome) VALUES (13,'Perdão');
+INSERT INTO tsaind(codind,nome) VALUES (14,'Espírito Instruidor');
+INSERT INTO tsaind(codind,nome) VALUES (15,'Espírito Consolador');
+INSERT INTO tsaind(codind,nome) VALUES (16,'Espírito Vivificador');
+INSERT INTO tsaind(codind,nome) VALUES (17,'Amor de Deus');
+INSERT INTO tsaind(codind,nome) VALUES (18,'Fé');
+INSERT INTO tsaind(codind,nome) VALUES (19,'Salvação');
+INSERT INTO tsaind(codind,nome) VALUES (20,'Testemunho');
+INSERT INTO tsaind(codind,nome) VALUES (21,'Companhia do Senhor');
+INSERT INTO tsaind(codind,nome) VALUES (22,'Aspiração');
+INSERT INTO tsaind(codind,nome) VALUES (23,'Oração');
+INSERT INTO tsaind(codind,nome) VALUES (24,'Santificação');
+INSERT INTO tsaind(codind,nome) VALUES (25,'Proteção');
+INSERT INTO tsaind(codind,nome) VALUES (26,'Confiança');
+INSERT INTO tsaind(codind,nome) VALUES (27,'Fidelidade');
+INSERT INTO tsaind(codind,nome) VALUES (28,'Fraternidade');
+INSERT INTO tsaind(codind,nome) VALUES (29,'Esperança');
+INSERT INTO tsaind(codind,nome) VALUES (30,'Lar Celestial');
+INSERT INTO tsaind(codind,nome) VALUES (31,'Convite');
+INSERT INTO tsaind(codind,nome) VALUES (32,'Decisão');
+INSERT INTO tsaind(codind,nome) VALUES (33,'Submissão');
+INSERT INTO tsaind(codind,nome) VALUES (34,'Dedicação');
+INSERT INTO tsaind(codind,nome) VALUES (35,'Advento');
+INSERT INTO tsaind(codind,nome) VALUES (36,'Natal');
+INSERT INTO tsaind(codind,nome) VALUES (37,'Ministério');
+INSERT INTO tsaind(codind,nome) VALUES (38,'Entrada Triunfal');
+INSERT INTO tsaind(codind,nome) VALUES (39,'Paixão e Morte');
+INSERT INTO tsaind(codind,nome) VALUES (40,'Ressurreição');
+INSERT INTO tsaind(codind,nome) VALUES (41,'Ascensão');
+INSERT INTO tsaind(codind,nome) VALUES (42,'A Grande Comissão');
+INSERT INTO tsaind(codind,nome) VALUES (43,'Segunda Vinda');
+INSERT INTO tsaind(codind,nome) VALUES (44,'Igreja Militante');
+INSERT INTO tsaind(codind,nome) VALUES (45,'Evangelização');
+INSERT INTO tsaind(codind,nome) VALUES (46,'Trabalho Cristão');
+INSERT INTO tsaind(codind,nome) VALUES (47,'Sociedade Auxiliadora Feminina');
+INSERT INTO tsaind(codind,nome) VALUES (48,'União Presbiteriana de Homens');
+INSERT INTO tsaind(codind,nome) VALUES (49,'Discipulado e Serviço');
+INSERT INTO tsaind(codind,nome) VALUES (50,'Posse de Pastor');
+INSERT INTO tsaind(codind,nome) VALUES (51,'Bastismo');
+INSERT INTO tsaind(codind,nome) VALUES (52,'Convertidos');
+INSERT INTO tsaind(codind,nome) VALUES (53,'Profissão de Fé');
+INSERT INTO tsaind(codind,nome) VALUES (54,'Ceia do Senhor');
+INSERT INTO tsaind(codind,nome) VALUES (55,'Dia do Senhor');
+INSERT INTO tsaind(codind,nome) VALUES (56,'Escola Dominical');
+INSERT INTO tsaind(codind,nome) VALUES (57,'Crianças');
+INSERT INTO tsaind(codind,nome) VALUES (58,'Despedida');
+INSERT INTO tsaind(codind,nome) VALUES (59,'Bíblia');
+INSERT INTO tsaind(codind,nome) VALUES (60,'Ano Novo');
+INSERT INTO tsaind(codind,nome) VALUES (61,'Pátria');
+INSERT INTO tsaind(codind,nome) VALUES (62,'Cidade');
+INSERT INTO tsaind(codind,nome) VALUES (63,'Mocidade');
+INSERT INTO tsaind(codind,nome) VALUES (64,'Casamento');
+INSERT INTO tsaind(codind,nome) VALUES (65,'Lar Cristão');
+INSERT INTO tsaind(codind,nome) VALUES (66,'Aniversário');
+INSERT INTO tsaind(codind,nome) VALUES (67,'Mãe');
+INSERT INTO tsaind(codind,nome) VALUES (68,'Final de Culto');
+INSERT INTO tsaind(codind,nome) VALUES (69,'Ofertório e Améns');
 
 
 
 
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND, CIFRA, TOM) VALUES (1,'01 - Doxologia',
+INSERT INTO tsahino(codhino, nome, letra, audio, codind, cifra, tom) VALUES (1,'01 - Doxologia',
  'Justo é o Senhor em Seus Santos caminhos,
  Benigno em todas as Suas obras. (Bis)
  Perto está o Senhor, perto está dos que O invocam,
@@ -170,7 +170,7 @@ De todos que o invocam  (De todos que o invocam)
 C/G G   C                        F C
 Em   verdade. Aleluia! Aleluia!', 'C');
 /*
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (2,'02 - Reverência',
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (2,'02 - Reverência',
  'O Senhor está no seu santo templo,
  O Senhor está no seu santo templo!
  Cale-se diante dele toda terra,
@@ -206,7 +206,7 @@ O Rei dos céus, o Cristo cuja glória
 Enleva os santos anjos de prazer. Amém.'
 ,'03.mp3',2);
 
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (4,'04 - Culto à Trindade',
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (4,'04 - Culto à Trindade',
  '1
  Deus está no templo!
  Pai Onipotente!
@@ -237,20 +237,20 @@ INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (4,'04 - Culto �
  Que prazer conhecer
  A graça infinita!
  Sim, está no templo!','04.mp3',2);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (5,'05 - Trindade Adorada',
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (5,'05 - Trindade Adorada',
  'Glória seja ao Pai,
  Ao Filho e ao Santo Espírito,
  Como era no princípio,
  É hoje e para sempre,
  Eternamente! Amém! Amém!','05.mp3',2);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (6,'06 - Doxologia',
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (6,'06 - Doxologia',
  'A Deus, supremo Benfeitor,
  Anjos e homens dêem louvor;
  A Deus o Filho, a Deus o Pai,
  E a Deus Espírito, glória dai. Amém.','06.mp3',2);
 
 
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (7,'07 - Glória à Trindade','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (7,'07 - Glória à Trindade','1
 A ti, meu Criador,
 Dos altos céus Senhor,
 Eu quero honrar.
@@ -274,7 +274,7 @@ Com teu poder sem par,
 Oh, vem me iluminar,
 E assim, ao teu fulgor,
 Eu brilharei. Amém.','07.mp3',2);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (8,'08 - Adoração à Trindade','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (8,'08 - Adoração à Trindade','1
 Grande Deus, o teu louvor
 Hoje, unidos, entoamos;
 Teu excelso e doce amor
@@ -302,7 +302,7 @@ Pelos filhos teus aqui,
 Honra e glória sem medida.
 Infinito é o teu amor!
 Cantem todos teu louvor! Amém.','08.mp3',2);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (9,'09 - Aleluia ao Deus Trino','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (9,'09 - Aleluia ao Deus Trino','1
 A ti, ó Deus, altíssimo Senhor,
 Eterno Pai, supremo Benfeitor,
 Teus filhos vêm, alegres, dar louvor.
@@ -322,7 +322,7 @@ Aleluia! Aleluia!
 A plenitude do real poder,
 E as nossas almas vem, aqui, reger.
 Aleluia! Aleluia! Amém.','09.mp3',2);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (10,'10 - A criação e seu Criador','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (10,'10 - A criação e seu Criador','1
 Vós criaturas de Deus Pai,
 Todos erguei a voz, cantai!
 Oh! Louvai-o! Aleluia!
@@ -348,7 +348,7 @@ Oh! Louvai-o! Oh! Louvai-o!
 Aleluia! Aleluia! Aleluia!','10.mp3',2);
 
 
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (11,'11 - Trindade santíssima','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (11,'11 - Trindade santíssima','1
 Santo! Santo! Santo! Deus Onipotente!
 Louvam nossas vozes teu nome com fervor!
 Santo! Santo! Santo! Justo e compassivo!
@@ -368,13 +368,13 @@ Santo! Santo! Santo! Deus Onipotente!
 Tuas obras louvam teu nome com fervor.
 Santo! Santo! Santo! Justo e compassivo!
 Deus soberano, Excelso Criador! Amém.','11.mp3',3);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (12,'12 - Glória a Deus','Santo! Santo! Santo!
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (12,'12 - Glória a Deus','Santo! Santo! Santo!
 Deus dos exercitos,
 A terra e os céus
 Proclamam tua glória.
 Glória a ti, glória a ti, ó Deus,
 Eternamente. Amém.','12.mp3',3);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (13,'13 - Contemplação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (13,'13 - Contemplação','1
 Se nos cega o sol ardente
 Quando visto em seu fulgor,
 Quem contemplará Aquele
@@ -401,7 +401,7 @@ Para que na glória eterna
 O vejamos já sem véu,
 Cristo padeceu a morte,
 O caminho abrindo ao céu.','13.mp3',3);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (14,'14 - Louvor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (14,'14 - Louvor','1
 Vamos nós louvar a Deus, Vamos, vamos!
 Ao Senhor de toda luz, Santo, Santo!
 Cantem, louvem lá nos céus
@@ -425,7 +425,7 @@ Exaltemos com fervor, Hoje, hoje!
 Tributemos todos nós
 Hinos santos de louvor,
 Sim, louvor em alta voz, Hoje, hoje!','14.mp3',3);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (15,'15 - Doxologia','Tua , ó Deus, é toda a grandeza
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (15,'15 - Doxologia','Tua , ó Deus, é toda a grandeza
 E o poder e a glória e a vitória
 E os louvores; vitória e louvores!
 Tua, ó Deus, tua, ó Deus, é a grandeza
@@ -436,7 +436,7 @@ E está no céu e na terra é teu!
 Teu é o domínio, teu é o domínio,
 Ó Senhor! E Tu és acima de todos os reis,
 De todos os reis. Amém. Amém. Aleluia!','15.mp3',4);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (16,'16 - Louvor a Deus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (16,'16 - Louvor a Deus','1
 Louvai a Deus,
 Soberano Senhor do que é feito.
 Louvai-o, sim,
@@ -452,7 +452,7 @@ Vos defende e abençoa a porfia.
 Lembrai, também,
 Que o poderoso vos vem
 Fazer feliz companhia.','16.mp3',4);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (17,'17 - Deus seja louvado','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (17,'17 - Deus seja louvado','1
 Seja louvado o Deus supremo,
 Deus revelado em Israel!
 Onipotente, prodígios obra,
@@ -465,7 +465,7 @@ Louvor perene só Deus merece!
 Cantai, não cesse o seu louvor!
 De todos seja sempre exaltado,
 E cante a Igreja com terno amor.','17.mp3',4);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (18,'18 - Deus dos antigos','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (18,'18 - Deus dos antigos','1
 Deus dos antigos, cuja forte mão
 Rege e sustém os astros na amplidão!
 Ó Soberano, excelso Criador,
@@ -486,7 +486,7 @@ Teu povo, ó Deus, assiste me seu labor,
 No testemunho do teu grande amor.
 As nossas vidas vem fortalecer
 Para o teu nome sempre engrandecer. Amém.','18.mp3',4);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (19,'19 - Rei Sublime','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (19,'19 - Rei Sublime','1
 Ó Rei sublime em majestade e glória,
 Sobre as milícias do celeste além,
 Ouve o louvor, os hinos de vitória,
@@ -505,7 +505,7 @@ Eterno Deus, teus filhos vês prostrados
 Perante o brilho da superna luz,
 Pois do pecado foram resgatados,
 E agora rendem glórias a Jesus!','19.mp3',4);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (20,'20 - Glorificação à Trindade','A - Louvor
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (20,'20 - Glorificação à Trindade','A - Louvor
 A ti, ó Deus louvamos,
 E por nosso Senhor te confessamos!
 A ti, ó Pai da Eternidade, adora toda a terra;
@@ -552,7 +552,7 @@ Pois confiamos e esperamos em ti.
 Senhor! Em ti, em ti eu espero;
 Nunca eu seja, nunca eu seja confundido.
 Amém.','20.mp3',4);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (21,'21 - Deus de Abraão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (21,'21 - Deus de Abraão','1
 Ao Deus de Abraão louvai, do vasto céu Senhor,
 Eterno e poderoso Pai e Deus de amor!
 Augusto Jeová que terra e céu criou,
@@ -572,7 +572,7 @@ Meu Deus por si jurou, eu nele confiei!
 E para o céu que preparou eu subirei.
 Sua face eu hei de ver, confiado em seu amor,
 E para sempre engrandecer meu Redentor.','21.mp3',4);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (22,'22 - Os céus proclamam','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (22,'22 - Os céus proclamam','1
 Altamente os céus proclamam
 Seu divino Criador!
 Anunciam o firmamento
@@ -599,7 +599,7 @@ Em tua graça meditando,
 Cantarei, ó bom Senhor,
 E será na minha boca
 Agradável o teu louvor. Amém.','22.mp3',5);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (23,'23 - Adoração ao Criador','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (23,'23 - Adoração ao Criador','1
 Oh! Vinde adorar ao Deus Criador,
 Da terra e dos céus, eterno Senhor.
 Ao Deus que, habitando no meio da luz,
@@ -614,7 +614,7 @@ Oh! Vinde adorar ao Deus Salvador,
 Que, em Cristo Jesus, nos mostra favor.
 Ao Deus que, benigno, com graça e perdão,
 Pecados cobrindo nos dá redenção.','23.mp3',5);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (24,'24 - Convite ao Louvor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (24,'24 - Convite ao Louvor','1
 Vinde, irmãos, louvar a Deus,
 Criador da terra e céus.
 
@@ -632,7 +632,7 @@ Desenvolve o tenro grão.
 5
 Com os dons do seu poder
 Nossas vidas faz crescer.','24.mp3',5);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (25,'25 - O Criador de Tudo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (25,'25 - O Criador de Tudo','1
 Deus, do infinito o Criador,
 Que deste aos astros seu fulgor,
 Tuas obras te proclamam!
@@ -667,7 +667,7 @@ Ele nos deixa conhecer
 Toda extensão de seu poder
 Revelado no universo!
 Aleluia! Aleluia! Aleluia!','25.mp3',5);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (26,'26 - Ao Deus grandioso','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (26,'26 - Ao Deus grandioso','1
 Senhor meu Deus, quando eu maravilhado,
 Os grandes feitos vejo da tua mão,
 Estrelas, mundos e trovões rolando,
@@ -703,7 +703,7 @@ E então cantar eternamente ali:
 Grandioso és tu, grandioso és tu!
 E então cantar eternamente ali:
 Grandioso és tu, grandioso és tu!','26.mp3',5);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (27,'27 - Um hino ao Senhor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (27,'27 - Um hino ao Senhor','1
 As grutas, as rochas imensas,
 Dos mundos o grande esplendor,
 Proclamam bem alto, constantes
@@ -732,7 +732,7 @@ E tu, pecador que vagueias,
 Que fazes ao teu Criador?
 Não achas momento em que cantes
 Um hino de glória ao Senhor!','27.mp3',5);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (28,'28 - Coroação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (28,'28 - Coroação','1
 Tuas obras te coroam
 Como um halo de esplendor;
 Astros, anjos, céus entoam
@@ -761,7 +761,7 @@ Quais alegres peregrinos,
 Sempre em marcha triunfal,
 Cantaremos gratos hinos
 Na jornada, até o final!','28.mp3',5);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (29,'29 - Louvor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (29,'29 - Louvor','1
 Ó minha alma, a Deus bendize
 Em humilde adoração,
 Nada há mais que te escravize
@@ -792,7 +792,7 @@ Lua, estrela, sol luzente,
 Que ao espaço dais fulgor,
 Oh, louvai-o! Oh louvai-o!
 Pois é Deus de excelso amor!','29.mp3',5);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (30,'30 - Providência de Deus (na criação)','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (30,'30 - Providência de Deus (na criação)','1
 Ó Deus, ó Providência! Com teu real poder
 Trouxeste à existência o mundo, todo ser!
 E a tudo que criaste, com benfazeja mão,
@@ -819,7 +819,7 @@ Dos campos, a verdura, dos frutos, o sabor,
 Celebram a ternura do teu constante amor!
 E a natureza inteira, por toda a Criação,
 Proclama, alvissareira, a tua proteção. Amém.','30.mp3',6);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (31,'31 - Providência de Deus (na redenção)','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (31,'31 - Providência de Deus (na redenção)','1
 Ó Deus, ó Providência! Sem ti não há viver!
 Vem dar-nos a assistência do teu real poder!
 Tão só em ti confiamos e em tua proteção,
@@ -844,7 +844,7 @@ Em Cristo, o Filho amado, a tua graça vem
 Cobrir-nos o pecado e dar-nos todo o bem,
 Reais munificências gozamos nós, então,
 Nas terna providências de tua Redenção. Amém.','31.mp3',6);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (32,'32 - O Deus Fiel','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (32,'32 - O Deus Fiel','1
 Tu és fiel, Senhor, ó Pai celeste,
 Teus filhos sabem que não falharás!
 Nunca mudaste, tu nunca faltaste,
@@ -866,7 +866,7 @@ Pleno perdão tu dás! Que segurança!
 Cada momento me guias, Senhor,
 E no porvir, oh! que doce esperança!
 Desfrutarei do teu rico favor. Amém','32.mp3',7);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (33,'33 - Maravilhas divinas','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (33,'33 - Maravilhas divinas','1
 Ao Deus de amor e de imensa bondade,
 Com voz de júbilo, vinde e aclamai!
 Com coração transbordante de graças,
@@ -892,7 +892,7 @@ Como até hoje e daqui para frente,
 Ele será nosso eterno poder,
 Nosso castelo bem forte e seguro,
 E nossa fonte de excelso prazer.','33.mp3',7);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (34,'34 - Convite ao louvor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (34,'34 - Convite ao louvor','1
 Demos com alegre som
 Glória a Deus, porque ele é bom.
 
@@ -911,7 +911,7 @@ No deserto ele o guiou.
 5
 Demos com alegre som
 Glória a Deus, porque ele é bom.','34.mp3',7);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (35,'35 - Adoração e súplica','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (35,'35 - Adoração e súplica','1
 Teu culto agora, aqui, Senhor,
 Nós vimos celebrar,
 Cantando, juntos, teu louvor,
@@ -926,7 +926,7 @@ Atende nossas petições,
 Ó poderoso Deus!
 Concede aos nossos corações
 Antegozar os céus. Amém.','35.mp3',8);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (36,'36 - Exaltação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (36,'36 - Exaltação','1
 De toda a terra e das nações,
 Louvor a Cristo entoai!
 Em alta voz, dos corações,
@@ -942,7 +942,7 @@ Em toda língua bendizei
 A Deus, Autor da Criação!
 Em toda terra engrandecei
 Jesus que trouxe a Redenção!','36.mp3',8);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (37,'37 - O Santo Nome','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (37,'37 - O Santo Nome','1
 Jesus, teu nome é santo,
 Amável teu querer.
 Louvor supremo e puro amor
@@ -972,7 +972,7 @@ Glorificado estás nos céus,
 Atento à adoração
 Que vimos nós, fiéis, prestar
 Com grato coração! Amém.','37.mp3',8);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (38,'38 - Louvores sem fim','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (38,'38 - Louvores sem fim','1
 Mil vezes mil louvores rendamos a Jesus,
 Que da mais alta glória desceu até à cruz!
 Por sua imensa graça, por seu insigne amor,
@@ -993,7 +993,7 @@ Oh! Vinde agora, todos, também a celebrar
 As glórias sempiternas do Redentor sem par!
 Com vozes de vitória seu Nome proclamai!
 Mil vezes mil louvores a Cristo tributai!','38.mp3',9);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (39,'39 - Exaltação e Louvor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (39,'39 - Exaltação e Louvor','1
 Oh! Vinde crentes dar louvor ao grande Rei Jesus
 Que, para a nossa Redenção, morreu na amarga cruz;
 Seu sangue derramou, de tudo me lavou,
@@ -1014,7 +1014,7 @@ O chefe da milícia é Jesus, meu Salvador,
 O Rei dos reis, o Redentor, o eterno e bom Senhor,
 A tudo vencerá, vitória nos dará
 E à glória eterna os seus conduzirá.','39.mp3',9);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (40,'40 - Cântico ao Salvador','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (40,'40 - Cântico ao Salvador','1
 Cantai a Cristo, o Salvador,
 Que tanto nos amou
 E, para nossa Redenção,
@@ -1035,7 +1035,7 @@ De Cristo, o excelso, infindo amor,
 Oh! Vinde, publicai!
 E dele a grande salvação
 A todos proclamai!','40.mp3',9);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (41,'41 - Louvor pela Graça Divina','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (41,'41 - Louvor pela Graça Divina','1
 Louvai, louvai Cristo, o bom Mestre divino!
 Por nós na cruz ele sofreu, morreu;
 Perdão, perdão hoje aos contritos outorga,
@@ -1064,7 +1064,7 @@ Fiéis, cantai de coração, bem unidos,
 Seu poder e glória louvai, louvai!
 Qual pastor que cuida do seu rebanho,
 Cristo, assim, os crentes protegerá.','41.mp3',9);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (42,'42 - O grande amor de Deus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (42,'42 - O grande amor de Deus','1
 A Deus demos glória por seu grande amor,
 O Filho bendito por nós todos deu
 E graça concede ao mais vil pecador,
@@ -1087,7 +1087,7 @@ Tal prova de amor nos persuade a confiar
 Nos merecimentos do Filho de Deus!
 E quem, a Jesus, pela fé se entregar,
 Vai vê-lo na glória eterna dos céus.','42.mp3',9);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (43,'43 - O Deus de Amor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (43,'43 - O Deus de Amor','1
 Desperta já, meu coração
 E louva ao Salvador,
 Cantando em hinos triunfais
@@ -1123,11 +1123,11 @@ Quando ele a mim, um pecador,
 Se digna de aceitar
 E me levar com seus fiéis
 Ao santo e eterno lar?','43.mp3',9);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (44,'44 - Louvores ao Senhor','Louvemos ao Senhor, ao Pai da eternidade,
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (44,'44 - Louvores ao Senhor','Louvemos ao Senhor, ao Pai da eternidade,
 Que mostra tanto amor à pobre humanidade!
 Seu Filho aqui sofreu por nossa redenção
 E com o Pai nos deu bendita comunhão!','44.mp3',9);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (45,'45 - Grande Redenção','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (45,'45 - Grande Redenção','1
 
 Milhares de milhares ouço
 Cantando a Deus com gratidão,
@@ -1168,7 +1168,7 @@ Nos libertaste pela cruz.
 “A Deus louvai, que nos remiu,
 E filhos seus e seus herdeiros,
 Em Cristo, nos constituiu!”','45.mp3',9);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (46,'46 - Altos Louvores','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (46,'46 - Altos Louvores','1
 Altos louvores a quem triunfou!
 Jesus, padecendo, seu povo salvou.
 Morto na cruz pelos crimes do mundo,
@@ -1207,7 +1207,7 @@ Oh! Volta na glória trazendo alegria!
 A Igreja suspira, ansiosa por ti!
 Vem, ó Jesus, majestoso reinar;
 Teu povo te espera, não queiras tardar!','46.mp3',9);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (47,'47 - Louvor e glória','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (47,'47 - Louvor e glória','1
 Louvamos-te, ó Deus, pelo dom de Jesus
 Que, por nós, pecadores, morreu sobre a cruz
 
@@ -1226,7 +1226,7 @@ Que foi morto, mas vive no Reino da luz.
 4
 Louvamos-te, ó Deus, e rogamos, Senhor:
 Dá-nos sempre sentir teu poder, teu amor.','47.mp3',9);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (48,'48 - Amor e gratidão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (48,'48 - Amor e gratidão','1
 Jesus, quão infinito é teu divino amor!
 Além do nosso alcance, profundo é seu valor!
 Os céus por nós deixaste, vieste, aqui, morrer,
@@ -1237,7 +1237,7 @@ Por isso, alegremente, buscamos sempre a ti,
 Visando obedecer-te na vida breve aqui.
 Embora desprezados, com aflições e dor,
 É suave e bom servir-te, bendito Salvador! Amém.','48.mp3',9);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (49,'49 - Sempre vencendo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (49,'49 - Sempre vencendo','1
 Sempre vencendo, mui vitorioso,
 Cristo Jesus, o Senhor!
 É Soberano, Chefe bendito,
@@ -1274,7 +1274,7 @@ Senhor, desejo e te imploro
 Que me permitas lutar
 Sempre ao teu lado, invencível,
 Até meus dias findar!','49.mp3',10);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (50,'50 - Sangue precioso','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (50,'50 - Sangue precioso','1
 Cantarei a Cristo e seu excelso amor;
 Por nós baixou à terra o grande Salvado
 
@@ -1294,7 +1294,7 @@ Seu manto de justiça, alegre, vestirei.
 4
 Cantarei a Cristo! Nas nuvens voltará,
 E na celeste glória os seus receberá.','50.mp3',10);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (51,'51 - Cristo coroado','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (51,'51 - Cristo coroado','1
 A Cristo coroai, Cordeiro vencedor!
 Ouvi das hostes celestiais, dos anjos o louvor!
 Eleva a tua voz e entoa, coração
@@ -1314,7 +1314,7 @@ A Cristo coroai, das eras o Senhor,
 Dos mundos e astros da amplidão eterno Criador.
 Ao grande Redentor, que nos deu salvação,
 Eternamente tributai louvor e adoração.','51.mp3',10);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (52,'52 - Glória e coroação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (52,'52 - Glória e coroação','1
 Saudai o nome de Jesus!
 Arcanjos, adorai!
 Ao Rei que se humilhou na cruz,
@@ -1341,7 +1341,7 @@ Ao Rei divino honrai!
 A quem quebrou os vis grilhões,
 Com glória, glória, glória, glória,
 Com glória coroai!','52.mp3',10);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (53,'53 - Honra, poder, majestade','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (53,'53 - Honra, poder, majestade','1
 Honra, poder, majestade, riqueza,
 Sabedoria, domínio e grandeza,
 Ao vencedor da batalha é cantado,
@@ -1364,7 +1364,7 @@ Dai ao Cordeiro o louvor que é devido;
 No trono reina de glória vestido.
 Foi imolado - aparente fraqueza!
 Mas triunfante, já vive em grandeza','53.mp3',10);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (54,'54 - A chegada do Messias','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (54,'54 - A chegada do Messias','1
 Cantai! Exultai! O Messias chegou!
 Dissiparam-se as trevas, a aurora raiou!
 
@@ -1390,7 +1390,7 @@ Pelos seus intercede à destra de Deus
 5
 Cantai! Exultai! O Senhor voltará!
 Triunfante, glorioso, nas nuvens virá!','54.mp3',10);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (55,'55 - Alegria e gratidão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (55,'55 - Alegria e gratidão','1
 Cantai alegremente, cantai a Deus louvor;
 Trazei a ele um canto de exultação e amor
 É Deus quem faz a terra seus frutos produzir,
@@ -1407,7 +1407,7 @@ Trazei aos seus altares dos frutos que ele deu,
 E as almas da colheita por quem, Jesus morreu.
 Prostrai-vos diante dele, humildes, com louvor,
 E assim, em vossas vidas, dai graças ao Senhor!','55.mp3',11);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (56,'56 - Ações de graça e súplica','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (56,'56 - Ações de graça e súplica','1
 Graças te rendemos, Deus de luz e amor,
 Pelo dom de Cristo, nosso Salvador;
 Pelo que nos deste com bondosa mão,
@@ -1418,7 +1418,7 @@ Pelos bons amigos que, Senhor, te apraz
 Congregar conosco, nesta doce paz.
 Dá-nos sempre a graça de contigo estar,
 Dá-nos sempre o gozo de teu Nome honrar!','56.mp3',11);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (57,'57 - Fonte de todo bem','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (57,'57 - Fonte de todo bem','1
 A terra semeamos a fim de nos dar pão,
 Mas Deus é quem a nutre com benfazeja mão.
 É Deus quem manda o frio, o inverno e o verão,
@@ -1442,7 +1442,7 @@ A nós, porém, seus filhos revela mais amor,
 Mandando a este mundo o Filho Salvador!
 A nós fazendo herdeiros de tudo quanto tem,
 Na redenção perfeita que dele nos provém!','57.mp3',11);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (58,'58 - Ofertas','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (58,'58 - Ofertas','1
 A minha vida, com meus bens,
 Provém de ti, Senhor!
 Saúde, veste, abrigo e pão
@@ -1471,7 +1471,7 @@ Aceita a minha oferta, ó Deus,
 E bênçãos dá-me a flux.
 Sim, dá-me sempre o que ofertar
 À causa de Jesus! Amém.','58.mp3',11);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (59,'59 - Gratidão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (59,'59 - Gratidão','1
 Ao Deus eterno, Criador,
 Mil graças tributemos,
 Por tantos anos de labor
@@ -1501,7 +1501,7 @@ Que grandes coisas, ó Senhor,
 A todos nós legaste!
 São provas desse grande amor
 Com que Tu nos amaste. Amém.','59.mp3',11);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (60,'60 - Ofertório','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (60,'60 - Ofertório','1
 Em tudo as tuas mãos, Senhor,
 Nos têm enriquecido,
 E às provisões do teu amor,
@@ -1521,7 +1521,7 @@ Com mui sincero coração
 Oferta aqui trazemos;
 Recebe como gratidão
 De quanto a ti devemos. Amém','60.mp3',11);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (61,'61 - Ações de graça','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (61,'61 - Ações de graça','1
 Graças dou por esta vida,
 Pelo bem que revelou
 Graças dou pelo futuro
@@ -1550,7 +1550,7 @@ Pela lágrima vertida
 E o consolo que é sem par,
 Pelo dom da eterna vida,
 Sempre graças hei de dar.','61.mp3',11);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (62,'62 - Hino de gratidão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (62,'62 - Hino de gratidão','1
 Graças te dou por tudo que me deste,
 Primeiro a Salvação em meu Jesus.
 Graças te dou por tudo que fizeste
@@ -1581,7 +1581,7 @@ Eu te agradeço, ó Pai, os meus amigos,
 E os inimigos também te agradeço.
 Sou grato por vitórias em perigos,
 E outras bênçãos que eu não mereço.','62.mp3',11);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (63,'63 - As muitas bênçãos','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (63,'63 - As muitas bênçãos','1
 Se da vida as vagas procelosas são,
 Se, com desalento, julgas tudo vão,
 Conta as muitas bênçãos, dize-as de uma vez,
@@ -1612,7 +1612,7 @@ Seja o teu combate longo ou breve aqui,
 Não te desanimes Deus será por ti!
 Seu divino auxílio minorando o mal,
 Te dará consolo e galardão final','63.mp3',11);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (64,'64 - Grata memória','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (64,'64 - Grata memória','1
 Nunca meus lábios cessarão, ó Cristo,
 De bendizer-te, de cantar-te glória;
 Pois guardo na alma teu amor imenso:
@@ -1641,7 +1641,7 @@ Oh! Nunca, nunca cessarão meus lábios
 De bendizer-te, de cantar-te a glória;
 Pois em minha alma Tu és sempre, ó Cristo,
 Grata memória! Amém.','64.mp3',11);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (65,'65 - Louvor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (65,'65 - Louvor','1
 Dai graças, todos vós, a Deus humildemente;
 Milagres fez por nós neste universo ingente.
 Pois vós deveis saber que muitos bens nos deu,
@@ -1656,7 +1656,7 @@ Exaltação, louvor ao Pai, ao Filho amado
 E ao bom Consolador, que foi dos céus mandado!
 Ao grande e trino Deus, em canto triunfal,
 Tribute os hinos seus a Igreja Universal.','65.mp3',11);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (66,'66 -  Coração quebrantado','Sonda-me, ó Deus, o coração;
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (66,'66 -  Coração quebrantado','Sonda-me, ó Deus, o coração;
 Sonda-me, ó Deus, o coração;
 Prova e conhece os meus pensamentos;
 Prova e conhece os meus pensamentos;
@@ -1671,7 +1671,7 @@ E mostra-me o caminho,
 E guia os meus passos,
 Guia meus passos,
 Ó meu Salvador. Amém.','66.mp3',12);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (67,'67 - Coração quebrantado','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (67,'67 - Coração quebrantado','1
 Sonda-me, ó Deus, pois vês meu coração!
 Prova-me, ó Pai, te peço em oração.
 De todo o mal liberta-me, Senhor,
@@ -1692,7 +1692,7 @@ Lá do alto céu o avivamento vem,
 E que comece em mim seguindo além.
 O teu poder, as bênçãos, teu favor
 Concede aos que são teus, ó Pai de amor. Amém','67.mp3',12);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (68,'68 - Necessidade','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (68,'68 - Necessidade','1
 Eu creio, Senhor, na divina promessa,
 Vitórias já tive nas lutas aqui.
 Contudo, é mui certo que a gente tropeça;
@@ -1713,7 +1713,7 @@ Esforços da terra, precário destino,
 Empenho dos homens, riqueza, o que for,
 Não valem a bênção do reino divino;
 Por isso eu preciso de ti, meu Senhor. Amém.','68.mp3',12);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (69,'69 - Súplica','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (69,'69 - Súplica','1
 Salvador, Jesus bendito
 De minha alma a Redenção
 Tua graça me convida
@@ -1733,7 +1733,7 @@ Tua ovelha, nos teus braços,
 Bem segura guardarás,
 Vem livrar-me dos pecados
 E guardar-me em tua paz!','69.mp3',12);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (70,'70 - Descanso em Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (70,'70 - Descanso em Jesus','1
 Todo meu tão vil pecado
 Lanço, ó Cristo, sobre ti,
 Pois, Cordeiro imaculado,
@@ -1758,7 +1758,7 @@ E na glória eterna, ao lado
 Dos fiéis em multidão,
 Meus louvores, Cristo amado,
 Mais perfeito te serão. Amém.','70.mp3',12);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (71,'71 - Perdão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (71,'71 - Perdão','1
 Sim, sofrimento te causei, ó Deus!
 E ao meu exemplo o fraco tropeçou,
 E eu não andei nos bons caminhos teus:
@@ -1778,7 +1778,7 @@ Escuta, ó Deus, a minha oração
 E vem livrar-me do pecado vil.
 Renova este pobre coração!
 Amém, Senhor!','71.mp3',12);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (72,'72 - Purificação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (72,'72 - Purificação','1
 A minha alma está manchada
 De pecado e corrupção,
 Pois em mim não há justiça,
@@ -1803,7 +1803,7 @@ Vem, Senhor, purificar-me,
 Teu perdão receberei.
 Eu bem sei que para sempre
 Ao teu lado reinarei. Amém.','72.mp3',12);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (73,'73 - Compaixão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (73,'73 - Compaixão','1
 A ti, Senhor, Atrevo-me a chegar;
 Bem sei que sou indigno de favor.
 Contrito venho para te implorar:
@@ -1823,7 +1823,7 @@ Tão infinito, ó Deus, é teu poder!
 Tão grande, ó Pai, o teu excelso amor!
 Aos rogos meus não deixes de atender:
 Tem compaixão de mim, sou pecador! Amém','73.mp3',12);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (74,'74 - Sinceridade','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (74,'74 - Sinceridade','1
 Jesus Senhor, me achego a ti,
 Tua ira santa mereci;
 O teu favor estende aqui!
@@ -1844,7 +1844,7 @@ Oh! Vem agora Salvador,
 Livrar-me por teu grande amor,
 Pois Tu, Jesus, és meu Senhor,
 Aceita um pecador. Amém.','74.mp3',12);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (75,'75 - Arrependimento e súplica','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (75,'75 - Arrependimento e súplica','1
 Abatido em meu pecado,
 Clamo a ti, ó bom Senhor!
 Olha o pranto, o desencanto,
@@ -1871,7 +1871,7 @@ Deus clemente, Pai do crente,
 Esperança e eterna luz,
 Sê meu guia, noite e dia,
 Para a glória de Jesus. Amém.','75.mp3',12);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (76,'76 - Compaixão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (76,'76 - Compaixão','1
 Tem compaixão de mim Senhor!
 Oh, mostra o teu excelso amor,
 E, na infinita multidão
@@ -1896,7 +1896,7 @@ Vem, pois, a mim então valer,
 A meus clamores atender,
 E o coração que triste está
 De eterno gozo exultará. Amém.','76.mp3',12);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (77,'77 -  Divino Perdão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (77,'77 -  Divino Perdão','1
 Quão abençoado aquele
 Que Jesus na cruz salvou!
 Seu pecado foi coberto,
@@ -1938,7 +1938,7 @@ Mas em Cristo bem guardados,
 Para nós não há temor:
 Exultamos, exultamos
 No divino Salvador!','77.mp3',13);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (78,'78 - Perfeita expiação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (78,'78 - Perfeita expiação','1
 Sacrifícios imolados
 Sobre o sanguinoso altar
 Não tiravam os pecados;
@@ -1966,7 +1966,7 @@ Lá na cruz supremo Amigo,
 Foi lançado sobre ti!
 Vou cantando, vou cantando:
 Minha culpa estava ali','78.mp3',13);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (79,'79 - Glória ao salvador','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (79,'79 - Glória ao salvador','1
 Chegado à cruz do bom Salvador,
 Prostrado aos pés do meu Redentor,
 Ele atendeu logo ao meu clamor;
@@ -1982,7 +1982,7 @@ Que maravilha Jesus me amou!
 Tudo de graça me perdoou!
 Dos meus grilhões ele me livrou!
 Glória ao Salvador!','79.mp3',13);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (80,'80 - O amor de Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (80,'80 - O amor de Jesus','1
 Cantarei o imenso amor
 Do Senhor - amor sem fim!
 De Jesus que aqui desceu
@@ -2008,7 +2008,7 @@ Não mereço tal favor,
 Mas Jesus me soube amar;
 Quero pois com devoção
 Meu amor lhe dedicar.','80.mp3',13);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (81,'81 - Súplica ao Espírito Santo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (81,'81 - Súplica ao Espírito Santo','1
 Espírito de Deus convém
 Ao teu auxílio recorrer;
 Manancial de todo bem,
@@ -2036,7 +2036,7 @@ Opera em nós o que convém,
 Em tudo imprime o teu querer.
 Perante o céu será, então,
 Perfeita a nossa redenção. Amém.','81.mp3',14);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (82,'82 - Divino preceptor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (82,'82 - Divino preceptor','1
 Ó divino Preceptor, já sentimos teu favor!
 Ó Consolador real, tua graça é divinal.
 2
@@ -2045,7 +2045,7 @@ Encha o mundo a tua luz, guia os homens a Jesus!
 3
 Santo Espírito de Deus, que desceste lá dos céus,
 Revestindo de poder, santifica o nosso ser. Amém.','82.mp3',14);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (83,'83 - Divino instruidor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (83,'83 - Divino instruidor','1
 Ó divinal Instruidor
 Que nos mostraste o bom Senhor,
 Com tua luz e teu poder
@@ -2060,7 +2060,7 @@ Consolador, Senhor e Deus,
 Dom inefável lá dos céus.
 Revela ao mundo a tua luz,
 A Redenção que vem da cruz. Amém.','83.mp3',14);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (84,'84 - Santo Espírito','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (84,'84 - Santo Espírito','1
 Santo Espírito de amor,
 Cobre-me com teu poder!
 Purifica-me, Senhor,
@@ -2081,7 +2081,7 @@ Eu confio em ti, Senhor,
 Meu viver vem transformar!
 Quero, pois, com gratidão
 Minha vida consagrar! Amém','84.mp3',14);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (85,'85 - Espírito consolador','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (85,'85 - Espírito consolador','1
 Vero Consolador, Espírito de Deus,
 A tua paz e o teu amor revela aos que são teus.
 2
@@ -2096,7 +2096,7 @@ O pecador faze encontrar o bom Salvador Jesus.
 5
 Como água Tu serás o purificador;
 E viva fonte abrirás nos teus átrios, ó Senhor!','85.mp3',15);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (86,'86 - Espírito do Eterno Deus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (86,'86 - Espírito do Eterno Deus','1
 Espírito do Eterno Deus,
 Opera em nós.
 Espírito do Eterno Deus,
@@ -2106,7 +2106,7 @@ Quebranta-nos, consola-nos,
 Transforma-nos, transborda-nos!
 Espírito do Eterno Deus,
 Opera em nós. Amém','86.mp3',16);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (87,'87 - Alegria perene','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (87,'87 - Alegria perene','1
 Desperta e canta ao grande Deus,
 Sim, ó minha alma, com fervor,
 Pois muitos e preciosos bens
@@ -2127,7 +2127,7 @@ Eu sei que é vil meu coração;
 Propende sempre para o mal.
 Mas ele em paz me guardará
 Com seu amor que é perenal.','87.mp3',17);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (88,'88 - Amor perene','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (88,'88 - Amor perene','1
 Amavas-me, Senhor, ainda cintilante
 Não irrompera a luz ao mando Criador!
 E nem o ardente sol, rompendo no levante,
@@ -2155,7 +2155,7 @@ Ao teu decreto, ó Deus, ao teu decreto eterno,
 Ao teu amor, ó Pai, ao teu amor superno.
 Meu Deus, que amor!
 És sempre e todo amor! Amém.','88.mp3',17);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (89,'89 - Amor sacrificial','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (89,'89 - Amor sacrificial','1
 O grande amor que meu Jesus
 Por mim mostrou na rude cruz,
 Morrendo, a fim de me salvar,
@@ -2183,7 +2183,7 @@ Incomparável Salvador,
 Teu inefável, santo amor
 Que é impossível de sondar,
 Quem poderá contar?','89.mp3',17);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (90,'90 - Amor insondável','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (90,'90 - Amor insondável','1
 Quão insondável é o amor
 Do Onipotente Criador,
 O santo e eterno Deus!
@@ -2210,7 +2210,7 @@ Quão inconstante seguidor
 Descobrirás em mim! Aviva-me
 Com teu poder, pois quero te obedecer
 E amar-te até ao fim! Amém.','90.mp3',17);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (91,'91 - A fé dos antigos','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (91,'91 - A fé dos antigos','1
 Oh, viva fé que nossos pais
 Honraram sempre com valor.
 Nós cantaremos mais e mais
@@ -2231,7 +2231,7 @@ Alto pendão, sublime fé!
 Por ti queremos pelejar
 Tudo sofrendo, a morte até,
 E firmes sempre a ti honrar.','91.mp3',18);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (92,'92 - A fé contemplada','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (92,'92 - A fé contemplada','1
 Deus promete grandes coisas conceder
 A qualquer que peça, crendo que há de obter,
 Esperando, sem na fé enfraquecer.
@@ -2256,7 +2256,7 @@ Sim creiamos nos que Deus nos prometeu,
 Pois jamais desonrará o nome seu;
 Ele cumprirá promessas que nos deu.
 O Senhor a fé contemplará!','92.mp3',18);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (93,'93 - Firmeza na fé','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (93,'93 - Firmeza na fé','1
 Somente ponho a minha fé
 Na graça excelsa de Jesus,
 No sacrifício remidor,
@@ -2281,7 +2281,7 @@ Quando a trombeta ressoar,
 Irei com ele me encontrar
 E com os salvos cantarei
 Louvor eterno ao grande Rei!','93.mp3',18);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (94,'94 - A porta da salvação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (94,'94 - A porta da salvação','1
 É franca a porta divinal,
 Aberta a todo o mundo.
 Por ela o pecador mortal
@@ -2302,7 +2302,7 @@ Aberta, sim, de par em par!
 Entrai com grande urgência,
 Pois Deus a todos quer mostrar
 Real munificência.','94.mp3',19);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (95,'95 -  Somente Cristo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (95,'95 -  Somente Cristo','1
 Somente Cristo é Salvador,
 Assim reconhecemos;
 Morreu por nós, em santo amor,
@@ -2328,7 +2328,7 @@ No santo sangue de Jesus
 Confia todo crente;
 O que ele fez na dura cruz
 É sempre suficiente.','95.mp3',19);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (96,'96 - Redenção suprema','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (96,'96 - Redenção suprema','1
 O peso do pecado Jesus a si tomou;
 De Deus a justa ira na rude cruz provou.
 Pagou por teus pecados! Sofreu em teu lugar!
@@ -2343,7 +2343,7 @@ Pois Deus ergueu da morte o Redentor Jesus!
 É vivo, ressurreto, o que expirou na cruz!
 Agora, entronizado no céu, o Salvador
 É sempre o mesmo Amigo do pobre pecador.','96.mp3',19);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (97,'97 - Súplica do redimido','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (97,'97 - Súplica do redimido','1
 Meu pecado resgatado
 Foi na cruz, por teu amor!
 E da morte - triste sorte!
@@ -2364,7 +2364,7 @@ Redimida só tem vida
 A minha alma em teu amor!
 Com apreço reconheço
 Quanto devo a ti, Senhor.','97.mp3',19);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (98,'98 - Não há condenação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (98,'98 - Não há condenação','1
 “Não há condenação!”
 Assim diz o Senhor.
 Pois temos ante o tribunal
@@ -2384,7 +2384,7 @@ Teu advogado ali.
 O Cristo triunfou!
 Pagando alto preço, ali
 Na cruz nos libertou!','98.mp3',19);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (99,'99 - Louvor ao Redentor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (99,'99 - Louvor ao Redentor','1
 Minha alma, louva ao Redentor,
 Jesus, teu Rei, teu Salvador;
 Morreu na cruz, em teu lugar,
@@ -2410,7 +2410,7 @@ Vem alma aflita descansar,
 Jesus te pode perdoar!
 A ele entrega o coração
 E teu será o seu perdão.','99.mp3',20);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (100,'100 - Louvores a Cristo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (100,'100 - Louvores a Cristo','1
 Ó minha alma sem demora,
 Vem a Cristo celebrar,
 E os louvores do seu Nome
@@ -2431,7 +2431,7 @@ Foi Jesus crucificado
 E me pode, assim, salvar.
 Para sempre, para sempre
 Seus louvores vou cantar.','100.mp3',20);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (101,'101 - A voz da salvação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (101,'101 - A voz da salvação','1
 Ouvi a doce voz
 De Cristo, o Redentor,
 Chamar-me para a salvação
@@ -2452,7 +2452,7 @@ A Deus eu louvarei
 Por essa redenção,
 Pois tendo Cristo, o Redentor,
 Eu tenho a salvação','101.mp3',20);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (102,'102 - O céu com Cristo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (102,'102 - O céu com Cristo','1
 Depois que Cristo me salvou,
 Em céu o mundo se tornou;
 Até nos meio do sofrer
@@ -2472,7 +2472,7 @@ Bem pouco importa eu habitar
 Em alto monte, à beira mar,
 Em casa ou gruta, boa ou ruim,
 É Céu ali, com Cristo em mim.','102.mp3',20);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (103,'103 - Salvação em Cristo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (103,'103 - Salvação em Cristo','1
 Jesus, agora eu bem sei
 Quão grande é teu amor!
 Pois salvação me deste aqui,
@@ -2493,7 +2493,7 @@ Louvor, louvor darei a ti,
 Ó Cristo, meu Senhor!
 Profeta, Sacerdote, Rei,
 Do mundo o Salvador','103.mp3',20);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (104,'104 - Linda melodia','1Mais do que milhares é Cristo, meu bom Mestre,
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (104,'104 - Linda melodia','1Mais do que milhares é Cristo, meu bom Mestre,
 Ele é a luz do mundo, a estrela da manhã!
 É o Rei da glória, e, em meu coração,
 Contente vou cantando a divinal canção!
@@ -2510,7 +2510,7 @@ Cristo libertou-me dos males do pecado,
 E agora alegre canto, pois para o céu irei.
 Cristo resgatou-me, ele é o meu Salvador;
 Dou toda glória a ele, meu Mestre e bom Senhor.','104.mp3',20);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (105,'105 - A certeza do crente','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (105,'105 - A certeza do crente','1
 Não sei porque de Deus o amor
 A mim se revelou,
 Porque Jesus, meu Salvador,
@@ -2536,7 +2536,7 @@ Não sei se ainda longe está,
 Ou muito perto vem
 A hora em que Jesus virá
 Na glória que ele tem.','105.mp3',20);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (106,'106 - Fonte carmesim','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (106,'106 - Fonte carmesim','1
 Há uma fonte carmesim
 Que meu Jesus abriu,
 No dia em que na cruz, por mim
@@ -2557,7 +2557,7 @@ A sua morte sobre a cruz
 Traz vida imortal!
 E vou morar com Cristo em luz
 Na glória celestial.','106.mp3',20);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (107,'107 - Ao pé da cruz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (107,'107 - Ao pé da cruz','1
 Quero estar ao pé da cruz,
 Que tão rica fonte
 Corre franca, salutar,
@@ -2583,7 +2583,7 @@ Junto à cruz ardendo em fé,
 Sem temor vigio;
 Firme, até a Pátria ver,
 Santa, além do rio.','107.mp3',21);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (108,'108 - Aflição e paz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (108,'108 - Aflição e paz','1
 Se paz a mais doce me deres gozar
 Se dor a mais forte sofrer,
 Oh, seja o que for, Tu me fazes saber
@@ -2607,7 +2607,7 @@ A vinda eu anseio do meu Salvador,
 Em breve virá me levar
 Ao céu, onde eu vou para sempre morar
 Com remidos na luz do Senhor!','108.mp3',21);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (109,'109 - O bom Pastor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (109,'109 - O bom Pastor','1
 Quero o Salvador comigo,
 Ao seu lado sempre andar.
 Quero tê-lo muito perto,
@@ -2633,7 +2633,7 @@ Quero o Salvador comigo,
 Sábio guia e Bom Pastor
 Nessa vida e além da morte,
 Longe de perigo e dor.','109.mp3',21);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (110,'110 - A vida com Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (110,'110 - A vida com Jesus','1
 Um dia Cristo achou-me
 Mui longe do meu lar,
 Perdido já no mundo,
@@ -2667,7 +2667,7 @@ Não há no mundo inteiro
 Um outro companheiro
 Que mostre tanto zelo
 Voltando para o lar.','110.mp3',21);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (111,'110-A - Crer e observar','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (111,'110-A - Crer e observar','1
 Em Jesus confiar, sua lei observar,
 Oh, que gozo, que bênção, que paz!
 Satisfeito guardar tudo quanto ordenar
@@ -2691,7 +2691,7 @@ Resoluto, Senhor, e com zelo e fervor,
 Os teus passos queremos seguir!
 Teus preceitos guardar, o teu nome exaltar,
 Sempre a tua vontade cumprir.','111.mp3',21);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (112,'111 - Comunhão Divina','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (112,'111 - Comunhão Divina','1
 Comigo estás, ó Deus, a noite vem!
 As trevas crescem e o temor também!
 Socorro tenho e vera proteção,
@@ -2711,7 +2711,7 @@ Pois em meu ser fizeste habitação.
 Em Cristo os mortos vão ressuscitar!
 No Reino eterno há gozo e exultação,
 E com Jesus eterna habitação. Amém.','112.mp3',21);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (113,'112 - Rica promessa','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (113,'112 - Rica promessa','1
 “Não temas! Contigo eu sempre estarei!”
 Oh, rica promessa do bondoso Rei!
 Qual astro que brilha na escuridão,
@@ -2730,7 +2730,7 @@ E se pelas águas tiver de passar,
 Seus braços eternos hão de me guardar!
 Sim, mesmo no fogo que me vem provar,
 Meu Senhor me promete sempre comigo estar.','113.mp3',21);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (114,'113 - Achei um bom amigo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (114,'113 - Achei um bom amigo','1
 Achei um bom Amigo, Jesus, o Salvador,
 Dos milhares o escolhido para mim.
 Ele é a luz do mundo, o forte Mediador,
@@ -2755,7 +2755,7 @@ Está sempre ao meu lado, e me protegerá,
 Até quando face a face o possa ver!
 Então, aos céus subindo, na glória eu me verei
 Com Jesus, meu Salvador, morando, enfim.','114.mp3',21);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (115,'114 - Brilho celeste','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (115,'114 - Brilho celeste','1
 Peregrinando por sobre os montes,
 E pelos vales, sempre na luz,
 Cristo promete nunca deixar-me,
@@ -2776,7 +2776,7 @@ A luz bendita me vai guiando
 Em meu caminho para a Mansão;
 Mais e mais perto seguindo o Mestre,
 Possuo o gozo da salvação','115.mp3',21);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (116,'115 - Unido com Cristo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (116,'115 - Unido com Cristo','1
 Com Cristo unido na morte da cruz,
 Eu gozo as bênçãos do reino da luz!
 Cheio da graça que ali corre a flux,
@@ -2802,7 +2802,7 @@ Nas minhas lutas me pode amparar
 E do maligno também me livrar!
 Cada momento, por onde eu andar,
 Cristo, meu Mestre, me pode guiar!','116.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (117,'116 - União com Deus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (117,'116 - União com Deus','1
 Mais perto quero estar, meu Deus de ti,
 Inda que seja a dor que me una a ti!
 Sempre hei de suplicar: “Mais perto quero estar,
@@ -2822,7 +2822,7 @@ E quando a morte, enfim, me vier chamar,
 Nos céus, com o Senhor, irei morar!
 Então me alegrarei, perto de ti meu Rei!
 Perto de ti meu Rei, meu Deus, de ti! Amém.','117.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (118,'117 - Pastor divino','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (118,'117 - Pastor divino','1
 Eis-nos, ó Pastor divino,
 Todos juntos num lugar,
 Como ovelhas congregados,
@@ -2843,7 +2843,7 @@ Vem encher o teu rebanho
 De sincera gratidão!
 Cantaremos, cantaremos
 Tua imensa compaixão. Amém.','118.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (119,'118 - Esperando em Deus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (119,'118 - Esperando em Deus','1
 Qual suspira a corça inquieta
 Pelas águas a bramir,
 Tua divinal presença
@@ -2879,7 +2879,7 @@ Ele as ondas más quebranta,
 Nos seus braços te levanta.
 Ó minha alma, sem temor,
 Canta a Deus o teu louvor. Amém','119.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (120,'119 - Súplica pelo culto','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (120,'119 - Súplica pelo culto','1
 Fala, ó Deus, agora pela pregação,
 Despertando em todos santa inspiração!
 2
@@ -2891,7 +2891,7 @@ Pela boa-nova do teu pregador!
 4
 Torna-a instrumento da verdade e luz,
 Do amor e graça que vêm de Jesus. Amém.','120.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (121,'120 - Dependência','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (121,'120 - Dependência','1
 Careço de Jesus, de ti, meu Salvador!
 Somente a tua voz tem para mim valor.
 
@@ -2909,7 +2909,7 @@ Sem ti a vida é vã, sou pobre sem Jesus.
 4
 Careço de Jesus! Viver desejo aqui,
 Ligado mais e mais, ó Salvador a ti! Amém.','121.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (122,'121 - Perfeição','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (122,'121 - Perfeição','1
 Mais pureza dá-me, mais horror ao mal,
 Mais calma em pesares, mais alto ideal;
 Mais fé no meu Mestre, mais consagração,
@@ -2924,7 +2924,7 @@ Mais confiança dá-me, mais força em Jesus,
 Mais do seu domínio, mais da sua luz;
 Mais rica esperança, mais obras aqui,
 Mais ânsias da Glória, mais vida em ti.Amém.','122.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (123,'122 - Necessitado','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (123,'122 - Necessitado','1
 À minha voz, ó Deus, atende,
 Pois noite e dia clamo a ti!
 Tão débil sou, tão pobre aqui,
@@ -2954,7 +2954,7 @@ Rejubilando em tua paz.
 De todo o mal os guardarás
 Pois tua Lei, ó Deus, conhecem
 E te obedecem. Amém.','123.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (124,'123 - Grande amor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (124,'123 - Grande amor','1
 Ó Senhor, que a tudo excedes,
 Dom celeste, amor sem par,
 Oh, coroa de favores
@@ -2981,7 +2981,7 @@ Abençoa todo crente,
 Ilumina-lhe o andar,
 E que todos se comprazam
 Em teu Nome proclamar. Amém.','124.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (125,'124 - Benigna luz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (125,'124 - Benigna luz','1
 Benigna luz, os passos vacilantes
 Me vem guiar!
 É noite escura, e vejo os céus distantes,
@@ -3002,7 +3002,7 @@ Descansarei, vencido o trilho escuro,
 No doce lar.
 Ali verei, na luz da eterna aurora,
 A tua face que não vejo agora. Amém','125.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (126,'125 - Sempre veraz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (126,'125 - Sempre veraz','1
 Sempre veraz serei, pois me acreditem;
 Forte serei, pois muito há que sofrer;
 Puro serei, no exemplo do meu Mestre,
@@ -3017,7 +3017,7 @@ Para que eu seja sempre assim, ó Cristo,
 Vem dominar, mudar meu coração.
 Pois eu bem sei dos laços em que caio,
 Se não contar com tua proteção! Amém.','126.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (127,'126 - Dependência','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (127,'126 - Dependência','1
 De ti, meu bom Senhor,
 Eu tenho precisão;
 Só teu divino amor
@@ -3037,7 +3037,7 @@ Vencendo a tentação
 Contente viverei
 Na tua proteção,
 Ó meu bendito Rei! Amém.','127.mp3',22);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (128,'127 - Hora bendita','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (128,'127 - Hora bendita','1
 Bendita hora de oração,
 Que acalma o aflito coração,
 O qual por meio de Jesus,
@@ -3064,7 +3064,7 @@ E, enfim, no resplendor de Deus,
 Na glória dos mais altos céus,
 Lembrar-me-ei, com gratidão,
 Das horas suaves de oração.','128.mp3',23);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (129,'128 - Comunhão preciosa','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (129,'128 - Comunhão preciosa','1
 Preciosas são as horas
 Na presença de Jesus!
 Comunhão deliciosa
@@ -3100,7 +3100,7 @@ Procurai estar sozinhos
 Em conversa com Jesus,
 Provareis na vossa vida
 O poder que vem da cruz. (bis)','129.mp3',23);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (130,'129 - Vigilância e oração','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (130,'129 - Vigilância e oração','1
 Bem de manhã, embora o céu sereno
 Pareça um dia calmo anunciar,
 Vigia e ora: o coração pequeno
@@ -3124,7 +3124,7 @@ E sem cessar vigia a todo instante,
 Pois o inimigo ataca sem parar;
 Só com Jesus, em comunhão constante,
 Podemos sempre descansar','130.mp3',23);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (131,'130 - Oração ao Senhor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (131,'130 - Oração ao Senhor','1
 Dirijo a ti,Senhor, minha oração;
 Eu sei que tudo vês no coração.
 A ti venho adorar, a graça suplicar,
@@ -3144,7 +3144,7 @@ Atende, ó meu Senhor, minha oração,
 Que humilde sobe a ti com gratidão
 Imploro, meu Senhor, por Cristo, o Mediador,
 Que sempre em teu amor possa eu viver. Amém.','131.mp3',23);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (132,'131 - Vida santificada','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (132,'131 - Vida santificada','1
 Para seres santo, tempo hás de tomar;
 Com o grande Mestre, seu Livro estudar;
 Hás de sempre amá-lo, aos fiéis valer,
@@ -3164,7 +3164,7 @@ Para seres útil, tempo hás de guardar!
 Ser calmo e paciente, em todo lugar.
 Ter a sua graça, e mostrar amor,
 Contente e submisso aos pés do Senhor,','132.mp3',24);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (133,'132 - Vivificação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (133,'132 - Vivificação','1
 Tu, que sobre a amarga cruz
 Revelaste teu amor,
 Tu que vives, ó Jesus,
@@ -3191,7 +3191,7 @@ Vem agora consumir
 Tudo quanto, ó Salvador,
 Quer altivo resistir
 Ao teu brando e santo amor. Amém.','133.mp3',24);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (134,'133 - Aspiração à santidade','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (134,'133 - Aspiração à santidade','1
 Puro, sim, mais puro eu desejo ser!
 Santo, sim, mais santo, sempre em meu viver!
 Ó Senhor, te peço nesta oração:
@@ -3206,7 +3206,7 @@ Justo, sim, mais justo quem me dera ser!
 Reto, sim, mais reto em meu proceder.
 Cristo é meu modelo, sempre o seguirei;
 Tudo quanto almejo nele encontrarei.','134.mp3',24);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (135,'134 - Riquezas do céu','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (135,'134 - Riquezas do céu','1
 Oh! Buscai, não as riquezas
 Deste mundo de incertezas!
 As do céu não têm tristezas:
@@ -3226,7 +3226,7 @@ Sim, buscai o Deus Bendito,
 Cujo amor é inaudito,
 Inefável, infinito:
 Oh, buscai-o! Sim, buscai!','135.mp3',24);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (136,'135 - Mais de Cristo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (136,'135 - Mais de Cristo','1
 Mais de Cristo eu quero ter,
 Seu ensino receber,
 Ter da sua compaixão
@@ -3242,7 +3242,7 @@ Mais de Cristo eu quero ouvir
 Nos seu passos prosseguir,
 Sempre perto dele andar,
 Seu amor manifestar.','136.mp3',24);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (137,'136 - Rocha eterna','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (137,'136 - Rocha eterna','1
 Rocha eterna, meu Jesus,
 Quero em ti me refugiar!
 O teu sangue lá na cruz,
@@ -3263,7 +3263,7 @@ E no Trono eu te encontrar,
 Teu chamado a responder;
 Rocha eterna, espero ali
 Abrigar-me, salvo em ti! Amém.','137.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (138,'137 - Abrigo no temporal','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (138,'137 - Abrigo no temporal','1
 Rochedo forte é o Senhor,
 Refúgio na tribulação!
 Constante e firme amparador,
@@ -3289,7 +3289,7 @@ Leal Amigo e Benfeitor,
 Auxílio na tribulação!
 Fiel e eterno Salvador,
 Auxílio na tribulação!','138.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (139,'138 - Refúgio','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (139,'138 - Refúgio','1
 Ó Bondoso Salvador!
 Sê Tu meu amparador!
 Negras ondas de aflição,
@@ -3316,7 +3316,7 @@ Enche o débil coração,
 Com os dons da salvação,
 E seguro, sem temor,
 Gozarei do teu favor. Amém.','139.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (140,'139 - O socorro do crente','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (140,'139 - O socorro do crente','1
 Para os altos montes olharei,
 Quem me socorrerá?
 Do meu divino protetor
@@ -3341,7 +3341,7 @@ Os inimigos dos fiéis
 Os querem assustar!
 O protegido por Jesus
 Sem medo deve andar.','140.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (141,'140 - Jornada do crente','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (141,'140 - Jornada do crente','1
 Guia, ó Deus, a minha sorte
 Nesta peregrinação.
 Frágil sou mas Tu és forte,
@@ -3366,7 +3366,7 @@ Ao Jordão, enfim, chegado,
 Dá-me tua mão, Senhor,
 E seguro, no outro lado,
 Cantarei o teu louvor. Amém.','141.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (142,'141 - Guia divino','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (142,'141 - Guia divino','1
 Guia Cristo a minha nau
 Sobre o revoltoso mar
 Que, enfurecido e mau,
@@ -3387,7 +3387,7 @@ Que me possa deleitar
 E ouvir-te assim dizer:
 “Entra, pobre viajor,
 No descanso do Senhor.” Amém.','142.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (143,'142 - O fiel pastor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (143,'142 - O fiel pastor','1
 Fiel e bom Pastor é meu Senhor Jesus,
 E nada poderá faltar por onde me conduz.
 A pasto verde e bom conduz meu caminhar,
@@ -3402,7 +3402,7 @@ Eu tenho proteção no braço do Senhor,
 E sempre me consolará Jesus, o Salvador.
 Bondade e Graça, pois, aqui me seguirão,
 E na presença do Senhor terei habitação.','143.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (144,'143 - Salmo 23','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (144,'143 - Salmo 23','1
 Deus é meu Pastor mui terno,
 Nada, pois, me faltará.
 Com seu santo amor eterno
@@ -3447,7 +3447,7 @@ Sempre a me seguir terei,
 
 E no lar da eternidade
 Mui feliz habitarei.','144.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (145,'144 - Segurança e alegria','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (145,'144 - Segurança e alegria','1
 Que segurança tenho em Jesus,
 Pois nele gozo paz, vida e luz!
 Com Cristo herdeiro, Deus me aceitou
@@ -3468,7 +3468,7 @@ Firmado em Cristo, no seu amor,
 Estou contente em meu Salvador!
 Esperançoso hei de viver
 Por Jesus Cristo, por seu poder.','145.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (146,'145 - Refúgio verdadeiro','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (146,'145 - Refúgio verdadeiro','1
 Seguro estou, não tenho temor do mal!
 Sim, guardado pela fé em meu Jesus.
 Não posso duvidar desse amor leal
@@ -3501,7 +3501,7 @@ Nunca o deixarei, mas fiel serei,
 Sempre firme, cheio de fervor!
 Estando bem firmado em Jesus, meu Rei,
 Sigo avante, confiando em seu amor.','146.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (147,'146 - Segurança do crente','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (147,'146 - Segurança do crente','1
 Oh! Quão preciosa e rica promessa
 De Jesus Cristo, celeste Rei.
 Ao que confia na sua graça
@@ -3522,7 +3522,7 @@ Inda que indigno foste escolhido,
 Jamais vacile, porque te amei.
 Quem dos meus braços pode arrancar-te?
 Seguro sempre te guardarei!','147.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (148,'147 - Vencendo vem Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (148,'147 - Vencendo vem Jesus','1
 Quando a alma sequiosa
 Chega à voz do Salvador,
 Eis que logo reconhece
@@ -3552,7 +3552,7 @@ Os modernos fariseus.
 Mas se alguém procura ver-nos
 Sem a graça do bom Deus,
 Vencendo vem Jesus!','148.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (149,'148 - Oração noturna','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (149,'148 - Oração noturna','1
 Finda-se este dia que meu Pai me deu,
 Sombras vespertinas cobrem já o céu.
 Ó Jesus bendito, se comigo estás,
@@ -3572,7 +3572,7 @@ Pelos pais e amigos, pela santa Lei,
 Pelo amor divino, graças te darei!
 Ó Jesus, aceita minha petição,
 E, seguro durmo sem perturbação Amém.','149.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (150,'149 - Verdadeira redenção','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (150,'149 - Verdadeira redenção','1
 Eu confio em meu Jesus
 E seguro estou!
 Pois morrendo sobre a cruz,
@@ -3598,7 +3598,7 @@ Lá nos céus eu viverei
 Com o Salvador;
 Plenamente fruirei
 Do seu grande amor.','150.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (151,'150 - Salvação perfeita','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (151,'150 - Salvação perfeita','1
 Livres do medo! Já resgatados!
 Cristo morreu por nossos pecados!
 Na sua cruz o pacto se fez,
@@ -3623,7 +3623,7 @@ Filhos de Deus - oh, gozo inaudito!
 Deus nos amou em grau infinito.
 Nesta clemência não há dobrez,
 Há segurança de uma vez!','151.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (152,'151 - O bom Pastor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (152,'151 - O bom Pastor','1
 Pelos bosques e campinas
 Pastoreia o bom Jesus.
 Junto às águas cristalinas
@@ -3653,7 +3653,7 @@ Certamente que a bondade
 Toda a vida fruirei.
 E no céu felicidade
 Para sempre gozarei!','152.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (153,'152 - Onisciência divina','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (153,'152 - Onisciência divina','1
 Tu me sondaste a mim, ó Deus,
 Não há segredo aos olhos teus!
 Prevês por onde quero andar,
@@ -3668,7 +3668,7 @@ Pois infinito é teu saber.
 Vem dominar meu coração;
 Vem controlar o meu sentir,
 E minha vida conduzir. Amém.','153.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (154,'153 - Amparo divino','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (154,'153 - Amparo divino','1
 Com tua mão segura bem a minha,
 Pois eu tão frágil sou, ó Salvador,
 Que não me atrevo a dar jamais um passo
@@ -3688,7 +3688,7 @@ Quando voltares lá dos céus descendo,
 Segura bem a minha mão, Senhor!
 E, meu Jesus, conduze-me contigo
 Para onde eu goze teu eterno amor. Amém.','154.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (155,'154 - Segurança e paz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (155,'154 - Segurança e paz','1
 Pelo vale escuro seguirei, Jesus,
 Mas por ti seguro, vendo a tua luz,
 O meu passo incerto Tu dirigirás!
@@ -3708,7 +3708,7 @@ Breve a noite desce, noite de Emaús!
 E meu ser carece de te ver, Jesus!
 Companheiro amigo, que ao meu lado vens,
 Sim estás comigo, sempre me sustém. Amém.','155.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (156,'155 - Castelo forte','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (156,'155 - Castelo forte','1
 Castelo forte é nosso Deus,
 Espada e bom escudo!
 Com seu poder defende os seus
@@ -3748,7 +3748,7 @@ Família., bens, prazer,
 Se tudo se acabar
 E a morte enfim chegar,
 Com ele reinaremos!','156.mp3',25);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (157,'156 - Confiança em Deus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (157,'156 - Confiança em Deus','1
 Descansa, ó alma, eis o Senhor ao lado;
 Paciente leva, e sem queixar-te, a cruz;
 Deixa o Senhor tomar de ti cuidado,
@@ -3769,7 +3769,7 @@ Sem dor, nem mágoas gozarás cantando
 As alegrias do celeste lar!
 Descansa, ó alma; agora há pranto e dor
 Depois o gozo, a paz, o céu de amor. Amém.','157.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (158,'157 - Segurança em Cristo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (158,'157 - Segurança em Cristo','1
 Por meus delitos expirou
 Jesus, a vida e luz!
 Do meu pecado me livrou
@@ -3789,7 +3789,7 @@ Sim, eu desejo aqui cantar
 Tão grande Salvador,
 E quando lá no céu chegar
 Louvá-lo-ei melhor. Amém.','158.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (159,'158 - Conforto e luz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (159,'158 - Conforto e luz','1
 Vai, alma tristonha, teu pranto depor!
 Põe os teus cuidados nas mãos do Senhor!
 Ao Mestre confia toda essa aflição,
@@ -3804,7 +3804,7 @@ Há tantos que choram dor muito maior;
 Há corações tristes por culpa e temor.
 Vai! Leva a mensagem de perdão e luz!
 Vai! Deixa as tristezas aos pés de Jesus!','159.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (160,'159 - Bondoso amigo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (160,'159 - Bondoso amigo','1
 Quão bondoso Amigo é Cristo,
 Revelou-nos seu amor;
 E nos diz que lhe entreguemos
@@ -3831,7 +3831,7 @@ Derramou precioso sangue
 Para nos purificar!
 Gozo, em vida e no futuro,
 Já podemos alcançar!','160.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (161,'160 - Cristo é tudo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (161,'160 - Cristo é tudo','1
 Nome algum, no céu, na terra,
 Se compara ao de Jesus!
 Ele sobre tudo reina,
@@ -3856,7 +3856,7 @@ Infinita é sua graça,
 Impossível de sondar!
 Com os santos anjos quero
 A Jesus louvores dar.','161.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (162,'161 - O melhor amigo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (162,'161 - O melhor amigo','1
 Sei que o melhor Amigo é Cristo!
 Quando a tempestade assalta a fé,
 Pronto estende a sua mão,
@@ -3894,7 +3894,7 @@ Do pecado me salvou,
 Para o céu me preparou.
 Sim, o melhor Amigo é Cristo!
 ','162.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (163,'162 - A voz de Deus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (163,'162 - A voz de Deus','1
 Quando a tempestade ruge
 Com o seu feroz bramir,
 Quando as nuvens se acumulam,
@@ -3928,7 +3928,7 @@ Qual um som que se repete
 Nas quebradas a rolar,
 Ao aflito e contristado
 Tua voz vem consolar.','163.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (164,'163 - Direção divina','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (164,'163 - Direção divina','1
 As tuas mãos dirigem meu destino!
 Ó Deus de amor que seja sempre assim!
 Teus são os meus poderes, minha vida;
@@ -3955,7 +3955,7 @@ Encontro em seu poder constante apoio,
 Forte é seu braço, insone o seu amor;
 Por fim, entrando na cidade eterna,
 Eu louvarei meu guia e Salvador. Amém.','164.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (165,'164 - Nome precioso','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (165,'164 - Nome precioso','1
 Santo nome, incomparável,
 Tem Jesus, o amado teu!
 Rei dos reis, Senhor eterno,
@@ -3976,7 +3976,7 @@ Este Nome leva sempre
 Para bem te defender!
 Ele é arma ao teu alcance,
 Quando o mal te aparecer.','165.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (166,'165 - Cuidado divino','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (166,'165 - Cuidado divino','1
 Não desanimes! Deus proverá!
 Deus velará por ti!
 Com suas asas te cobrirá,
@@ -4002,7 +4002,7 @@ Como estiveres, não temas, vem!
 Deus velará por ti.
 Teu Pai bondoso te espera além,
 Deus velará por ti.','166.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (167,'166 - Luz e vida','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (167,'166 - Luz e vida','1
 És da minha alma a luz Senhor!
 Vem dissipar o meu temor!
 Noite não há se perto estás,
@@ -4022,7 +4022,7 @@ E desde cedo, ao despertar,
 O nosso passo vem guiar!
 Na imensidão do teu amor
 Vem nos guardar, ó Salvador. Amém.','167.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (168,'167 - Cristo, esperança nossa','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (168,'167 - Cristo, esperança nossa','1
 “Cristo esperança nossa!”
 Vinde, ó salvos proclamar!
 Ele é eterno Deus bendito,
@@ -4046,7 +4046,7 @@ Combatamos sem temor.
 Nossa grande esperança
 É o Cristo Salvador,
 É o Cristo salvador!','168.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (169,'168 - Jesus amado','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (169,'168 - Jesus amado','1
 Quão doce fala ao coração
 Do pobre pecador
 O nome que lhe traz perdão:
@@ -4066,7 +4066,7 @@ Jesus, meu Rei, meu Salvador,
 Teu Nome quero ter
 Não só nos lábios, com fervor,
 Mas sempre no viver! Amém.','169.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (170,'169 - Grata confiança','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (170,'169 - Grata confiança','1
 No poder do Deus bendito,
 Vai tudo bem!
 Se amor é infinito,
@@ -4111,7 +4111,7 @@ Pelo sangue resgatados,
 E do mundo separados,
 Sempre por Jesus guardados,
 Vai tudo bem!','170.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (171,'170 - Redentor onipotente','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (171,'170 - Redentor onipotente','1
 Redentor Onipotente
 Poderoso Salvador,
 Advogado Onisciente
@@ -4138,7 +4138,7 @@ Porta aberta, sempre aberta,
 Conduzindo à salvação,
 Rica fonte donde emana
 Gozo, paz, consolação!','171.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (172,'171 - Deus proverá','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (172,'171 - Deus proverá','1
 Na forte aflição, perigo e dor,
 Na vil traição, no horrendo terror,
 Com toda a certeza vitória virá!
@@ -4163,7 +4163,7 @@ Na hora final, a morte a chegar,
 A voz divinal nos há de alegrar!
 Minha alma, segura, então cantará
 A doce esperança: “Meu Deus proverá.”','172.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (173,'172 - Chuvas de bençãos','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (173,'172 - Chuvas de bençãos','1
 Chuvas de bênçãos teremos
 Pelas promessas de Deus;
 Tempos benditos trazendo
@@ -4188,7 +4188,7 @@ Chuvas de bênçãos teremos,
 Chuvas mandadas dos céus,
 Bênçãos a todos os crentes,
 Bênçãos do nosso bom Deus.','173.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (174,'173 - Oração vespertina','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (174,'173 - Oração vespertina','1
 Vai fugindo o dia, breve a noite vem;
 Vespertina estrela já se avista além.
 2
@@ -4200,7 +4200,7 @@ Em tuas mãos entregues, hemos de dormir.
 4
 E quando acordarmos, faze, ó bom Senhor,
 Que nós te sirvamos com maior vigor. Amém.','174.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (175,'174 - Poderoso salvador','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (175,'174 - Poderoso salvador','1
 Confio em ti, meu Senhor,
 Contigo seguro eu estou
 Os ímpios vieste buscar!
@@ -4218,7 +4218,7 @@ Por mim padeceste na cruz!
 Teu sangue me pode livrar!
 Tu és poderoso, Tu és poderoso,
 E podes guardar! Amém.','175.mp3',26);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (176,'175 - O servo do Senhor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (176,'175 - O servo do Senhor','1
 Quão bem aventurado o servo do Senhor,
 Que não faz aliança com o desprezador!
 2
@@ -4242,7 +4242,7 @@ E sua Igreja inteira na glória receber.
 8
 Então, os que desprezam o grande Salvador
 Perecerão malditos diante do Senhor.','176.mp3',27);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (177,'176 - Fidelidade do cristão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (177,'176 - Fidelidade do cristão','1
 Sempre fiéis, sim a ti nós seremos,
 Por tua graça, bendito Senhor!
 Sempre fiéis, nós por ti lutaremos
@@ -4262,7 +4262,7 @@ Nós te louvamos, pois Tu, que venceste,
 Sempre em triunfo nos podes levar.
 A teus fiéis, ó Jesus, prometeste
 Todos os dias com ele estar. Amém.','177.mp3',27);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (178,'177 - Firme nas promessas','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (178,'177 - Firme nas promessas','1
 Firme nas promessas do meu Salvador,
 Cantarei louvores ao meu Criador!
 Fico, pelos séculos do seu amor,
@@ -4288,7 +4288,7 @@ Firme nas promessas do Senhor Jesus,
 Em amor ligado sempre à sua cruz!
 Cada dia mais me alegro em sua luz,
 Firme nas promessas de Jesus!','178.mp3',27);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (179,'178 - A excelência do amor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (179,'178 - A excelência do amor','1
 Qual o adorno desta vida?
 É o amor, é o amor.
 Alegria é concedida
@@ -4324,7 +4324,7 @@ O supremo Deus nos ama;
 Cristo para o céu nos chama,
 Cristo para o céu nos chama,
 Onde reina este amor.','179.mp3',28);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (180,'179 - Saudação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (180,'179 - Saudação','1
 Saudamo-vos, irmãos em Cristo,
 Lembrando o que temos visto:
 Nesses anos, pelas lutas, tentações.
@@ -4350,7 +4350,7 @@ Ele como filhos seus nos escolheu
 Ricas bênçãos ele já nos concedeu.
 Seja “avante” o nosso lema triunfal,
 Pois seguimos para o lar celestial.','180.mp3',28);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (181,'180 - Amor fraternal','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (181,'180 - Amor fraternal','1
 Jesus, Pastor amado! Louvamos-te hoje, aqui,
 Unidos pela graça, um corpo só em ti.
 Contendas e malícias, que longe de nós vão,
@@ -4375,7 +4375,7 @@ Jesus, bondoso Amigo, ensina-nos a amar.
 E, como Tu fizeste, também a perdoar!
 Pois tanto carecemos do auxilio teu, Senhor!
 Unidos, graças damos por teu imenso amor. Amém.','181.mp3',28);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (182,'181 - Irmãos em Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (182,'181 - Irmãos em Jesus','1
 Bem-vindos, irmãos em Jesus,
 A nós, bem unidos na paz
 Que Cristo nos dá pela cruz,
@@ -4395,7 +4395,7 @@ Unidos vivemos aqui;
 Unidos seremos nos céus.
 Alegres, cantando ali
 A grande clemência de Deus.','182.mp3',28);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (183,'182 - União fraterna','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (183,'182 - União fraterna','1
 Que grande bênção é
 Estarem com amor,
 Irmãos, ligados pela fé,
@@ -4410,7 +4410,7 @@ Mandaste aos teus, Jesus,
 Da divinal mansão,
 O Santo Espírito que produz
 Tão plena comunhão. Amém.','183.mp3',28);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (184,'183 - Benditos laços','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (184,'183 - Benditos laços','1
 Benditos laços são
 Os do fraterno amor,
 Que assim em santa comunhão
@@ -4430,7 +4430,7 @@ Se desta santa união
 Nos vamos separar,
 No céu eterna comunhão
 Havemos de gozar.','184.mp3',28);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (185,'184 - Face a face','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (185,'184 - Face a face','1
 Em breve a vida vou findar,
 Não mais aqui eu cantarei!
 Nos céus, então, irei morar,
@@ -4456,7 +4456,7 @@ Por meu Jesus eu vou viver
 E minha luz farei brilhar.
 De dia em dia hei de fazer
 O que ao meu Salvador honrar.','185.mp3',29);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (186,'185 - Glória vindoura','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (186,'185 - Glória vindoura','1
 No tempo em que meu trabalho acabar
 E enfim de Deus a presença gozar,
 E quando a Cristo eu puder contemplar,
@@ -4476,7 +4476,7 @@ No tempo em que meus irmãos for rever
 Lá nos fulgores do céu - que prazer!
 Sim, quando junto a Jesus for viver,
 Oh, quanta glória haverá com Jesus!','186.mp3',29);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (187,'186 - O lar do céu','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (187,'186 - O lar do céu','1
 Oh, pensai nesse lar lá do céu,
 Nas gloriosas moradas de luz,
 Onde os crentes, felizes, desfrutam
@@ -4502,7 +4502,7 @@ Sem demora no céu estarei;
 Vejo o fim da jornada chegar.
 Meu bondoso Jesus lá me espera
 Para as bênçãos eternas me dar.','187.mp3',29);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (188,'187 - Cidade celestial','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (188,'187 - Cidade celestial','1
 Tenho lido da bela cidade,
 Situada no reino de Deus,
 Com seus muros de jaspe luzente,
@@ -4543,7 +4543,7 @@ Tenho lido do sangue vertido
 Que a todos redime do mal;
 Mas metade da glória celeste
 Jamais se contou ao mortal!','188.mp3',29);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (189,'188 - Clara luz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (189,'188 - Clara luz','1
 Quanta dor, quanta amargura
 Vem meu peito retalhar!
 Não importa,se diviso
@@ -4570,7 +4570,7 @@ Pois nos mostra a bela terra
 Donde mana leite e mel;
 Essa luz jamais se apaga,
 Pois provém do Deus fiel.','189.mp3',29);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (190,'189 - Jerusalém celeste','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (190,'189 - Jerusalém celeste','1
 Jerusalém celeste, de fúlgido esplendor.
 És vívida esperança da Igreja do Senhor!
 Teus muros fulgurantes avisto pela fé,
@@ -4585,7 +4585,7 @@ Cidade radiosa, sem noite, morte ou mal,
 Que neste pobre mundo atinge o que é mortal.
 Exulta, ó alma crente, eis teu glorioso lar,
 Que Cristo, redivivo, no céu foi preparar.','190.mp3',29);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (191,'190 - Maior que a dor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (191,'190 - Maior que a dor','1
 Se amarga for aqui a vida,
 Irmãos, volvei o vosso olhar
 A quem na cruz infame, erguida,
@@ -4600,7 +4600,7 @@ Porém, o verdadeiro gozo,
 No céu, Jesus irá vos dar,
 Pois ele diz: “No lar formoso
 Vou preparar-vos um lugar.”','191.mp3',29);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (192,'191 - Rio da vida','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (192,'191 - Rio da vida','1
 Fonte de amor perene,
 Manancial de luz!
 Água da vida corre
@@ -4627,7 +4627,7 @@ Corre rio, calmo corre!
 Como assim a paz
 Em minha alma, para sempre,
 Corra mais e mais.','192.mp3',29);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (193,'192 - No céu com Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (193,'192 - No céu com Jesus','1
 Junto ao trono de Deus, preparado,
 Há cristão um lugar para ti;
 Há alegria perene ao seu lado,
@@ -4663,7 +4663,7 @@ Pois dali, pois dali,
 Todo cheio de amor, de ternura,
 Desse amor que mostrou lá na cruz,
 Nos atende, nos ouve Jesus.','193.mp3',30);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (194,'193 - Aspiração do céu','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (194,'193 - Aspiração do céu','1
 Vou à Pátria - eu, peregrino -,
 A viver eternamente com Jesus
 Que concedeu-me feliz destino
@@ -4683,7 +4683,7 @@ Terra santa, formosa e pura,
 Salvo por Jesus eu entrarei em ti;
 Felicidade, paz e ventura,
 Perfeitamente desfrutarei ali.','194.mp3',30);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (195,'194 - Morada feliz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (195,'194 - Morada feliz','1
 Com Jesus há morada feliz,
 Prometida e segura nos céus.
 Avistamos o lindo País,
@@ -4704,7 +4704,7 @@ No descanso perfeito, eternal,
 Desfrutando o labor que passou,
 Cantaremos em tom triunfal,
 Os louvores de quem nos amou.','195.mp3',30);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (196,'195 - Dormindo no Senhor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (196,'195 - Dormindo no Senhor','1
 Dormindo no Senhor,
 Bendito é nosso irmão!
 Perante o trono, vencedor,
@@ -4734,7 +4734,7 @@ Os mortos viverão!
 E os vivos, com fulgor,
 Ao teu encontro subirão!
 Oh, vem, Jesus Senhor!','196.mp3',30);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (197,'196 - Gozo, esplendores, venturas','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (197,'196 - Gozo, esplendores, venturas','1
 Oh, quanto gozo, esplendores, venturas,
 Hão de fruir as fiéis criaturas!
 Paz e descanso terão os cansados,
@@ -4754,7 +4754,7 @@ De glória eterna, Senhor, te cobriste!
 Em ti, de ti e por ti tudo existe!
 Nós te adoramos na voz deste canto,
 Deus Pai, Deus Filho e Espírito Santo. Amém.','197.mp3',30);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (198,'197 - O salvador espera','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (198,'197 - O salvador espera','1
 Jesus quer entrar hoje em teu coração,
 E para sempre ficar.
 E há de outorgar-te seu pleno perdão,
@@ -4769,7 +4769,7 @@ Se Cristo adentrar esse teu coração,
 E em tua vida reinar,
 Que paz infinita, que satisfação
 Sua presença há de te dar.','198.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (199,'198 - Salvação graciosa','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (199,'198 - Salvação graciosa','1
 Eis mensagem do Senhor, Aleluia!
 Palavras do bom Deus de amor!
 Cristo salva o pecador, aleluia!
@@ -4794,7 +4794,7 @@ Aceitai a salvação, Aleluia
 Segui os passos do Senhor!
 Anunciai o seu perdão, Aleluia!
 Proclamai a grande Redenção!','199.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (200,'199 - Cristo salva','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (200,'199 - Cristo salva','1
 Cristo salva o pecador,
 Dá-lhe um novo coração;
 Ao contrito, com amor,
@@ -4814,7 +4814,7 @@ Vinde todos e achareis
 Plena paz no Redentor;
 Vinde, e então recebereis
 Vida eterna no Senhor.','200.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (201,'200 - Palavra abençoada','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (201,'200 - Palavra abençoada','1
 Palavra abençoada,
 Convite que contém
 Promessa e cumprimento
@@ -4849,7 +4849,7 @@ Assim conheceremos
 O gozo que produz
 No coração submisso
 O “vinde” de Jesus.','201.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (202,'201 - Manso e suave','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (202,'201 - Manso e suave','1
 Manso e suave! Eis Jesus nos chamando:
 Chama por ti e por mim.
 Eis que ele às portas espera velando:
@@ -4874,7 +4874,7 @@ Oh, quanto amor que Jesus nos em dado:
 Dado a ti e a mim!
 Eis que foi morte, foi crucificado
 Morto por ti e por mim!','202.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (203,'202 - Palavras preciosas','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (203,'202 - Palavras preciosas','1
 Preciosas as palavras
 De Jesus, eterno Rei:
 “Aquele que vier a mim,
@@ -4894,7 +4894,7 @@ Preciosas as palavras
 De Jesus, eterno Rei:
 “Por vós o mundo já venci,
 Por vós a vida dei.','203.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (204,'203 - Convite para a salvação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (204,'203 - Convite para a salvação','1
 Eis, Cristo te convida; vem pecador!
 Concede eterna vida, vem, pecador!
 Hoje é tão favorável, vem, pecador!
@@ -4904,7 +4904,7 @@ Eis o ensejo agora, vem pecador!
 Atende sem demora, vem, pecador!
 Cereces desta Graça? Vem, pecador!
 Decide! A vida passa! Vem, pecador!','204.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (205,'204 - Cristo à porta','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (205,'204 - Cristo à porta','1
 À porta estou, ó alma triste,
 Ansioso por e consolar;
 A minha voz, enfim, ouviste,
@@ -4925,7 +4925,7 @@ A minha graça poderosa
 O teu pecado vem lavar!
 Ó alma impura, pesarosa,
 Eu vou entrar, eu vou entrar!','205.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (206,'205 - O amor que chama','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (206,'205 - O amor que chama','1
 Não vos demoreis, Jesus vos chama,
 Ele chama com amor.
 Não vos demoreis, Jesus vos ama,
@@ -4947,7 +4947,7 @@ Não vos demoreis, Jesus foi morto
 Em lugar do pecador.
 Não vos demoreis, real conforto
 Quer vos dar o Salvador.','206.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (207,'206 - Convite de jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (207,'206 - Convite de jesus','1
 Triste estás, cansado, aflito,
 Sem vigor, sem luz?
 “Vem a mim!” Eis o convite de Jesus!
@@ -4971,7 +4971,7 @@ Sim, terás, e boas-vindas do teu Rei!
 “Se confio na Palavra,
 Salvará, por fim?”
 Anjos, santos e o universo bradam: “Sim.”','207.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (208,'207 - Convite ao pecador','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (208,'207 - Convite ao pecador','1
 Vem a Cristo, mesmo agora,
 Vem assim como estás!
 Que dele, sem demora,
@@ -4986,7 +4986,7 @@ Ele almeja receber-te,
 Tua vida salvar,
 Pois quer consigo ver-te
 E contigo habitar.','208.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (209,'208 - Aproximação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (209,'208 - Aproximação','1
 Chegai-vos ao Senhor com puro coração.
 Ouvi palavras de favor, a voz da salvação!
 É Deus quem fala aqui, na sua santa lei;
@@ -4996,7 +4996,7 @@ Entendimento dá a quem com fé pedir.
 Com paciência guiará a todo que o seguir.
 As trevas dissipou, rasgou o escuro véu,
 A luz divina derramou, por ela vinde ao céu.','209.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (210,'209 - Encorajamento','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (210,'209 - Encorajamento','1
 Medo tens que o adversário vá vencer?
 Luz te falta e onde estás não podes ver?
 Abre o coração, que Cristo vai entrar,
@@ -5016,7 +5016,7 @@ Queres ir andando alegre para o céu
 Ignorando todo o negro e denso véu?
 Abre o coração, que Cristo vai entrar,
 E o sol em ti raiar.','210.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (211,'210 - O filho perdido','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (211,'210 - O filho perdido','1
 Vem, filho perdido, ó pródigo, vem!
 Ruína te espera nas trevas além.
 Tu de medo, tremendo, e faminto, gemendo,
@@ -5039,7 +5039,7 @@ Em miséria vagando, tuas culpas chorando,
 Oh, rompe as ciladas do vil tentador!
 Em teu lar há bastante, e tu vagas errante!
 Ó filho perdido, vem, pródigo,vem!','211.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (212,'211 - Quase induzido','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (212,'211 - Quase induzido','1
 Quase induzido a crer em Jesus;
 Quase induzi-do a andar na luz!
 Pensas em replicar:
@@ -5057,7 +5057,7 @@ Quase induzi-do, vem sem temer!
 “Quase” não servirá;
 “Quase” te afastará!
 “Quase” te lançará na perdição!','212.mp3',31);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (213,'212 - Apelo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (213,'212 - Apelo','1
 Alma, escuta o bom Senhor
 A Jesus, o Salvador.
 Ele diz com terno amor:
@@ -5075,7 +5075,7 @@ Ajudar-me vem, Senhor!
 A entregar-te o meu amor!
 Faze, ó bom Jesus, que assim
 Sejas Tu que viva em mim. Amém','213.mp3',32);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (214,'213 - A última hora','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (214,'213 - A última hora','1
 Ao findar o labor desta vida,
 Quando a morte ao teu lado chegar,
 Que destino há de ter a tua alma?
@@ -5106,7 +5106,7 @@ Se quiseres deixar teus pecados
 E entregar-te hoje mesmo a Jesus,
 Hás de ter, nesta vida e na morte,
 Um brilhante caminho de luz.','214.mp3',32);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (215,'214 - Convite e aceitação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (215,'214 - Convite e aceitação','1
 Ouço meu Senhor dizer:
 “Tuas forças débeis são,
 Nada podes merecer;
@@ -5131,7 +5131,7 @@ Lá na glória cantarei
 Tua eterna salvação;
 Junto ao trono renderei
 Meu louvor e gratidão. Amém.','215.mp3',32);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (216,'215 - Apelo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (216,'215 - Apelo','1
 Jesus, estás à porta
 Do aflito coração!
 E queres fazer nele
@@ -5158,7 +5158,7 @@ Senhor, com fé abrimos
 O nosso coração!
 Oh, entra e faze nele
 Eterna habitação! Amém.','216.mp3',32);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (217,'216 - Perdão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (217,'216 - Perdão','1
 Acharei mercê em Deus?
 Pode ainda perdoar?
 Esquecer pecados meus?
@@ -5183,7 +5183,7 @@ Sim, eu creio e salvo estou!
 Reina gozo lá no céu,
 Pois a Nova já chegou
 De mais um que nele creu.','217.mp3',32);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (218,'217 - Desprendimento','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (218,'217 - Desprendimento','1
 Tal como estou, sem me esquivar,
 Me entrego a quem me quis salvar.
 Pois padeceste em meu lugar,
@@ -5213,7 +5213,7 @@ Tal como estou, por teu amor
 Saí das garras do opressor!
 E teu somente sou, Senhor;
 Ó Salvador, eu venho a ti. Amém.','218.mp3',33);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (219,'218 - Vontade soberana','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (219,'218 - Vontade soberana','1
 Tua vontade faze, ó Senhor!
 Eu sou feitura, tu és o Autor.
 Molda e refaze todo meu ser,
@@ -5233,7 +5233,7 @@ Tua vontade, boa e sem par
 Quero na vida realizar.
 Vive, triunfa, domina, enfim,
 Reina, supremo, meu Deus, em mim! Amém.','219.mp3',33);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (220,'219 - Dedicação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (220,'219 - Dedicação','1
 Sofreste, ó meu Senhor, na amarga cruz,
 E derramaste ali teu sangue a flux;
 Que resgatou minha alma dos pecados meus
@@ -5248,7 +5248,7 @@ Aceita, ó terno Deus, a adoração
 Que oferto a ti, Senhor, com devoção.
 Deponho, então, a teus pés, para sempre, ó Pai,
 A eterna gra-tidão. Amém.','220.mp3',34);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (221,'220 - Plena dedicação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (221,'220 - Plena dedicação','1
 Sobre a cruz Jesus comprou-me,
 Corpo e alma, todo o ser.
 Hoje e sempre, inteiramente,
@@ -5287,7 +5287,7 @@ Que ventura pertencer-te!
 Ouve a minha petição:
 Vem, Senhor, supremo Amigo,
 Dominar meu coração! Amém.','221.mp3',34);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (222,'221 - Um vaso de benção','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (222,'221 - Um vaso de benção','1
 Quero ser um vaso de bênção,
 Sim, um vaso escolhido de Deus,
 Para as novas levar aos perdidos,
@@ -5312,7 +5312,7 @@ Para ser um vaso de benção
 É mister uma vida real,
 Uma vida de fé e pureza,
 Revestida de amor divinal. Amém.','222.mp3',34);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (223,'222 - Mais perto da cruz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (223,'222 - Mais perto da cruz','1
 Meu Senhor, sou teu, tua voz ouvi
 A chamar-me com amor!
 E contigo sempre desejo estar,
@@ -5332,7 +5332,7 @@ Que prazer sem par, que delícia é
 Aos teus santos pés me achar!
 E com viva fé e profundo amor,
 Com meu Salvador falar. Amém.','223.mp3',34);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (224,'223 - Oração do arrependido','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (224,'223 - Oração do arrependido','1
 Convencido estou, ó Cristo
 De que o mundo é sempre vão.
 Quero, pois, viver contigo,
@@ -5357,7 +5357,7 @@ Quero os dons que me outorgaste
 Empregar no teu labor,
 Trabalhando em tua Igreja,
 Bem firmado em teu amor. Amém.','224.mp3',34);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (225,'224 - Consagração','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (225,'224 - Consagração','1
 A ti seja consagrada
 Minha vida, ó meu Senhor!
 Meus momentos e meus dias
@@ -5387,7 +5387,7 @@ Meu anelo, meu desejo,
 Sejam só teu nome honrar!
 Que meu ser completo eu possa,
 Ó Jesus, te consagrar! Amém.','225.mp3',34);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (226,'225 - Dedicação pessoal','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (226,'225 - Dedicação pessoal','1
 Eis-me, ó Salvador, aqui!
 Corpo e alma oferto a ti!
 Servo inútil, sem valor,
@@ -5407,7 +5407,7 @@ Eu, remido pecador,
 Me dedico ao Redentor.
 Teu é este coração,
 Teu em plena sujeição! Amém.','226.mp3',34);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (227,'226 - A história de Cristo','Conta-me a história de Cristo,
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (227,'226 - A história de Cristo','Conta-me a história de Cristo,
 Grava-a no meu coração!
 Conta-me a história inaudita
 De graça, paz e perdão.
@@ -5442,7 +5442,7 @@ Dá-me o viver na certeza
 De que foi mesmo por mim,
 Que seu amor inefável
 Não tem mudança nem fim.','227.mp3',35);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (228,'227 - A velha história','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (228,'227 - A velha história','1
 Conta-me a velha história
 Do grande Salvador,
 De Cristo e sua vida,
@@ -5475,7 +5475,7 @@ E quando, enfim, a aurora
 Do mundo além raiar,
 Recorda a velha história,
 Que Deus me quis salvar!','228.mp3',35);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (229,'228 - De deus, o ungido','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (229,'228 - De deus, o ungido','1
 Saudai de Deus, o Ungido,
 O Filho de Davi;
 Saudai o Prometi-do
@@ -5502,7 +5502,7 @@ Concerto permanente
 Conosco irá guardar
 Seu nome, eternamente,
 Traduz amor sem par.','229.mp3',35);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (230,'229 - Boas-novas','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (230,'229 - Boas-novas','1
 Eu venho a vós, dos altos céus,
 Com boas-novas do meu Rei
 Maravilhoso e grande Deus!
@@ -5522,7 +5522,7 @@ Eterna glória ao nosso Deus,
 Que veio em Cristo nos salvar.
 Alegres anjos vêm dos céus
 Um novo dia anunciar!','230.mp3',35);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (231,'230 - Adoração','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (231,'230 - Adoração','1
 Oh, vinde fiéis, triunfantes e alegres,
 Sim, vinde a Belém, já movidos de amor!
 Nasceu vosso Rei, o Messias prometido,
@@ -5542,7 +5542,7 @@ E em glórias a vida nos dá, sempiterna,
 Nos céus adorai-o, vós anjos, em coro,
 E todos na terra lhe rendam louvor!
 A Deus honra e glória contentes rendamos,','231.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (232,'231 - O Primeiro natal','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (232,'231 - O Primeiro natal','1
 Eis que um anjo proclamou o primeiro Natal,
 A uns pobres pastores ao pé de Belém
 Que, nos campos, a guardar seu rebanho, afinal,
@@ -5571,7 +5571,7 @@ E como eles vimos nós, com intenso fervor,
 Dar louvores sinceros a quem nos amou;
 Adorar de coração o Supremo Senhor
 Que, morrendo na cruz, nossas almas salvou!','232.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (233,'232 - Pequena vila de Belém','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (233,'232 - Pequena vila de Belém','1
 Pequena vila de Belém,
 Repousa em teu dormir,
 Enquanto os astros lá no céu
@@ -5607,7 +5607,7 @@ Ali proclamam anjos
 De Deus o amor fiel!
 Oh! Vem, Senhor, aqui reinar,
 Eterno Emanuel. Amém.','233.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (234,'233 - Os pastores no campo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (234,'233 - Os pastores no campo','1
 No campo, o rebanho guardando,
 Os pastores, deitados no chão,
 Mal se vê pela luz das estrelas,
@@ -5643,7 +5643,7 @@ Ao celeste conjunto a cantar:
 Nasceu quem vos vem salvar!”
 Como cantam! E cremos que nunca
 Desse canto ouviremos assaz!','234.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (235,'234 - Um pequeno a repousar','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (235,'234 - Um pequeno a repousar','1
 Quem é o pequeno a repousar
 Nos braços de Maria,
 A quem os anjos vêm cantar
@@ -5663,7 +5663,7 @@ Trazei a ele o coração,
 Prostrai-vos reverentes,
 Aos pés do Rei, que a salvação
 Nos trouxe eternamente!','235.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (236,'235 - O anjo da paz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (236,'235 - O anjo da paz','1
 Um anjo formoso desceu das alturas,
 Na fresca doçura da noite, em Belém.
 E a luz fulgurante brilhou nas colinas,
@@ -5683,7 +5683,7 @@ Pois vem lá de cima bafejos de amor.
 Lançar a semente do amor divinal,
 Trazendo a este mundo canções de alegria,
 Na santa harmonia que inspira o Natal.','236.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (237,'236 - Em linda noite','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (237,'236 - Em linda noite','1
 Em linda noite o mundo, a nós
 Em coro angelical,
 Com harpas de ouro, o céu quis dar
@@ -5710,7 +5710,7 @@ E quando, enfim, reinar a paz
 De Cristo, o Salvador,
 Os salvos todos cantarão
 Em coro o seu louvor!','237.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (238,'237 - Jesus nasceu','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (238,'237 - Jesus nasceu','1
 Vinde cantai Jesus nasceu!
 À terra a luz desceu!
 A graça infinda ao mundo vem
@@ -5722,7 +5722,7 @@ Que foi por grande amor
 Que à terra veio o Sumo Bem,
 Na gruta de Belém, na gruta de Belém,
 Jesus, humilde, ao mundo vem.','238.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (239,'237-A  - Linda estrela','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (239,'237-A  - Linda estrela','1
 Oh, linda estrela! Fulgor cintilante!
 Rumo nas trevas teu brilho nos dá;
 Vem conduzir-nos, ó lume divino,
@@ -5742,7 +5742,7 @@ São todas vãs as ofertas mundanas,
 Ouro não pode comprar seu favor!
 Cristo, porém, de nós todos aceita
 As ofertas sinceras de amor!','239.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (240,'238 - Novas de amor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (240,'238 - Novas de amor','1
 Harmonias pelo ar,
 Uma estrela no céu,
 Uma prece de mãe,
@@ -5778,7 +5778,7 @@ Pois no berço, em Belém,
 Manjedoura de luz,
 Eis o Deus Salvador,
 Esse humano imortal.','240.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (241,'239 - Nasce Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (241,'239 - Nasce Jesus','1
 Nasce Jesus! Fonte de luz
 Descem os anjos cantando.
 Nasce Jesus! É nossa luz
@@ -5803,7 +5803,7 @@ Digam-no todos os povos!
 Gozam paz e salvação todos os que crêem.
 Reino bendito! Reino de amor divino!
 Gratos louvores homens e anjos dêem!','241.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (242,'240 - Louvor angelical','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (242,'240 - Louvor angelical','1
 Eis dos anjos a harmonia!
 Cantam glória ao Rei Jesus.
 Paz aos homens que alegria!
@@ -5833,7 +5833,7 @@ Nasce a fim de renascermos!
 Vive para revivermos!
 Rei, profeta, intercessor,
 Louvem todos ao Senhor!','242.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (243,'241 - O nascimento de Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (243,'241 - O nascimento de Jesus','1
 Mal supõe aquela gente
 Que em Belém quer ir parar,
 Que uma luz tão refulgente
@@ -5865,7 +5865,7 @@ Confiança nele tende,
 Não desprezará ninguém!
 Vinde, os braços vos estende!
 Nasce em Belém.','243.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (244,'242 - Os anjos e o natal','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (244,'242 - Os anjos e o natal','1
 Anjos das mansões da glória,
 Sobre a terra já voai.
 Conhecei do mundo a história,
@@ -5893,7 +5893,7 @@ Recebei o Cristo Amado,
 Que conosco vem morar.
 Adoremos, adoremos,
 Cristo é o nosso grande Rei.','244.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (245,'243 - Noite de paz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (245,'243 - Noite de paz','1
 Noite de paz! Noite de amor!
 Tudo dorme em derredor.
 Entre os astros que espargem a luz,
@@ -5911,7 +5911,7 @@ Oh, que belo resplendor
 Ilumina o menino Jesus!
 No presépio do mundo, eis a luz,
 Sol de eterno fulgor!','245.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (246,'244 - Mensagem aos pastores','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (246,'244 - Mensagem aos pastores','1
 Em noite linda e silente,
 Nos verdes prados do Oriente,
 Nos verdes prados do Oriente,
@@ -5932,7 +5932,7 @@ Ressoa a nova do céu!
 Jesus, de celeste origem,
 Da mais crente e humilde virgem, (bis)
 A vos salvar, já nasceu.','246.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (247,'245 - Homens sábios e de bem','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (247,'245 - Homens sábios e de bem','1
 Vós homens sábios e de bem,
 E vós que estais em dor,
 Lembrai-vos todos, afinal:
@@ -5960,7 +5960,7 @@ Louvores entoai,
 Com verdadeira gratidão
 As novas proclamai,
 E neste dia de Natal ao Salvador louvai','247.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (248,'246 - Jesus, o Messias','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (248,'246 - Jesus, o Messias','1
 Jesus, o Messias, desceu lá do céu,
 E foi no Natal quando ao mundo nasceu.
 Alegre e feliz eu me devo sentir,
@@ -5975,7 +5975,7 @@ Jesus, o Messias, que veio salvar,
 A paz já nos deu e com Deu foi estar.
 E neste Natal, abençoa, Senhor,
 As vidas que agora te rendem louvor. Amém.','248.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (249,'247 - Estrela cintilante','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (249,'247 - Estrela cintilante','1
 Uma estrela cintilante,
 De ofuscante e rara luz,
 Conduziu os sábios magos
@@ -5990,7 +5990,7 @@ Nós, também, agradecemos
 Ao Senhor o seu amor.
 Por nos dar seu Filho amado,
 Cristo o nosso Redentor','249.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (250,'248 - No humilde presépio','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (250,'248 - No humilde presépio','1
 No humilde presépio, sem ter nada seu,
 Jesus, pobrezinho, sem teto nasceu!
 Os céus estrelados, fulgentes de luz,
@@ -6000,7 +6000,7 @@ Desejo a teu lado viver, meu Senhor;
 Amar-te e servir-te, Jesus Salvador.
 Aos teus pequeninos pedimos guardar
 Até que possamos contigo morar. Amém.','250.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (251,'249 - Na manjedoura','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (251,'249 - Na manjedoura','1
 Num berço de palha dormia Jesus,
 O meigo menino que ali veio à luz.
 Num rude presépio, de noite, em Belém,
@@ -6015,7 +6015,7 @@ Tu foste criança, nasceste em Belém!
 Por isso às crianças atendes também.
 Desejo ter sempre ao meu lado, Senhor,
 A tua presença tão cheia de amor. Amém.','251.mp3',36);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (252,'250 - A voz de Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (252,'250 - A voz de Jesus','1
 Ouvi o Salvador dizer:
 “Vem descansar em mim
 E, confiante, receber
@@ -6044,7 +6044,7 @@ Fui a Jesus e nele achei
 O sol que brilha em mim;
 E nessa luz eu andarei
 Até da vida ao fim!','252.mp3',37);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (253,'251 - O pão da vida','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (253,'251 - O pão da vida','1
 Ó Cristo, Pão da vida,
 Descido lá do céu,
 O Pão de nossas almas
@@ -6071,7 +6071,7 @@ Agradecemos sempre
 O amor que aqui nos deu
 Sustento verdadeiro,
 No santo Pão do céu.','253.mp3',37);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (254,'252 - Pão celestial','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (254,'252 - Pão celestial','1
 Pão da vida, pão dos céus,
 Pão celeste é meu Jesus!
 Pão que dá ao coração
@@ -6087,7 +6087,7 @@ Pois almejo te servir
 E te honrar, meu Salvador.
 Pois almejo te servir
 E te honrar, meu Salvador. Amém.','254.mp3',37);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (255,'253 - Cristo, a luz do mundo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (255,'253 - Cristo, a luz do mundo','1
 Luz do mundo, Jesus Cristo
 Dissipaste as ilusões!
 Desvendaste os nossos olhos,
@@ -6115,7 +6115,7 @@ Esclarece os incautos,
 Revelando o grande Deus
 Luz do mundo, Luz do mundo,
 És o resplendor dos céus. Amém.','255.mp3',37);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (256,'254 - Sossegai','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (256,'254 - Sossegai','1
 Mestre. o mar se revolta
 E as ondas nos dão pavor!
 O céu se reveste de trevas,
@@ -6152,7 +6152,7 @@ Firme ao teu lado, ó Mestre,
 Dono da terra e céu,
 Eu hei de chegar, bem seguro,
 Ao porto, destino meu.','256.mp3',37);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (257,'255 - A ovelha perdida','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (257,'255 - A ovelha perdida','1
 Noventa e nove ovelhas vão
 Seguras ao curral.
 Mas uma se extraviou
@@ -6184,7 +6184,7 @@ O Salmo Vencedor.
 E os anjos cantam lá nos céus:
 “Voltou a ovelha para Deus,
 Voltou a ovelha para Deus.”','257.mp3',37);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (258,'256 - Glória singular','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (258,'256 - Glória singular','1
 Visão de glória singular
 A Igreja pôde contemplar
 Em Cristo, quando ascendeu
@@ -6204,7 +6204,7 @@ A Deus o Filho, a Deus o Pai
 E a Deus o Espírito entoai!
 O Deus que a graça nos quis dar
 De sua glória contemplar. Amém.','258.mp3',37);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (259,'257 - Hosana ao grande Rei','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (259,'257 - Hosana ao grande Rei','1
 Hosana! Hosana! Hosana!
 Hosana ao Filho de Davi!
 Hosana ao grande Rei,
@@ -6228,7 +6228,7 @@ Meu Deus, meu Rei, serei aqui
 Um servo teu, leal..
 Hosana ao Filho de Davi,
 Hosana nas alturas!','259.mp3',38);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (260,'258 - Majestade','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (260,'258 - Majestade','1
 Caminha em majestade e vai!
 Ao som de hosana e exultação
 Por entre palmas, para a cruz,
@@ -6248,7 +6248,7 @@ Caminha em majestade e vai!
 Em glória segue para a cruz.
 Se abate a fronte, em face à dor,
 Mas vai triunfante o Vencedor','260.mp3',38);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (261,'259 - Hosana e glória','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (261,'259 - Hosana e glória','1
 A ti, hosana e glória, ó Cristo Salvador,
 Cantavam as crianças com vozes de louvor.
 O povo hebreu saudou-te com palmas e com flor,
@@ -6263,7 +6263,7 @@ Assim como aceitaste do povo a saudação,
 Aceita o nosso canto de grata exaltação,
 A ti, hosana e glória, ó Cristo Salvador,
 Cantavam as crianças com vozes de louvor.','261.mp3',38);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (262,'260 - Amor que vence','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (262,'260 - Amor que vence','1
 Amor, que por amor desceste!
 Amor, que por amor morreste!
 Ah! Quanta dor não padeceste!
@@ -6287,7 +6287,7 @@ Que em tua graça me seguras,
 Cercando-me de mil venturas!
 Aceita agora, ó Salvador,
 O meu humilde amor. Amém.','262.mp3',39);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (263,'261 - O gólgota','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (263,'261 - O gólgota','1
 Mui longe o monte verde está,
 Ao norte de Sião.
 Ali na cruz, o bom Jesus,
@@ -6312,7 +6312,7 @@ Ninguém podia nos livrar
 Da pena eternal.
 Só Cristo pode nos remir
 A preço divinal.','263.mp3',39);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (264,'262 - Contemplação da cruz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (264,'262 - Contemplação da cruz','1
 Ao contemplar a tua cruz
 E o que sofreste ali, Senhor,
 Sei que não há, ó meu Jesus,
@@ -6337,7 +6337,7 @@ Tudo o que eu possa consagrar
 Ao teu serviço, ao teu louvor,
 Em nada poderei pagar
 Ao que me dás em teu amor. Amém.','264.mp3',39);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (265,'263 -  Junto à cruz de Cristo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (265,'263 -  Junto à cruz de Cristo','1
 Na cruz de Jesus Cristo,
 Meus olhos podem ver
 Um vulto agonizante,
@@ -6364,7 +6364,7 @@ O mundo abandonando,
 Eu tudo quis perder,
 Porquanto achei a Cristo
 Que transformou meu ser.!','265.mp3',39);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (266,'264 - Fronte ensangüentada','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (266,'264 - Fronte ensangüentada','1
 Oh, fronte ensangüentada
 Em tanto opróbrio e dor,
 De espinhos coroada,
@@ -6400,7 +6400,7 @@ Na cruz com fé me abrigo
 E amparo Tu me dás!
 E unido assim contigo,
 Hei de dormir em paz!','266.mp3',39);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (267,'265 - Cristo redentor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (267,'265 - Cristo redentor','1
 Que agonia dolorosa
 Tu sofreste, ó meu Jesus!
 Foi por mim tanta amargura
@@ -6428,7 +6428,7 @@ Vislumbrai no sacrifício
 Que nos trouxe a redenção!
 Com amor, sim, muito amor,
 Crede em Cristo, o Redentor.','267.mp3',39);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (268,'266 - Rude cruz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (268,'266 - Rude cruz','1
 Rude cruz se erigiu,
 Dela o dia fugiu
 Como emblema de vergonha e dor.
@@ -6454,7 +6454,7 @@ Meu Jesus, para dar-me perdão.
 Eu me alegro na cruz
 Dela vem graça e luz,
 Para minha santificação.','268.mp3',39);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (269,'267 - Precioso sangue','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (269,'267 - Precioso sangue','1
 Oh, que precioso sangue
 O Senhor verteu,
 Quando, para resgatar-nos,
@@ -6474,7 +6474,7 @@ Oh, que precioso sangue,
 Sangue remidor!
 Nele Cristo manifesta
 Seu amor!','269.mp3',39);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (270,'268 - Redenção','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (270,'268 - Redenção','1
 Pendurado no madeiro,
 Ó Jesus, pudeste, assim,
 Destruir meu cativeiro
@@ -6495,7 +6495,7 @@ Sê propício aos condenados
 A lutar na escuridão
 Deste abismo de pecados,
 Sob a dor da maldição! Amém.','270.mp3',39);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (271,'269 - Pureza no sangue de Cristo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (271,'269 - Pureza no sangue de Cristo','1
 Seja bendito o Cordeiro
 Que na cruz por nós padeceu;
 Seja bendito o seu sangue
@@ -6527,7 +6527,7 @@ Lavas de todo pecado,
 Que maravilha de amor!
 Pois que mais alvo que a neve
 O teu sangue nos torna, Senhor.','271.mp3',39);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (272,'270 - Desafio','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (272,'270 - Desafio','1
 Morri na cruz por ti,
 Foi para te livrar.
 Meu sangue ali verti
@@ -6550,7 +6550,7 @@ Eu trouxe a salvação,
 Dos altos céus favor.
 É livre o meu perdão,
 É grande o meu amor.','272.mp3',39);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (273,'271 - Ressurreição','Aleluia! Aleluia! Aleluia! Aleluia!
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (273,'271 - Ressurreição','Aleluia! Aleluia! Aleluia! Aleluia!
 1
 Ó filhos, vinde aqui cantar
 Ao Rei do céu, da terra e mar
@@ -6571,7 +6571,7 @@ Aceita agora, ó Salvador,
 O nosso canto de louvor,
 Que a ti erguemos com amor!
 Aleluia! Aleluia! Amém.','273.mp3',40);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (274,'272 - Aleluia ao Cristo redivivo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (274,'272 - Aleluia ao Cristo redivivo','1
 Cristo já ressuscitou! Aleluia!
 Sobre a morte triunfou! Aleluia!
 Tudo consumado está! Aleluia!
@@ -6586,7 +6586,7 @@ Gratos hinos hoje erguei! Aleluia!
 A Jesus, o grande Rei! Aleluia!
 Ressurgiu, é vencedor! Aleluia!
 Toda glória ao Redentor! Aleluia!','274.mp3',40);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (275,'273 - Memórias da ressurreição','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (275,'273 - Memórias da ressurreição','1
 Hoje nos lembramos da Ressurreição
 Que assegura ao crente plena redenção.
 Ao terceiro dia, qual nos prometeu,
@@ -6610,7 +6610,7 @@ Hoje te aclamamos Rei e Salvador!
 Para sempre vives, na celeste luz,
 Homem-Deus ilustre, ó Redentor Jesus!
 Sejas Tu louvado eternamente, amém.!','275.mp3',40);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (276,'274 - Morto e ressurreto','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (276,'274 - Morto e ressurreto','1
 Eis morto o Salvador,
 Na sepultura
 Mas com poder real
@@ -6633,7 +6633,7 @@ No grande Vencedor
 Eis as primícias
 Dos santos que também
 Ressurgirão.','276.mp3',40);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (277,'275 - Cristo venceu','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (277,'275 - Cristo venceu','1
 Cristo venceu!
 Liberta está minha alma!
 Gozo a divina calma de sua paz,
@@ -6657,7 +6657,7 @@ Temores não mais sinto.
 Vencida a morte, abriu-se o denso véu!
 Cristo venceu! O Filho poderoso
 Reina! E com ele viverei no céu!','277.mp3',40);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (278,'276 - Amorável convite','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (278,'276 - Amorável convite','1
 Vinde vós, fiéis, cantai
 Amoravelmente:
 Deus seu povo libertou
@@ -6684,7 +6684,7 @@ Aleluia! Glória dai,
 Com fervor supino!
 Aleluia sem cessar,
 Ao Deus Uno e trino.','278.mp3',40);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (279,'277 - Cristo vive! Ressurgiu!','Cristo vive! Ressuscitou de entre os mortos,
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (279,'277 - Cristo vive! Ressurgiu!','Cristo vive! Ressuscitou de entre os mortos,
 Cristo vive! Ressuscitou de entre os mortos,
 E foi feito, e foi feito as primícias dos que dormem.
 Glória e louvor sejam dados com poder
@@ -6695,7 +6695,7 @@ Glória e louvor sejam dados com poder
 Ao Pai eterno, que no trono assentado está,
 E ao Cordeiro de Deus, por séculos e séculos,
 Amém.','279.mp3',40);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (280,'278 - A vitória de Jesus','Aleluia! Aleluia! Aleluia!
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (280,'278 - A vitória de Jesus','Aleluia! Aleluia! Aleluia!
 1
 Findou-se a luta de Jesus!
 O Salvador venceu na cruz!
@@ -6716,7 +6716,7 @@ Com majestade sem igual
 Firmou o império divinal
 Erguei o salmo triunfal
 Aleluia!','280.mp3',40);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (281,'279 - O dia triunfal raiou','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (281,'279 - O dia triunfal raiou','1
 O dia triunfal raiou,
 Trazendo o sol de alegre luz;
 Pois ressurgiu e nos livrou
@@ -6731,7 +6731,7 @@ Com alegria e com louvor
 A Páscoa vamos celebrar,
 Pois Cristo, o grande Vencedor,
 De Deus o amor nos vem mostrar! Aleluia!','281.mp3',40);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (282,'280 - Ascensão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (282,'280 - Ascensão','1
 Subiste ao céu, Triunfador!
 De tudo agora és Tu Senhor;
 Venceste, Rei da glória!
@@ -6764,7 +6764,7 @@ Oh, sim! E assim,
 Nós, constantes e exultantes,
 Juntaremos
 Nossas mãos: louvar-te-emos! Amém.','282.mp3',41);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (283,'281 - Jesus triunfante','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (283,'281 - Jesus triunfante','1
 Aleluia! Triunfante,
 Para os céus Jesus subiu.
 As prisões quebrou da morte,
@@ -6791,7 +6791,7 @@ Ei-lo agora, junto ao trono,
 Pelos seus a interceder.
 Aleluia! Ressurreto,
 Cristo reina com poder!','283.mp3',41);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (284,'281-A - Fronte ensangüentada','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (284,'281-A - Fronte ensangüentada','1
 A fronte que uma vez sangrou
 Agora brilha em luz!
 Real é o halo que adornou
@@ -6816,7 +6816,7 @@ Os que carregam sua cruz,
 Com Cristo hão de reinar.
 Verão de perto a sua luz
 No sempiterno lar.','284.mp3',41);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (285,'282 - A grande comissão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (285,'282 - A grande comissão','1
 Disse Jesus: “Ide por todo o mundo,
 E pregai o eterno dom
 Da salvação que, com amor profundo,
@@ -6856,7 +6856,7 @@ Que conhece os escolhidos seus,
 Cheia de amor,
 Vem revelar o favor
 Da compaixão de Deus e dá-nos graça tanta.','285.mp3',42);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (286,'283 - Desafio','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (286,'283 - Desafio','1
 Avançai ! Avançai! Derramai essa luz
 Sobre os povos da terra que não têm Jesus!
 Ide já, diz o Mestre. Quem é que irá,
@@ -6877,7 +6877,7 @@ Foi por eles também que o Senhor padeceu,
 E na terra, entre os homens, insultos sofreu.
 Proclamai redenção! Em Jesus há perdão!
 Avançai, com amor, avançai!','286.mp3',42);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (287,'284 - Obediência','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (287,'284 - Obediência','1
 Nem sempre será para onde eu quiser
 Que o Mestre me quer enviar!
 É grande a Seara a embranquecer,
@@ -6910,7 +6910,7 @@ De ti meu sustento só dependerá,
 E de tudo me hás de prover!
 A tua vontade a minha será,
 Estou pronto a votar-te meu ser. Amém.','287.mp3',42);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (288,'285 - A salvação do Brasil','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (288,'285 - A salvação do Brasil','1
 Do vasto Mato Grosso
 Até ao Ceará,
 Por vilas e cidades
@@ -6937,7 +6937,7 @@ De tão fatal pecado,
 Da idolatria vil,
 Unidos no Evangelho,
 Salvemos o Brasil.','288.mp3',42);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (289,'286 - Colheita bendita','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (289,'286 - Colheita bendita','1
 Ceifeiros somos nós, fiéis,
 Ceifando para o Rei dos reis
 Os frutos prontos a colher
@@ -6970,7 +6970,7 @@ Oh, não demores a atender!
 A noite em breve vai descer.
 Conosco toma o teu lugar
 E por Jesus vem trabalhar!','289.mp3',42);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (290,'287 - Igreja, alerta!','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (290,'287 - Igreja, alerta!','1
 É tempo! É Tempo, o Mestre está chamando já!
 Marchar, marchar, confiando em seu amor!
 Partir, partir, a salvação a proclamar,
@@ -6999,7 +6999,7 @@ Igreja, alerta! O dia prometido vem,
 No qual Jesus, o Salvador, virá!
 Por toda parte, o vitorioso Redentor
 Eterna glória e honra e louvor terá.','290.mp3',42);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (291,'288 - A mensagem real','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (291,'288 - A mensagem real','1
 Sou forasteiro aqui, em terra estranha estou,
 Celeste Pátria, sim, é para onde vou.
 Embaixador por Deus, do Reino lá dos céus,
@@ -7020,7 +7020,7 @@ Mais belo que um rosal, o lar celeste tem
 A bênção imortal, o gozo eterno, além.
 No céu tem galardão quem frui a redenção.
 Venho em serviço do meu Rei!','291.mp3',42);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (292,'289 - Quem irá?','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (292,'289 - Quem irá?','1
 Eis os milhões que, em trevas tão medonhas,
 Jazem perdidos, sem o Salvador!
 Oh! Quem irá as novas proclamando
@@ -7040,7 +7040,7 @@ Da escravidão os povos libertai.
 Em que os remidos todos se unirão,
 E em coro santo, excelso, jubiloso,
 Eternamente glória a ti darão!','292.mp3',42);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (293,'290 - Jesus já vem','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (293,'290 - Jesus já vem','1
 Jesus já vem, o grande Salvador,
 O Bem-amado destes corações!
 E os crentes mortos, vastas multidões,
@@ -7065,7 +7065,7 @@ Oh, vem, Senhor! Não tardes, ó Jesus!
 Pois Tu somente irás satisfazer
 Aos nossos corações, que anelam ver
 Seu Salvador! Amém.','293.mp3',43);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (294,'291 - Triunfante','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (294,'291 - Triunfante','1
 Entre nuvens multicores,
 Com os santos vem do céu
 Quem, amando os pecadores,
@@ -7092,7 +7092,7 @@ Ante o trono aurifulgente
 Se prosterne com amor!
 Inaugura o Rei Eterno!
 Aleluia! Vem, Senhor! Amém.','294.mp3',43);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (295,'292 - A vinda do Senhor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (295,'292 - A vinda do Senhor','1
 Como foi para o céu
 Jesus Cristo há de vir,
 Quando o som da trombeta ecoar!
@@ -7132,7 +7132,7 @@ Rei celeste, vem presto reinar.
 Vem, ó sol da justiça,
 No mundo luzir.
 Ó meu Rei, vem meu pranto estancar.','295.mp3',43);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (296,'293 - O dia glorioso','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (296,'293 - O dia glorioso','1
 Vinde, ó cristãos, regozijai-vos,
 O Senhor não tardará!
 Já vem o glorioso dia
@@ -7156,7 +7156,7 @@ Então será glorificado
 Nos remidos, o Senhor.
 E o mundo inteiro admirará
 O seu poder e seu amor.','296.mp3',43);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (297,'294 - O senhor voltará','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (297,'294 - O senhor voltará','1
 Breve o Senhor, em esplendor,
 Aqui há de descer.
 O mundo inteiro, com temor,
@@ -7176,7 +7176,7 @@ Faze o milagre, ó grande Deus:
 Que vença, enfim, o Bem,
 Com o poder dos altos céus,
 Aqui no mundo. Amém.','297.mp3',43);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (298,'295 - A volta de Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (298,'295 - A volta de Jesus','1
 Sobre nuvem fulgurante
 Vem do céu o Salvador.
 Com poder e majestade
@@ -7197,7 +7197,7 @@ Para que, vencida a morte,
 Nos vejamos sem temor,
 Contemplando, contemplando
 Tua face em resplendor. Amém.','298.mp3',43);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (299,'296 - Cristo não tarda','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (299,'296 - Cristo não tarda','1
 Cristo em breve do céu virá,
 Pois prometeu e não tardará.
 Oh, que alegria, que glória será,
@@ -7222,7 +7222,7 @@ Cristo não tarda, não tarda em vir.
 Quem pronto está para aquele porvir?
 Oh, que alegria teremos em ir,
 Quando Jesus regressar.','299.mp3',43);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (300,'297 - A chamada final','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (300,'297 - A chamada final','1
 Quando lá do céu descendo
 Para os seus Jesus voltar,
 E o clarim de Deus a todos proclamar
@@ -7248,7 +7248,7 @@ Desprezaram, insultaram meu Senhor!
 Mas glorioso vem o dia
 Da vitória do meu Rei,
 E por sua imensa graça lá estarei!','300.mp3',43);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (301,'298 - A pedra fundamental','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (301,'298 - A pedra fundamental','1
 Da Igreja o fundamento
 É Cristo, o Salvador!
 Em seu poder descansa
@@ -7275,7 +7275,7 @@ Que muitos pecadores
 Aqui, em contrição,
 Se tornem templos santos
 De tua habitação. Amém.','301.mp3',44);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (302,'299 - Renovação','Fortalece a tua Igreja,
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (302,'299 - Renovação','Fortalece a tua Igreja,
 Ó bendito Salvador!
 Dá-lhe tua plena graça,
 Oh, renova seu vigor.
@@ -7283,7 +7283,7 @@ Vivifica, vivifica
 Nossas almas, ó Senhor! Amém.
 Vivifica, vivifica
 Nossas almas, ó Senhor! Amém.','302.mp3',44);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (303,'300 - Igreja militante','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (303,'300 - Igreja militante','1
 Para resgatar a Igreja
 Grande preço Cristo deu.
 Não foi ouro, nem foi prata:
@@ -7308,7 +7308,7 @@ Eis que estou aqui na terra
 Esperando o teu voltar.
 Vem buscar a tua Igreja,
 Vem, Senhor, e sem tardar. Amém.','303.mp3',44);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (304,'301 - O único salvador','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (304,'301 - O único salvador','1
 Igreja do Senhor,
 Proclama com fervor:
 “Quem salva é só Jesus!”
@@ -7343,7 +7343,7 @@ Proclama com fervor:
 Por esse extremo amor
 Que tem ao pecador
 Louvemos a Jesus.','304.mp3',44);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (306,'302 - Povoam as cidades','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (306,'302 - Povoam as cidades','1
 Povoam as cidades inquietas multidões
 Que vivem na ganância e em vis degradações.
 Bem pouco ali ressoam as preces e o louvor
@@ -7358,7 +7358,7 @@ Contempla, ó Deus, teu povo nas lutas do viver,
 E aos crentes das cidades concede teu poder!
 Do sonho à realidade permite-nos sair,
 Oh, faze a Igreja de hoje melhor a ti servir. Amém.','306.mp3',45);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (307,'303 - Pendão Real','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (307,'303 - Pendão Real','1
 Um pendão real vos entregou o Rei,
 A vós, soldados seus!
 Corajosos, pois, em tudo o defendei,
@@ -7384,7 +7384,7 @@ Pois sejamos todos a Jesus fiéis,
 E a seu real pendão!
 Os que da vitória colhem os lauréis
 Com ele reinarão.','307.mp3',45);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (308,'304 - A voz do evangelho','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (308,'304 - A voz do evangelho','1
 A voz do Evangelho
 Já se fez ouvir aqui,
 Publicando em som alegre,
@@ -7416,7 +7416,7 @@ Salvai-vos desde já,
 Não vos detenhais no mal,
 Cobiçando os seus prazeres,
 Pois vos pode ser fatal.','308.mp3',45);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (309,'305 - Quem quiser','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (309,'305 - Quem quiser','1
 Quem ouvir as novas, deve proclamar.
 Salvação de graça, vinde desfrutar!
 Oh! Que o mundo inteiro ouça anunciar:
@@ -7436,7 +7436,7 @@ Que fiel promessa tens, ó pecador,
 De uma vida eterna! Vem ao Salvador!
 Ele a todos fala com mui terno amor.
 Todo o que quiser é vir!','309.mp3',45);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (310,'306 - Fidelidade na luta','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (310,'306 - Fidelidade na luta','1
 Erguei-vos, cristãos! Cristo quer-vos de pé!
 Na luta do bem, revelai vossa fé!
 Cingindo a armadura, hoje a Cristo exaltai,
@@ -7455,7 +7455,7 @@ As hostes do mal deveis hoje enfrentar,
 As suas prisões pecadores livrar.
 De Cristo bem alto o pendão levantai!
 À sombra da cruz, corajosos lutai!','310.mp3',45);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (311,'307 - A santa peleja','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (311,'307 - A santa peleja','1
 Erga-se o estandarte,
 Tremulando à luz!
 Seu brasão: coroa
@@ -7496,7 +7496,7 @@ Dá que em teu serviço
 Saiba a cruz tomar
 E teu santo nome
 Hoje e sempre honrar','311.mp3',45);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (312,'308 - Escuridão e luz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (312,'308 - Escuridão e luz','1
 Nas tormentas dessa vida,
 Perto está a perdição.
 Aos incautos navegantes,
@@ -7526,7 +7526,7 @@ Noite eterna se aproxima,
 Tenebrosa em seu horror!
 Clama, avisa aos infelizes;
 Insta-os para o Salvador!','312.mp3',45);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (313,'309 - Proclamação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (313,'309 - Proclamação','1
 Proclamai que Jesus Cristo é Senhor e Rei,
 Proclamai! Proclamai!
 Que nos livra da cruel condenação da Lei,
@@ -7558,7 +7558,7 @@ Dizei que, sem demora, todos devem crer
 E a Cristo agora mesmo o coração render!
 Que estejam preparados quando aqui voltar,
 A fim de, redimidos, com louvores o aclamar.','313.mp3',45);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (314,'310 - Quem salva é só Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (314,'310 - Quem salva é só Jesus','1
 De Deus, ó eterna Igreja
 Que espalha santa luz,
 Proclama aos pecadores:
@@ -7585,7 +7585,7 @@ Vai, dize aos desgarrados:
 “Quem salva é só Jesus!”
 Vai, dize aos desgarrados:
 “Quem salva é só Jesus!”','314.mp3',45);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (315,'311 - Avanta, ó crentes','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (315,'311 - Avanta, ó crentes','1
 Avante, avante, ó crentes,
 Soldados de Jesus!
 Erguei seu estandarte,
@@ -7612,7 +7612,7 @@ Então, eternamente,
 Será o vencedor
 No céu glorificado
 Com Cristo, o Salvador!','315.mp3',46);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (316,'312 - Há trabalho certo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (316,'312 - Há trabalho certo','1
 Há trabalho certo para ti cristão
 Que demanda toda tua devoção.
 Vem, alegremente, a Cristo obedecer,
@@ -7637,7 +7637,7 @@ Quantos há perdidos, sem a salvação,
 Quantos que precisam de consolação!
 Como Cristo os ama, faze-os entender,
 Pois só tu, ó crente, o poderás fazer.','316.mp3',46);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (317,'313 - Prontidão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (317,'313 - Prontidão','1
 Quem de Cristo ao lado agora quer andar?
 Quem a sua vida quer lhe dedicar?
 Tudo abandonando, a Jesus seguir,
@@ -7663,7 +7663,7 @@ A peleja sempre dura nos será;
 Inimigo forte nos combaterá;
 Mas Onipotente é o Rei dos reis!
 A vitória é certa para os seus fiéis!','317.mp3',46);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (318,'314 - Diligência','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (318,'314 - Diligência','1
 Ouve! A voz divina clama:
 “Quem deseja trabalhar?”
 Vastos campos nos convidam,
@@ -7690,7 +7690,7 @@ Olha o Mestre a convocar-te,
 Ouve a voz chamando a ti!
 Oh! Responde sem demora:
 “Manda-me! Estou pronto aqui!”','318.mp3',46);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (319,'315 -Serviço do crente','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (319,'315 -Serviço do crente','1
 Vamos nós trabalhar, somos servos de Deus,
 E o mestre seguir no caminho dos céus!
 Com o seu bom conselho o vigor renovar,
@@ -7710,7 +7710,7 @@ Vamos nós trabalhar, ajudados por Deus,
 Que a coroa de glória nos dá lá nos céus.
 A mansão dos fiéis sempiterna será,
 Pois Jesus salvação inefável nos dá!','319.mp3',46);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (320,'316 - Os intentos de Deus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (320,'316 - Os intentos de Deus','1
 Os seus intentos cumpre Deus
 No decorrer dos anos.
 Ele executa o seu querer
@@ -7750,7 +7750,7 @@ Bem perto o dia vem,
 Quando a glória de Deus
 Há de o mundo inundar,
 Como as águas cobrem o mar.','320.mp3',46);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (321,'317 - Chamada','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (321,'317 - Chamada','1
 Eia, crentes destemidos,
 Da verdade convencidos,
 Para a luta apercebidos,
@@ -7784,7 +7784,7 @@ Avançai, pois, exultando,
 Sempre em Cristo confiando,
 Vosso testemunho dando:
 Deus Verdade e Fé!','321.mp3',46);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (322,'318 - Ceifeiros do Senhor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (322,'318 - Ceifeiros do Senhor','1
 Ceifeiros da Seara santa,
 Quão poucos, fracos sois!
 Mas forte é Cristo, vosso Mestre,
@@ -7806,7 +7806,7 @@ Jesus está convosco sempre,
 Assim nos prometeu.
 Coragem, pois, irmãos avante,
 Eis que ele já venceu!','322.mp3',46);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (323,'319 - Obreiros em marcha','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (323,'319 - Obreiros em marcha','1
 Eis marchamos para aquele bom país,
 Onde o crente, sim, é Cristo que o diz,
 Com o Salvador, vivendo ali feliz,
@@ -7841,7 +7841,7 @@ Os perdidos vamos com amor buscar!
 Aos descrentes vamos logo declarar
 Que Jesus quer, hoje, a todos resgatar!
 Oh, sim, vamos trabalhar!','323.mp3',46);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (324,'320 - Brilha no viver','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (324,'320 - Brilha no viver','1
 Não somente ao se fazer trabalho singular
 É mister agir com muito ardor;
 Mas as coisas mais humildes a executar
@@ -7862,7 +7862,7 @@ Por maior que venha ser o teu esforço aqui,
 Por mais firme a tua devoção,
 Quantas almas inda jazem ao redor de ti,
 Na mais total escuridão.','324.mp3',46);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (325,'321 - Mãos ao trabalho','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (325,'321 - Mãos ao trabalho','1
 Mãos ao trabalho, jovens!
 Vai já passando o alvor.
 Eia, enquanto tendes
@@ -7889,7 +7889,7 @@ Vamos, irmãos, à obra!
 Por Cristo trabalhar!
 Eia, que em vindo a noite
 Vamos descansar.','325.mp3',46);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (326,'322 - Heroínas da fé','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (326,'322 - Heroínas da fé','1
 Avante, companheiras,
 Na causa de Jesus!
 Ativas no trabalho,
@@ -7914,7 +7914,7 @@ Erguei-vos heroínas,
 E vinde trabalhar!
 Mostrai vossas virtudes
 Na Pátria, Igreja e Lar!','326.mp3',47);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (327,'323 - Santa peleja','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (327,'323 - Santa peleja','1
 Nesta arena da santa peleja,
 No combate devemos entrar,
 Batalhando com fé e coragem,
@@ -7935,7 +7935,7 @@ Pelejemos! A causa é sagrada!
 Vamos todas com fé e oração;
 E guiados por Deus, Pai celeste,
 Cumpriremos a nossa missão!','327.mp3',47);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (328,'324 - Unidas e firmes','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (328,'324 - Unidas e firmes','1
 Sempre unidas companheiras,
 Declaremos por Jesus,
 Guerra santa contra as trevas,
@@ -7955,7 +7955,7 @@ Sempre firmes na esperança,
 Confiando no Senhor,
 Imploremos sua graça
 E busquemos seu amor!','328.mp3',47);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (329,'325 - Aspiração feminina','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (329,'325 - Aspiração feminina','1
 A nós aqui reunidas,
 Senhor envia luz.
 São tuas nossas vidas,
@@ -7997,7 +7997,7 @@ E o mundo despertado,
 Contemplará em nós
 Rebanho santo e amado,
 Atento à tua voz. Amém.','329.mp3',47);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (330,'325-A  - Jesus Cristo é o Senhor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (330,'325-A  - Jesus Cristo é o Senhor','1
 Todas unidas com santo ardor,
 Almas remidas cheias de amor.
 Nossa mensagem é de valor,
@@ -8018,7 +8018,7 @@ Nosso trabalho é para o Senhor,
 Nossos talentos são do Senhor.
 Vamos, unidas, pois, proclamar
 Que ele é o Senhor do céu e mar!','330.mp3',47);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (331,'326 - Homens presbiterianos','Fé
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (331,'326 - Homens presbiterianos','Fé
 Homens presbiterianos do Brasil
 Testemunhas de Jesus, o Salvador!
 Levantemo-nos, com fé e mui vigor,
@@ -8050,7 +8050,7 @@ Na grandiosa obra de Jesus, Senhor,
 Poderosa, forte, bela e triunfal,
 Arvorando, com amor, pendão real,
 Exaltando seu labor!','331.mp3',48);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (332,'327 - Obreiros cristãos','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (332,'327 - Obreiros cristãos','1
 Aqui reunidos, queremos, ó Deus,
 À causa da Igreja servir.
 Na santa seara, a nós, servos teus,
@@ -8077,7 +8077,7 @@ Dos falsos obreiros a astúcia do mal
 Afasta, Senhor, com poder.
 E à boa semente do santo trigal
 Permite nascer e crescer! Amém.','332.mp3',49);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (333,'328 - Deus do universo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (333,'328 - Deus do universo','1
 Deus do universo, de leis imutáveis,
 Que nos sustém na luta terreal,
 Dá-nos marchar em meio às tuas hostes,
@@ -8097,7 +8097,7 @@ E em meio às trevas faze a luz brilhar.
 Teus pensamentos quão grandiosos são!
 Teu povo almeja estar contigo sempre;
 “Venha o teu reino” - é a nossa petição.','333.mp3',49);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (334,'329 - Instalação de pastor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (334,'329 - Instalação de pastor','1
 Senhor da Igreja, atende
 A nossa petição!
 Que o teu trabalho siga
@@ -8133,7 +8133,7 @@ E cada vez mais forte,
 Mais cheio de fervor,
 A todos manifeste
 A graça do Senhor. Amém.','334.mp3',50);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (335,'330 - A Bênção do batismo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (335,'330 - A Bênção do batismo','1
 Ó Jesus, eu te confesso,
 Para sempre és meu Senhor
 Obediente, aqui desejo
@@ -8158,7 +8158,7 @@ Fortalece ao meu anseio
 De te ser fiel aqui,
 Pois minha alma só aspira
 A viver de ti em ti. Amém.','335.mp3',51);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (336,'331 - Oração','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (336,'331 - Oração','1
 Confirma, ó Salvador,
 A decisão feliz
 De quem, por teu amor,
@@ -8186,7 +8186,7 @@ Revela os ricos dons
 Que o teu poder nos traz;
 Mostrando ao mundo, assim, Jesus,
 Que é bom andar na tua luz. Amém.','336.mp3',51);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (337,'332 - Batismo infantil','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (337,'332 - Batismo infantil','1
 Nossos filhos te pertencem,
 Ó eterno Deus de amor!
 São herdeiros da aliança
@@ -8214,7 +8214,7 @@ Se derrama nos infantes
 Com valor sacramental,
 Te pedimos, grande Deus,
 Abençoa-os lá dos céus. Amém.','337.mp3',51);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (338,'333 - O batismo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (338,'333 - O batismo','1
 Nós, Senhor, nos alegremos
 Ao teu mando obedecer.
 Pois tu mesmo nos mandaste
@@ -8242,7 +8242,7 @@ Vivos em Jesus queremos
 Sua imagem refletir.
 Vem, Senhor, aqui fazer
 Tua graça em nós crescer. Amém.','338.mp3',51);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (339,'334 - A conversão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (339,'334 - A conversão','1
 Em cegueira eu andei e perdido vaguei
 Longe, longe do meu Salvador!
 Mas da glória desceu, o seu sangue verteu
@@ -8268,7 +8268,7 @@ Que ditoso, então, foi o meu coração,
 Conhecer o excelso amor,
 Que levou meu Jesus a sofrer lá na cruz,
 E salvar este pobre pecador.','339.mp3',52);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (340,'335 - Júbilo no céu','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (340,'335 - Júbilo no céu','1
 Oh, que belos hinos cantam lá no céu,
 Pois do mundo o filho mau voltou!
 Vede o Pai celeste prestes a abraçar
@@ -8288,7 +8288,7 @@ Este arrependido vamos festejar,
 Como os anjos fazem com fervor.
 E anunciemos, com real prazer,
 Que se resgatou um pecador.','340.mp3',52);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (341,'336 - Transformação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (341,'336 - Transformação','1
 Eu, perdido pecador,
 Longe do meu Jesus
 Me encontrava, sem vigor,
@@ -8312,7 +8312,7 @@ A mensagem transmitir
 Aos que perdidos são!
 Venham todos já fruir
 A salvação.','341.mp3',52);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (342,'337 - Profissão de fé','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (342,'337 - Profissão de fé','1
 O Céu festeja a conversão
 De mais um pecador!
 Exulta a Igreja de prazer;
@@ -8332,7 +8332,7 @@ Consolador divino, vem
 As almas converter!
 Vem muitas almas batizar,
 Exerce o teu poder! Amém.','342.mp3',53);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (345,'338 - Dia da profissão de fé','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (345,'338 - Dia da profissão de fé','1
 Salve, dia de festa e canto
 Quando venho a fé professar
 Em Deus Pai, no Espírito Santo,
@@ -8347,7 +8347,7 @@ Salve, data de alegre memória,
 De convívio, de amor fraternal!
 Salve, dia em que canto vitória
 Contra as fúrias tremendas do mal.','345.mp3',53);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (346,'339 - Dia feliz','
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (346,'339 - Dia feliz','
 Oh, dia alegre em que aceitei
 Jesus e nele a salvação!
 O gozo deste coração
@@ -8370,7 +8370,7 @@ Me sacro voto, ó Salvador,
 De dia em dia afirmarei!
 E além da morte exultarei,
 Louvando sempre a ti, Senhor','346.mp3',53);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (347,'340 - Santa comunhão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (347,'340 - Santa comunhão','1
 Disposta a mesa, ó Salvador,
 Estás presente aqui!
 Ministra o vinho, parte o pão,
@@ -8395,7 +8395,7 @@ Sabemos que regressarás
 Em majestade e luz!
 Juiz Supremo, eterno Rei,
 Oh, vem, Senhor Jesus! Amém.','347.mp3',54);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (348,'341 - Vera páscoa','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (348,'341 - Vera páscoa','1
 Ó Jesus, ó vera Páscoa
 Suspirada dos antigos!
 Ó Cordeiro eterno e meigo,
@@ -8410,7 +8410,7 @@ Bom Jesus, ó Vinho puro
 De perene gozo a fonte,
 Faze que nossa alma viva
 Para ti, sempre de ti. Amém.','348.mp3',54);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (349,'342 - Comunhão','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (349,'342 - Comunhão','1
 Atendendo ao que mandaste,
 Relembramos, ó Jesus,
 O teu grande sacrifício
@@ -8430,7 +8430,7 @@ Que por meio desta Ceia
 Nós cresçamos em poder;
 O Poder com que os remidos
 Todo o mal irão vencer. Amém.','349.mp3',54);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (350,'343 - Em memória','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (350,'343 - Em memória','1
 Levado pelo imenso amor
 Que Tu me tens, Senhor,
 À tua Mesa, ó Salvador,
@@ -8450,7 +8450,7 @@ E quando a morte, enfim, chegar,
 Jesus, ao doce lar,
 Os teus fiéis virás chamar;
 Lembrar-te-ás de mim. Amém.','350.mp3',54);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (351,'344 - A ceia do senhor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (351,'344 - A ceia do senhor','1
 Eis-me aqui, Senhor bondoso,
 Tua Ceia a celebrar,
 E por ela neste instante,
@@ -8470,7 +8470,7 @@ Que o amor aqui lembrado
 Venha encher o coração
 Dos que jazem separados
 Desta doce comunhão! Amém.','351.mp3',54);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (352,'345 - O pão do mundo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (352,'345 - O pão do mundo','1
 Ó Pão, só por amor partido!
 Ó Vinho, dado por amor!
 Ó Cristo, vida nos tens sido,
@@ -8480,7 +8480,7 @@ Ao pecador atribulado
 Vens, mesmo agora, consolar.
 De tua Ceia, ó Cristo amado,
 Nossa alma vem alimentar. Amém.','352.mp3',54);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (353,'346 - A ceia do Senhor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (353,'346 - A ceia do Senhor','1
 Não nas mãos, mas em minha alma,
 Tomo o corpo de Jesus,
 E, em figura, bebo o sangue
@@ -8500,7 +8500,7 @@ E permite que hoje eu tenha,
 No fruir da salvação,
 Com os crentes e contigo
 Verdadeira comunhão. Amém.','353.mp3',54);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (354,'347  - O justo pelos injustos','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (354,'347  - O justo pelos injustos','1
 Ó crentes, cantai entoando o louvor
 De quem nos remiu com tão grande amor!
 Os crimes do mundo, levando na cruz,
@@ -8520,7 +8520,7 @@ Agora se cumpre em nós, bom Senhor,
 A linda promessa de teu amor:
 De que, congregados, Tu sempre estarás
 Presente, trazendo-nos bênçãos e paz. Amém.','354.mp3',55);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (355,'348 - É este o dia','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (355,'348 - É este o dia','1
 É este o dia que o bom Deus
 Criou com sua mão!
 A terra inteira, os altos céus,
@@ -8540,7 +8540,7 @@ Glória louvor e adoração
 A Cristo vimos dar!
 Os altos céus se alegrarão,
 Louvando-o sem cessar!','355.mp3',55);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (356,'349 - Dia do Senhor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (356,'349 - Dia do Senhor','1
 Hoje é dia do Senhor!
 Entoai o seu louvor
 E adorai-o com fervor.
@@ -8560,7 +8560,7 @@ Hoje é dia de perdão!
 Deus convida o coração
 A aceitar a Redenção;
 Glória ao nosso Deus!','356.mp3',55);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (357,'350 - A palavra da vida','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (357,'350 - A palavra da vida','1
 Fonte da Celeste Vida,
 Manifesta o teu poder.
 Vivifica os sem alento,
@@ -8588,7 +8588,7 @@ Oh, concede os belos frutos
 Que esta instrução produz!
 E gozamos, e gozamos
 Alegria, vida e luz.','357.mp3',56);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (358,'351 - Belas palavras de vida','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (358,'351 - Belas palavras de vida','1
 Quero ouvi-las mais outra vez,
 Belas palavras de vida!
 Narram tudo o que Cristo fez,
@@ -8614,7 +8614,7 @@ Quer salvar todo pecador!
 Belas palavras de vida!
 Ele vivifica
 E nos purifica.','358.mp3',56);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (359,'352 - Leitura bendita','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (359,'352 - Leitura bendita','1
 Enquanto, ó Salvador, teu Livro ler,
 De auxílio necessito para ver
 Da mera letra, além, a ti, Senhor,
@@ -8624,7 +8624,7 @@ E meditar no teu excelso amor.
 Alimentando a imensa multidão.
 Da vida o pão és Tu ; podes assim
 Satisfazer, Senhor, também a mim. Amém.','359.mp3',56);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (360,'353 - Ao fim dos estudos','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (360,'353 - Ao fim dos estudos','1
 Findo o tempo dos estudos,
 Eis-nos grande Instruidor!
 Levantamos nossas vozes,
@@ -8645,7 +8645,7 @@ E que o teu divino livro
 Mais possamos conhecer!
 Desejamos, desejamos
 Sempre em tua luz viver. Amém.','360.mp3',56);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (363,'354 - A escola dominical','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (363,'354 - A escola dominical','1
 Dominical é a grande e antiga Escola
 Em que se estuda o Livro do Senhor;
 A vida aqui se exalta e se acrisola
@@ -8674,7 +8674,7 @@ Que os seus alunos conta por milhões;
 Na qual o estudo é verdadeira festa,
 Que empolga crianças, jovens e anciãos,
 Que empolga crianças, jovens e anciãos','363.mp3',56);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (364,'354-A - Escola dominical','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (364,'354-A - Escola dominical','1
 Vamos todos à Escola Sagrada
 A Palavra de Deus aprender.
 A verdade dos céus revelada
@@ -8694,7 +8694,7 @@ Propaguemos com fé, corajosos,
 Desta Escola o sublime ideal.
 E veremos um dia, ditosos,
 A vitória do bem sobre o mal.','364.mp3',56);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (365,'355 - Oração infantil','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (365,'355 - Oração infantil','1
 Amigo dos meninos,
 Benigno Salvador!
 Conosco está presente,
@@ -8712,7 +8712,7 @@ Concede nos estudos
 Que temos hoje aqui,
 Sejamos instruídos,
 Ó grande Deus, por ti. Amém.','365.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (366,'356 - Jesus menino','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (366,'356 - Jesus menino','1
 Foi também Jesus, um dia,
 Como eu, pequeno, assim,
 Mas em tudo se fazia
@@ -8739,7 +8739,7 @@ Ao teu lado sempre estando,
 Quero andar na tua luz,
 Minha vida consagrando
 Só a ti, Senhor Jesus! Amém.','366.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (367,'357 - Louvor infantil','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (367,'357 - Louvor infantil','1
 Filhos de Jerusalém
 Davam a Jesus louvor!
 Cantaremos nós, também,
@@ -8758,7 +8758,7 @@ Grande é o nosso Salvador,
 Toda a dívida pagou!
 Pela morte o bom Pastor
 Seu rebanho resgatou.','367.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (368,'358 - Jesus e as crianças','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (368,'358 - Jesus e as crianças','1
 Congregação
 A Jesus crianças vinham
 Sua bênção suplicar.
@@ -8780,7 +8780,7 @@ Minhas mãos, tão pequeninas,
 Se ergam sempre em teu louvor,
 Ó Jesus, Senhor bendito,
 Por salvar-nos com amor! Amém.','368.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (369,'359 - Jesus me quer bem','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (369,'359 - Jesus me quer bem','1
 Sei que Cristo me quer bem,
 Pois na Bíblia assim o diz.
 Frágil sou, mas força tem;
@@ -8795,7 +8795,7 @@ Tudo fez Jesus por mim,
 Só por ele vou viver.
 E porque me quer assim,
 Hei de amá-lo até morrer!','369.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (370,'360 - Pequena luz','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (370,'360 - Pequena luz','1
 No mundo, pequenina luz
 De Deus eu quero ser,
 A refletir, do meu Jesus,
@@ -8815,7 +8815,7 @@ Na Igreja, pequenina voz
 Que louve ao Salvador,
 E nunca, ao fim da vida até,
 Me afaste do Senhor','370.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (371,'361 - Brilhando com Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (371,'361 - Brilhando com Jesus','1
 Manda-nos luzir o Senhor Jesus,
 Como vela acesa dá de noite a luz!
 Quer que nós brilhemos como a luz do céu:
@@ -8830,7 +8830,7 @@ Ao redor, então, manda a luz brilhar
 Para as densas trevas hoje dissipar.
 Com Jesus brilhemos, pois nos escolheu:
 Tu no teu cantinho e eu no meu!','371.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (372,'362 - Brilhando por Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (372,'362 - Brilhando por Jesus','1
 Vejo no céu, esplendente,
 Do sol a clara luz!
 Quero viver tão somente
@@ -8855,7 +8855,7 @@ O feio e triste pecado
 Ajuda-me a vencer!
 Tendo Jesus ao meu lado,
 Eu quero aqui viver.','372.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (373,'363 - Venham as crianças','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (373,'363 - Venham as crianças','1
 Venham, venham as crianças
 Ao bendito Salvador,
 Que na cruz, ao resgatá-las,
@@ -8876,7 +8876,7 @@ Receber os seus conselhos,
 Sua santa Lei ouvir.
 Cristo agora, Cristo sempre
 Quer na luz nos conduzir.','373.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (374,'364 - Graças a Deus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (374,'364 - Graças a Deus','1
 De manhã, deixando o leito,
 Faço a Deus minha oração.
 Dou-lhe graças pela noite,
@@ -8891,7 +8891,7 @@ E depois vindo a noitinha,
 Novamente ao me deitar,
 Oro a Deus, agradecido,
 Durmo em paz sem recear.','374.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (375,'365 - Convite às crianças','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (375,'365 - Convite às crianças','1
 Oh, vinde crianças!
 Cantai a linda história
 Do bom Messias, Rei dos reis,
@@ -8915,7 +8915,7 @@ E sua salvação!
 A voz de Cristo, o Bom Pastor,
 Repete ainda com amor:
 “Deixai as crianças que venham a mim.”','375.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (376,'366 - Jóias preciosas','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (376,'366 - Jóias preciosas','1
 Quando, ó Cristo, aqui vieres
 As jóias buscar,
 Entre as jóias, ricas jóias,
@@ -8935,7 +8935,7 @@ Criancinhas, criancinhas
 Que amais a Jesus,
 Sois as jóias, ricas jóias
 Compradas na cruz.','376.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (377,'367 - Convite aos meninos','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (377,'367 - Convite aos meninos','1
 Vinde meninos! Vinde a Jesus!
 Ele ganhou-vos bênçãos na cruz!
 Os pequeninos ele conduz,
@@ -8961,7 +8961,7 @@ Eis a chamada : “Vinde hoje a mim!”
 Não há no mundo quem ame assim!
 Seu grande amor por vós não tem fim.
 Oh, vinde ao Salvador!','377.mp3',57);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (378,'368 - Despedida','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (378,'368 - Despedida','1
 Deus vos guarde pelo seu poder
 Permaneça ao vosso lado,
 Vos dispense o seu cuidado,
@@ -8981,7 +8981,7 @@ Deus vos guarde bem no seu amor.
 No trabalho glorioso,
 Para o dia venturoso,
 Deus vos guarde bem no seu amor!','378.mp3',58);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (379,'369 - A bíblia para todos','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (379,'369 - A bíblia para todos','1
 Eis a Bíblia, a Palavra
 Que de Deus provém!
 Quem com ela vive e lavra,
@@ -9001,7 +9001,7 @@ Mocidade, homens, velhos,
 Ponde-vos de pé!
 E as lições dos Evangelhos
 Propagai com fé.','379.mp3',59);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (380,'370 - Proclamação','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (380,'370 - Proclamação','1
 A lei de Deus aos homens vamos dar.
 A cada povo, a todo coração
 Pregai a Cristo, seu divino amor,
@@ -9021,7 +9021,7 @@ O mundo a voz de Deus escutará,
 Se com esforço e com dedicação
 Nos empenharmos todos no ideal
 De anunciar a Luz da Salvação!','380.mp3',59);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (381,'371 - A bíblia','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (381,'371 - A bíblia','1
 Da Bíblia a luz celeste
 Lampeje aqui, Senhor,
 A luz que vem de Cristo,
@@ -9048,7 +9048,7 @@ Adestra-nos, ó Mestre,
 Com teu Verbo eficaz!
 Instrui e repreende,
 Destrói o que é falaz. Amém.','381.mp3',59);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (382,'372 - O crente e a bíblia','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (382,'372 - O crente e a bíblia','1
 Não abandono a Bíblia,
 Pois é a voz de Deus.
 Dos crentes o tesouro,
@@ -9080,7 +9080,7 @@ Que saiba todo o mundo,
 Que a Cristandade tem
 A fé, robusta e pura,
 Que pela Bíblia vem.','382.mp3',59);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (383,'373 - Ano novo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (383,'373 - Ano novo','1
 Rompe a aurora! Vai-se embora
 Mais um ano e outro vem!
 Não temamos: Prossigamos,
@@ -9100,7 +9100,7 @@ Os talentos, nos momentos
 Deste ano a começar,
 Consagremos e usemos
 Para Deus glorificar.','383.mp3',60);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (384,'374 - Saudando o ano novo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (384,'374 - Saudando o ano novo','1
 Ano velho já findado,
 Foste o dom do Criador!
 Novo ano, que começas,
@@ -9121,7 +9121,7 @@ E com grande regozijo
 Bendizendo o excelso dom
 Ao saudarmos ao saudarmos
 Ano novo, ano bom.','384.mp3',60);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (385,'375 - Ano velho','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (385,'375 - Ano velho','1
 Ano velho já termina;
 Damos a Jesus louvor,
 Pois do mal nos tem guardado
@@ -9151,7 +9151,7 @@ Nossos passos vem guiar!
 E esquecidas nossas culpas,
 Um bom ano vem nos dar.
 Um bom ano, um bom ano vem nos dar. Amém.','385.mp3',60);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (386,'376 - Intercessão pela pátria','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (386,'376 - Intercessão pela pátria','1
 Divino Salvador,
 Contempla com favor
 Nosso País!
@@ -9199,7 +9199,7 @@ Brilhe a benigna luz
 Que o teu favor produz!
 Reine o Senhor Jesus
 Sobre a nação! Amém.','386.mp3',61);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (387,'377 - A nação para Cristo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (387,'377 - A nação para Cristo','1
 Uma voz, nos primórdios da história,
 Fez-se ouvir com solene vigor,
 Proclamando a estupenda vitória
@@ -9236,7 +9236,7 @@ Vamos, pois, incessantes na lida,
 Em socorro dos nossos irmãos,
 Transformar nossa Pátria querida
 Num reinado feliz de Cristão!','387.mp3',61);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (388,'378 - Oração pela Pátria','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (388,'378 - Oração pela Pátria','1
 Por nossa Pátria oramos
 A ti, supremo Deus!
 Por nosso lar clamamos
@@ -9272,7 +9272,7 @@ Então os salvos de Jesus,
 Lutando firmes pela cruz,
 Difundirão de Cristo a luz
 Por toda a Pátria! Amém','388.mp3',61);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (389,'379 - Petição pela pátria','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (389,'379 - Petição pela pátria','1
 Minha Pátria para Cristo!
 Eis a minha petição.
 Minha Pátria tão querida,
@@ -9295,7 +9295,7 @@ Brava gente brasileira,
 Longe vá temor servil:
 Ou ficar a Pátria salva,
 Ou morrer pelo Brasil.','389.mp3',61);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (390,'380 - Jesus proteja a pátria','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (390,'380 - Jesus proteja a pátria','1
 Oh, minha Pátria amada,
 Brasil dos sonhos meus!
 Dirija o teu destino
@@ -9322,7 +9322,7 @@ A gratidão nos faça
 Erguer o coração
 Em culto fervoroso,
 Em santa adoração. Amém.','390.mp3',61);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (391,'381 - Intercessão pela cidade','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (391,'381 - Intercessão pela cidade','1
 A cidade, ó Deus, protege,
 Cada rua, cada lar,
 Seus cansados transeuntes,
@@ -9347,7 +9347,7 @@ Abençoa nossa Igreja,
 Nossos dias, nosso lar;
 E que assim, por toda a vida,
 Nós possamos te louvar! Amém.','391.mp3',62);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (392,'382 - Mocidade presbiteriana','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (392,'382 - Mocidade presbiteriana','1
 Somos jovens num mundo velho
 A pregar vivos ideais
 Do santo Evangelho
@@ -9378,7 +9378,7 @@ Com fé no Comandante,
 Venceremos todo o mal!
 “Sê testemunha” - disse o Senhor.
 Falemos sempre de Jesus, sem temor!','392.mp3',63);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (393,'383 - Um novo mundo','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (393,'383 - Um novo mundo','1
 Jovens fortes chama-nos Jesus,
 Para um mundo novo construir.
 Trevas, que hoje tentam destruir,
@@ -9400,7 +9400,7 @@ O momento em que há de raiar
 Novo mundo, com Jesus, Senhor,
 Onde a paz e o amor
 Sempre hão de reinar.','393.mp3',63);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (394,'384 - Vamos com Jesus','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (394,'384 - Vamos com Jesus','1
 Ó jovens, atendei! Oh, que lindo pavilhão
 Cristo há desfraldado já sobre a nação.
 E quer-vos nas fileiras a todos receber
@@ -9428,7 +9428,7 @@ E o Senhor vitória lhe concederá!
 Sim, vamos, companheiros,
 Pois, sendo aqui fiéis,
 Com Jesus conquistaremos imortais lauréis!','394.mp3',63);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (395,'385 - O estudante e a Bíblia','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (395,'385 - O estudante e a Bíblia','1
 Toda luz que a razão irradia
 Nós podemos nos livros achar.
 Mas só Cristo nossa alma alumia,
@@ -9463,7 +9463,7 @@ Nele está toda a luz, toda a vida.
 Procuremos tornar difundida
 A verdade em nosso País.
 A verdade em nosso País.','395.mp3',63);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (396,'386 - Testemunho','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (396,'386 - Testemunho','1
 Direi ao mundo que sou crente
 Não me envergonho de o dizer!
 Direi ao mundo que sou crente,
@@ -9489,7 +9489,7 @@ Oh, dize ao mundo que és crente,
 Não te envergonhes de o dizer.
 Oh, dize ao mundo que és crente,
 E que por Cristo vais viver.','396.mp3',63);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (399,'387 - Combate','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (399,'387 - Combate','1
 Moços, declarai guerra contra o mal,
 Exaltai a cruz do Salvador!
 Firmes empunhai armas não carnais,
@@ -9509,7 +9509,7 @@ Nosso Deus e Pai, ouve com favor!
 Vem nos ajudar a combater!
 E vencida, enfim, a luta final,
 A coroa vem nos conceder.','399.mp3',63);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (400,'388 - Mocidade, avante','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (400,'388 - Mocidade, avante','1
 Mocidade cristã, eia, avante!
 Reuni vossas forças: Lutai!
 O inimigo potente se mostra,
@@ -9530,7 +9530,7 @@ Eia, pois, mocidade pujante,
 Por Jesus, pela fé, avançai!
 Ide aos povos levar o Evangelho,
 Para a glória de Deus trabalhai!','400.mp3',63);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (401,'389 - Avante, mocidade!','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (401,'389 - Avante, mocidade!','1
 Eia, avante, mocidade,
 Vamos por Jesus lutar!
 A peleja é gloriosa,
@@ -9562,7 +9562,7 @@ Eia, avante, companheiros,
 Vamos firmes batalhar.
 Sempre alegres na esperança,
 Sempre unidos trabalhar.','401.mp3',63);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (402,'390 - Fiéis soldados','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (402,'390 - Fiéis soldados','1
 De novo a combater
 Por ti, Jesus chamados
 Fiéis e bons soldados,
@@ -9595,7 +9595,7 @@ E após a luta a glória
 De lá nos céus estar!
 Lutar, orar, servir!
 E com Jesus reinar.!','402.mp3',63);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (403,'391 - Mocidade fiel','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (403,'391 - Mocidade fiel','1
 Mocidade fiel, redimida,
 Mocidade que Cristo salvou,
 Inflamada de amor, vossa vida
@@ -9619,7 +9619,7 @@ Tendo o peito escudado na fé,
 Por Jesus, pela sua bandeira,
 Mocidade valente, de pé.
 Mocidade valente, de pé.','403.mp3',63);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (404,'392 - Vida vitoriosa','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (404,'392 - Vida vitoriosa','1
 Cristo amado, sei que na força do mal
 Tu, meu Mestre, sempre serás protetor.
 Tu me guardas, dando-me paz divinal!
@@ -9644,7 +9644,7 @@ Oh! Que bênção ter a certeza do bem,
 Ter na vida paz e perdão do Senhor!
 Mui alegre vou para a Pátria de além,
 Onde reina Cristo Jesus, Rei de amor!','404.mp3',63);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (405,'393 - União vital','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (405,'393 - União vital','1
 Duas vidas, Senhor, se unem num só ser;
 Duas almas e dois nobres corações.
 Pelo amor e afeição querem já viver
@@ -9664,7 +9664,7 @@ Tu criaste, Senhor, Para o nosso bem,
 A união que adorna esta vida aqui.
 De uma união mui feliz quantas bênçãos vêm
 À família dos teus filhos, glória a ti! Amém','405.mp3',64);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (406,'394 - Perfeito amor','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (406,'394 - Perfeito amor','1
 Perfeito amor, além do entendimento,
 Com devoção buscamos teu favor.
 Faze perfeito, pois, o casamento
@@ -9679,7 +9679,7 @@ Dá que eles tenham forças e alegria
 Nos dissabores, lutas, provações!
 Que assim conservem juntos a harmonia,
 Perfeitos tendo sempre os corações. Amém.','406.mp3',64);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (407,'395 - Amor no lar','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (407,'395 - Amor no lar','1
 Mui felizes nos correm os dias
 E depressa se esvai nossa dor!
 São benditas as sãs alegrias,
@@ -9704,7 +9704,7 @@ Se sentimos em casa a pobreza,
 Se há pobreza também ao redor,
 Suportável será, com certeza,
 Quando reina no lar doce amor!','407.mp3',65);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (408,'396 - Graças pelo aniversário','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (408,'396 - Graças pelo aniversário','1
 Um ano mais de vida
 Guardou-vos o Senhor!
 E deu-vos fiel guarida
@@ -9729,7 +9729,7 @@ Ensina-nos, ó Cristo,
 O que convém lembrar,
 E todo o nosso tempo
 No bem aproveitar. Amém.','408.mp3',66);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (409,'397 - Por minha boa mãe','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (409,'397 - Por minha boa mãe','1
 Por minha boa mãe
 E pelo seu amor,
 Na terra, sem igual,
@@ -9754,7 +9754,7 @@ Enquanto aqui viver.
 De mãe o puro amor.
 Por ela o coração
 Bendize ao Criador.','409.mp3',67);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (410,'398 - Outra vez cantamos','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (410,'398 - Outra vez cantamos','1
 Pai, outra vez cantamos teu louvor
 A uma voz, ao templo teu deixar.
 Bemdito és Tu, conosco estás, Senhor,
@@ -9774,7 +9774,7 @@ Dá-nos, Senhor, a tua paz fruir
 A cada instante, em nosso labutar!
 E adentrando a Pátria do porvir,
 A paz perfeita iremos desfrutar. Amém.','410.mp3',68);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (411,'399 - Término do culto','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (411,'399 - Término do culto','1
 Findado agora o culto, ó Deus,
 Prestado em teu louvor,
 Despede em paz e guia os teus
@@ -9786,7 +9786,7 @@ A graça singular!
 No teu amor permanecer,
 No Santo Espírito viver,
 Em comunhão sem par. Amém.','411.mp3',68);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (412,'400 - Oração por proteção','1
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (412,'400 - Oração por proteção','1
 Grande Deus! Em paz,agora,
 Despedimo-nos, Senhor.
 Certos de fruir as bênçãos
@@ -9801,11 +9801,11 @@ Tua santa proteção.
 Deus eterno, Deus eterno,
 Reina em cada coração. Amém.','412.mp3',68);
 
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (415,'A · Ofertório','Tudo vem de ti Senhor
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (415,'A · Ofertório','Tudo vem de ti Senhor
 E do que é teu, te damos. Amém.','415.mp3',69);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (416,'B · Amém Tríplice','Amém, amém, amém.','416.mp3',69);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (417,'C · Amém Quádruplo','Amém, amém, amém, amém.','417.mp3',69);
-INSERT INTO TSAHINO(CODHINO, NOME, LETRA, AUDIO, CODIND) VALUES (418,'D · Amém Sétuplo','[Soprano] Amém, amém, amém, amém, amém, amém, amém.
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (416,'B · Amém Tríplice','Amém, amém, amém.','416.mp3',69);
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (417,'C · Amém Quádruplo','Amém, amém, amém, amém.','417.mp3',69);
+insert into tsahino(codhino, nome, letra, audio, codind) VALUES (418,'D · Amém Sétuplo','[Soprano] Amém, amém, amém, amém, amém, amém, amém.
 [Outros] Amém, amém, amém, amém, amém, amém.','418.mp3',69);
 
 
