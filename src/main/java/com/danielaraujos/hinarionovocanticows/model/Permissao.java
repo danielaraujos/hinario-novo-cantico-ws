@@ -16,7 +16,7 @@ import java.util.List;
 public class Permissao implements GrantedAuthority {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "codper", updatable = false, unique = true, nullable = false)
     private BigInteger id;
 
